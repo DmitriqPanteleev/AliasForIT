@@ -9,7 +9,7 @@ import Foundation
 
 struct Consts {
     
-    static let isFirstLaunch = "isFirstLaunch"
+    static let alreadyLaunched = "alreadyLaunched"
     
     enum SettingsKeys {
         static let pointsForWin = "pointsForWin"

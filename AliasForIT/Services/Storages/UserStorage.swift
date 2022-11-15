@@ -13,12 +13,12 @@ final class UserStorage {
     
     private let defaults = UserDefaults.standard
     
-    var isFirstLaunch: Bool {
+    var alreadyLaunched: Bool {
         get {
-            defaults.bool(forKey: Consts.isFirstLaunch)
+            defaults.bool(forKey: Consts.alreadyLaunched)
         }
         set {
-            defaults.set(newValue, forKey: Consts.isFirstLaunch)
+            defaults.set(newValue, forKey: Consts.alreadyLaunched)
         }
     }
     

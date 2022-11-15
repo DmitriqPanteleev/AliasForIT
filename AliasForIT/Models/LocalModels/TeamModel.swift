@@ -10,7 +10,7 @@ import Foundation
 struct TeamModel: Equatable {
     let name: String
     let image: String
-    let score: String
+    let score: Int
     
     var imageSource: URL? {
         guard let source = URL(string: image) else { return nil }

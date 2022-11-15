@@ -15,6 +15,17 @@ struct AliasForITApp: App {
     var body: some Scene {
         WindowGroup {
             SettingsView(viewModel: SettingsViewModel())
+            RoundView(viewModel: RoundViewModel(
+                roundModel: RoundModel(
+                    team: TeamModel(
+                        name: "name",
+                        image: "",
+                        score: 10
+                    ),
+                    words: [:]
+                ),
+                roundDuration: UserStorage.shared.roundTime)
+            )
         }
     }
 }

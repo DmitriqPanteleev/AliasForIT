@@ -16,7 +16,8 @@ final class SettingsManager {
     }
     
     func bindSettings() {
-        if user.isFirstLaunch {
+        print(user.alreadyLaunched)
+        if !user.alreadyLaunched {
             user.pointsForWin = 50
             user.roundTime = 60
             user.isSoundActive = true

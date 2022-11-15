@@ -37,6 +37,9 @@
 		D0ED1A932923AAF6002ABBD5 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D0ED1A922923AAF6002ABBD5 /* RxCocoa */; };
 		D0ED1A952923AAF6002ABBD5 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D0ED1A942923AAF6002ABBD5 /* RxSwift */; };
 		D0ED1A982923AB35002ABBD5 /* CombineExt in Frameworks */ = {isa = PBXBuildFile; productRef = D0ED1A972923AB35002ABBD5 /* CombineExt */; };
+		D0ED1A9A2923CC0E002ABBD5 /* RoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A992923CC0E002ABBD5 /* RoundViewModel.swift */; };
+		D0ED1A9C2923CC1F002ABBD5 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A9B2923CC1F002ABBD5 /* RoundView.swift */; };
+		D0ED1A9E2923CC2F002ABBD5 /* RoundRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A9D2923CC2F002ABBD5 /* RoundRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +60,9 @@
 		D0ED1A712923A64E002ABBD5 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		D0ED1A732923A7E7002ABBD5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D0ED1A802923A948002ABBD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D0ED1A992923CC0E002ABBD5 /* RoundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundViewModel.swift; sourceTree = "<group>"; };
+		D0ED1A9B2923CC1F002ABBD5 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
+		D0ED1A9D2923CC2F002ABBD5 /* RoundRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +251,9 @@
 		D0ED1A672923A592002ABBD5 /* RoundView */ = {
 			isa = PBXGroup;
 			children = (
+				D0ED1A9B2923CC1F002ABBD5 /* RoundView.swift */,
+				D0ED1A992923CC0E002ABBD5 /* RoundViewModel.swift */,
+				D0ED1A9D2923CC2F002ABBD5 /* RoundRouter.swift */,
 			);
 			path = RoundView;
 			sourceTree = "<group>";
@@ -357,6 +366,9 @@
 				D0ED1A6A2923A5CB002ABBD5 /* SettingCellStyle.swift in Sources */,
 				D0ED1A5C2923A4E3002ABBD5 /* UserStorage.swift in Sources */,
 				D0ED1A602923A528002ABBD5 /* Consts.swift in Sources */,
+				D0ED1A9A2923CC0E002ABBD5 /* RoundViewModel.swift in Sources */,
+				D0ED1A9C2923CC1F002ABBD5 /* RoundView.swift in Sources */,
+				D0ED1A9E2923CC2F002ABBD5 /* RoundRouter.swift in Sources */,
 				D0ED1A5E2923A51A002ABBD5 /* SettingsManager.swift in Sources */,
 				D0ED1A632923A561002ABBD5 /* Extensions + String.swift in Sources */,
 				D0ED1A572923A4A6002ABBD5 /* RoundModel.swift in Sources */,
