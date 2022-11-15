@@ -21,6 +21,22 @@
 		D0ED1A6E2923A609002ABBD5 /* CountSettingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A6D2923A609002ABBD5 /* CountSettingCellView.swift */; };
 		D0ED1A702923A639002ABBD5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A6F2923A639002ABBD5 /* SettingsView.swift */; };
 		D0ED1A722923A64E002ABBD5 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A712923A64E002ABBD5 /* SettingsViewModel.swift */; };
+		D0ED1A742923A7E7002ABBD5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D0ED1A732923A7E7002ABBD5 /* GoogleService-Info.plist */; };
+		D0ED1A772923A8BC002ABBD5 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = D0ED1A762923A8BC002ABBD5 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		D0ED1A792923A8BC002ABBD5 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = D0ED1A782923A8BC002ABBD5 /* FirebaseCrashlytics */; };
+		D0ED1A7B2923A8BC002ABBD5 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = D0ED1A7A2923A8BC002ABBD5 /* FirebaseDatabase */; };
+		D0ED1A7D2923A8BC002ABBD5 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D0ED1A7C2923A8BC002ABBD5 /* FirebaseDatabaseSwift */; };
+		D0ED1A7F2923A8BC002ABBD5 /* FirebaseDynamicLinks in Frameworks */ = {isa = PBXBuildFile; productRef = D0ED1A7E2923A8BC002ABBD5 /* FirebaseDynamicLinks */; };
+		D0ED1A812923A948002ABBD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A802923A948002ABBD5 /* AppDelegate.swift */; };
+		D0ED1A842923AA03002ABBD5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D0ED1A832923AA03002ABBD5 /* Alamofire */; };
+		D0ED1A872923AA4B002ABBD5 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D0ED1A862923AA4B002ABBD5 /* Kingfisher */; };
+		D0ED1A8A2923AAB0002ABBD5 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = D0ED1A892923AAB0002ABBD5 /* CombineMoya */; };
+		D0ED1A8C2923AAB0002ABBD5 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = D0ED1A8B2923AAB0002ABBD5 /* Moya */; };
+		D0ED1A8E2923AAB0002ABBD5 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = D0ED1A8D2923AAB0002ABBD5 /* ReactiveMoya */; };
+		D0ED1A902923AAB0002ABBD5 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = D0ED1A8F2923AAB0002ABBD5 /* RxMoya */; };
+		D0ED1A932923AAF6002ABBD5 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D0ED1A922923AAF6002ABBD5 /* RxCocoa */; };
+		D0ED1A952923AAF6002ABBD5 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D0ED1A942923AAF6002ABBD5 /* RxSwift */; };
+		D0ED1A982923AB35002ABBD5 /* CombineExt in Frameworks */ = {isa = PBXBuildFile; productRef = D0ED1A972923AB35002ABBD5 /* CombineExt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +55,8 @@
 		D0ED1A6D2923A609002ABBD5 /* CountSettingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountSettingCellView.swift; sourceTree = "<group>"; };
 		D0ED1A6F2923A639002ABBD5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D0ED1A712923A64E002ABBD5 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		D0ED1A732923A7E7002ABBD5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D0ED1A802923A948002ABBD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +64,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0ED1A7D2923A8BC002ABBD5 /* FirebaseDatabaseSwift in Frameworks */,
+				D0ED1A7B2923A8BC002ABBD5 /* FirebaseDatabase in Frameworks */,
+				D0ED1A8C2923AAB0002ABBD5 /* Moya in Frameworks */,
+				D0ED1A902923AAB0002ABBD5 /* RxMoya in Frameworks */,
+				D0ED1A982923AB35002ABBD5 /* CombineExt in Frameworks */,
+				D0ED1A8E2923AAB0002ABBD5 /* ReactiveMoya in Frameworks */,
+				D0ED1A872923AA4B002ABBD5 /* Kingfisher in Frameworks */,
+				D0ED1A952923AAF6002ABBD5 /* RxSwift in Frameworks */,
+				D0ED1A932923AAF6002ABBD5 /* RxCocoa in Frameworks */,
+				D0ED1A772923A8BC002ABBD5 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				D0ED1A842923AA03002ABBD5 /* Alamofire in Frameworks */,
+				D0ED1A792923A8BC002ABBD5 /* FirebaseCrashlytics in Frameworks */,
+				D0ED1A8A2923AAB0002ABBD5 /* CombineMoya in Frameworks */,
+				D0ED1A7F2923A8BC002ABBD5 /* FirebaseDynamicLinks in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +103,7 @@
 		D0ED1A3C2923A33E002ABBD5 /* AliasForIT */ = {
 			isa = PBXGroup;
 			children = (
+				D0ED1A732923A7E7002ABBD5 /* GoogleService-Info.plist */,
 				D0ED1A4C2923A394002ABBD5 /* App */,
 				D0ED1A4D2923A39B002ABBD5 /* Coordinators */,
 				D0ED1A512923A3C9002ABBD5 /* Services */,
@@ -104,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				D0ED1A3D2923A33E002ABBD5 /* AliasForITApp.swift */,
+				D0ED1A802923A948002ABBD5 /* AppDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -241,6 +275,22 @@
 			dependencies = (
 			);
 			name = AliasForIT;
+			packageProductDependencies = (
+				D0ED1A762923A8BC002ABBD5 /* FirebaseAnalyticsWithoutAdIdSupport */,
+				D0ED1A782923A8BC002ABBD5 /* FirebaseCrashlytics */,
+				D0ED1A7A2923A8BC002ABBD5 /* FirebaseDatabase */,
+				D0ED1A7C2923A8BC002ABBD5 /* FirebaseDatabaseSwift */,
+				D0ED1A7E2923A8BC002ABBD5 /* FirebaseDynamicLinks */,
+				D0ED1A832923AA03002ABBD5 /* Alamofire */,
+				D0ED1A862923AA4B002ABBD5 /* Kingfisher */,
+				D0ED1A892923AAB0002ABBD5 /* CombineMoya */,
+				D0ED1A8B2923AAB0002ABBD5 /* Moya */,
+				D0ED1A8D2923AAB0002ABBD5 /* ReactiveMoya */,
+				D0ED1A8F2923AAB0002ABBD5 /* RxMoya */,
+				D0ED1A922923AAF6002ABBD5 /* RxCocoa */,
+				D0ED1A942923AAF6002ABBD5 /* RxSwift */,
+				D0ED1A972923AB35002ABBD5 /* CombineExt */,
+			);
 			productName = AliasForIT;
 			productReference = D0ED1A3A2923A33E002ABBD5 /* AliasForIT.app */;
 			productType = "com.apple.product-type.application";
@@ -269,6 +319,14 @@
 				Base,
 			);
 			mainGroup = D0ED1A312923A33E002ABBD5;
+			packageReferences = (
+				D0ED1A752923A8BC002ABBD5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				D0ED1A822923AA03002ABBD5 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				D0ED1A852923AA4B002ABBD5 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				D0ED1A882923AAAF002ABBD5 /* XCRemoteSwiftPackageReference "Moya" */,
+				D0ED1A912923AAF6002ABBD5 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				D0ED1A962923AB35002ABBD5 /* XCRemoteSwiftPackageReference "CombineExt" */,
+			);
 			productRefGroup = D0ED1A3B2923A33E002ABBD5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -285,6 +343,7 @@
 			files = (
 				D0ED1A452923A340002ABBD5 /* Preview Assets.xcassets in Resources */,
 				D0ED1A422923A340002ABBD5 /* Assets.xcassets in Resources */,
+				D0ED1A742923A7E7002ABBD5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +362,7 @@
 				D0ED1A572923A4A6002ABBD5 /* RoundModel.swift in Sources */,
 				D0ED1A6C2923A5E2002ABBD5 /* SwitchSettingsCellView.swift in Sources */,
 				D0ED1A6E2923A609002ABBD5 /* CountSettingCellView.swift in Sources */,
+				D0ED1A812923A948002ABBD5 /* AppDelegate.swift in Sources */,
 				D0ED1A3E2923A33E002ABBD5 /* AliasForITApp.swift in Sources */,
 				D0ED1A592923A4B5002ABBD5 /* TeamModel.swift in Sources */,
 				D0ED1A702923A639002ABBD5 /* SettingsView.swift in Sources */,
@@ -507,6 +567,130 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D0ED1A752923A8BC002ABBD5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = exactVersion;
+				version = 9.6.0;
+			};
+		};
+		D0ED1A822923AA03002ABBD5 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = exactVersion;
+				version = 5.6.2;
+			};
+		};
+		D0ED1A852923AA4B002ABBD5 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = exactVersion;
+				version = 7.3.2;
+			};
+		};
+		D0ED1A882923AAAF002ABBD5 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = exactVersion;
+				version = 15.0.0;
+			};
+		};
+		D0ED1A912923AAF6002ABBD5 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = exactVersion;
+				version = 6.5.0;
+			};
+		};
+		D0ED1A962923AB35002ABBD5 /* XCRemoteSwiftPackageReference "CombineExt" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineExt";
+			requirement = {
+				kind = exactVersion;
+				version = 1.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D0ED1A762923A8BC002ABBD5 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0ED1A752923A8BC002ABBD5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		D0ED1A782923A8BC002ABBD5 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0ED1A752923A8BC002ABBD5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		D0ED1A7A2923A8BC002ABBD5 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0ED1A752923A8BC002ABBD5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		D0ED1A7C2923A8BC002ABBD5 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0ED1A752923A8BC002ABBD5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		D0ED1A7E2923A8BC002ABBD5 /* FirebaseDynamicLinks */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0ED1A752923A8BC002ABBD5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDynamicLinks;
+		};
+		D0ED1A832923AA03002ABBD5 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0ED1A822923AA03002ABBD5 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		D0ED1A862923AA4B002ABBD5 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0ED1A852923AA4B002ABBD5 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		D0ED1A892923AAB0002ABBD5 /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0ED1A882923AAAF002ABBD5 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		D0ED1A8B2923AAB0002ABBD5 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0ED1A882923AAAF002ABBD5 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		D0ED1A8D2923AAB0002ABBD5 /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0ED1A882923AAAF002ABBD5 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+		D0ED1A8F2923AAB0002ABBD5 /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0ED1A882923AAAF002ABBD5 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+		D0ED1A922923AAF6002ABBD5 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0ED1A912923AAF6002ABBD5 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		D0ED1A942923AAF6002ABBD5 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0ED1A912923AAF6002ABBD5 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		D0ED1A972923AB35002ABBD5 /* CombineExt */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0ED1A962923AB35002ABBD5 /* XCRemoteSwiftPackageReference "CombineExt" */;
+			productName = CombineExt;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D0ED1A322923A33E002ABBD5 /* Project object */;
 }
