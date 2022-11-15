@@ -11,7 +11,7 @@ import SwiftUI
 struct AliasForITApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SettingsView(viewModel: SettingsViewModel())
         }
     }
 }

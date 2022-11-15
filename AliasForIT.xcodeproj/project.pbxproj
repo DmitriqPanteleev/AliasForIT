@@ -8,17 +8,37 @@
 
 /* Begin PBXBuildFile section */
 		D0ED1A3E2923A33E002ABBD5 /* AliasForITApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A3D2923A33E002ABBD5 /* AliasForITApp.swift */; };
-		D0ED1A402923A33E002ABBD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A3F2923A33E002ABBD5 /* ContentView.swift */; };
 		D0ED1A422923A340002ABBD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0ED1A412923A340002ABBD5 /* Assets.xcassets */; };
 		D0ED1A452923A340002ABBD5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0ED1A442923A340002ABBD5 /* Preview Assets.xcassets */; };
+		D0ED1A572923A4A6002ABBD5 /* RoundModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A562923A4A6002ABBD5 /* RoundModel.swift */; };
+		D0ED1A592923A4B5002ABBD5 /* TeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A582923A4B5002ABBD5 /* TeamModel.swift */; };
+		D0ED1A5C2923A4E3002ABBD5 /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A5B2923A4E3002ABBD5 /* UserStorage.swift */; };
+		D0ED1A5E2923A51A002ABBD5 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A5D2923A51A002ABBD5 /* SettingsManager.swift */; };
+		D0ED1A602923A528002ABBD5 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A5F2923A528002ABBD5 /* Consts.swift */; };
+		D0ED1A632923A561002ABBD5 /* Extensions + String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A622923A561002ABBD5 /* Extensions + String.swift */; };
+		D0ED1A6A2923A5CB002ABBD5 /* SettingCellStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A692923A5CB002ABBD5 /* SettingCellStyle.swift */; };
+		D0ED1A6C2923A5E2002ABBD5 /* SwitchSettingsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A6B2923A5E2002ABBD5 /* SwitchSettingsCellView.swift */; };
+		D0ED1A6E2923A609002ABBD5 /* CountSettingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A6D2923A609002ABBD5 /* CountSettingCellView.swift */; };
+		D0ED1A702923A639002ABBD5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A6F2923A639002ABBD5 /* SettingsView.swift */; };
+		D0ED1A722923A64E002ABBD5 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A712923A64E002ABBD5 /* SettingsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D0ED1A3A2923A33E002ABBD5 /* AliasForIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AliasForIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0ED1A3D2923A33E002ABBD5 /* AliasForITApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasForITApp.swift; sourceTree = "<group>"; };
-		D0ED1A3F2923A33E002ABBD5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D0ED1A412923A340002ABBD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0ED1A442923A340002ABBD5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D0ED1A562923A4A6002ABBD5 /* RoundModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundModel.swift; sourceTree = "<group>"; };
+		D0ED1A582923A4B5002ABBD5 /* TeamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModel.swift; sourceTree = "<group>"; };
+		D0ED1A5B2923A4E3002ABBD5 /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
+		D0ED1A5D2923A51A002ABBD5 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		D0ED1A5F2923A528002ABBD5 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
+		D0ED1A622923A561002ABBD5 /* Extensions + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + String.swift"; sourceTree = "<group>"; };
+		D0ED1A692923A5CB002ABBD5 /* SettingCellStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCellStyle.swift; sourceTree = "<group>"; };
+		D0ED1A6B2923A5E2002ABBD5 /* SwitchSettingsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchSettingsCellView.swift; sourceTree = "<group>"; };
+		D0ED1A6D2923A609002ABBD5 /* CountSettingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountSettingCellView.swift; sourceTree = "<group>"; };
+		D0ED1A6F2923A639002ABBD5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D0ED1A712923A64E002ABBD5 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +71,14 @@
 		D0ED1A3C2923A33E002ABBD5 /* AliasForIT */ = {
 			isa = PBXGroup;
 			children = (
-				D0ED1A3D2923A33E002ABBD5 /* AliasForITApp.swift */,
-				D0ED1A3F2923A33E002ABBD5 /* ContentView.swift */,
-				D0ED1A412923A340002ABBD5 /* Assets.xcassets */,
+				D0ED1A4C2923A394002ABBD5 /* App */,
+				D0ED1A4D2923A39B002ABBD5 /* Coordinators */,
+				D0ED1A512923A3C9002ABBD5 /* Services */,
+				D0ED1A4E2923A3A3002ABBD5 /* Models */,
+				D0ED1A4F2923A3AB002ABBD5 /* Modules */,
+				D0ED1A522923A3D0002ABBD5 /* Components */,
+				D0ED1A502923A3B1002ABBD5 /* Helpers */,
+				D0ED1A4B2923A370002ABBD5 /* Resources */,
 				D0ED1A432923A340002ABBD5 /* Preview Content */,
 			);
 			path = AliasForIT;
@@ -65,6 +90,139 @@
 				D0ED1A442923A340002ABBD5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D0ED1A4B2923A370002ABBD5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D0ED1A412923A340002ABBD5 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D0ED1A4C2923A394002ABBD5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D0ED1A3D2923A33E002ABBD5 /* AliasForITApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D0ED1A4D2923A39B002ABBD5 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		D0ED1A4E2923A3A3002ABBD5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D0ED1A552923A498002ABBD5 /* LocalModels */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D0ED1A4F2923A3AB002ABBD5 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				D0ED1A652923A57F002ABBD5 /* MainView */,
+				D0ED1A662923A589002ABBD5 /* GameView */,
+				D0ED1A672923A592002ABBD5 /* RoundView */,
+				D0ED1A642923A578002ABBD5 /* SettingsView */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		D0ED1A502923A3B1002ABBD5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D0ED1A612923A551002ABBD5 /* Extensions */,
+				D0ED1A5F2923A528002ABBD5 /* Consts.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D0ED1A512923A3C9002ABBD5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D0ED1A5A2923A4D6002ABBD5 /* Storages */,
+				D0ED1A5D2923A51A002ABBD5 /* SettingsManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D0ED1A522923A3D0002ABBD5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D0ED1A552923A498002ABBD5 /* LocalModels */ = {
+			isa = PBXGroup;
+			children = (
+				D0ED1A562923A4A6002ABBD5 /* RoundModel.swift */,
+				D0ED1A582923A4B5002ABBD5 /* TeamModel.swift */,
+			);
+			path = LocalModels;
+			sourceTree = "<group>";
+		};
+		D0ED1A5A2923A4D6002ABBD5 /* Storages */ = {
+			isa = PBXGroup;
+			children = (
+				D0ED1A5B2923A4E3002ABBD5 /* UserStorage.swift */,
+			);
+			path = Storages;
+			sourceTree = "<group>";
+		};
+		D0ED1A612923A551002ABBD5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D0ED1A622923A561002ABBD5 /* Extensions + String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D0ED1A642923A578002ABBD5 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				D0ED1A682923A5AF002ABBD5 /* Components */,
+				D0ED1A6F2923A639002ABBD5 /* SettingsView.swift */,
+				D0ED1A712923A64E002ABBD5 /* SettingsViewModel.swift */,
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
+		D0ED1A652923A57F002ABBD5 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		D0ED1A662923A589002ABBD5 /* GameView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GameView;
+			sourceTree = "<group>";
+		};
+		D0ED1A672923A592002ABBD5 /* RoundView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RoundView;
+			sourceTree = "<group>";
+		};
+		D0ED1A682923A5AF002ABBD5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D0ED1A692923A5CB002ABBD5 /* SettingCellStyle.swift */,
+				D0ED1A6B2923A5E2002ABBD5 /* SwitchSettingsCellView.swift */,
+				D0ED1A6D2923A609002ABBD5 /* CountSettingCellView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +295,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0ED1A402923A33E002ABBD5 /* ContentView.swift in Sources */,
+				D0ED1A6A2923A5CB002ABBD5 /* SettingCellStyle.swift in Sources */,
+				D0ED1A5C2923A4E3002ABBD5 /* UserStorage.swift in Sources */,
+				D0ED1A602923A528002ABBD5 /* Consts.swift in Sources */,
+				D0ED1A5E2923A51A002ABBD5 /* SettingsManager.swift in Sources */,
+				D0ED1A632923A561002ABBD5 /* Extensions + String.swift in Sources */,
+				D0ED1A572923A4A6002ABBD5 /* RoundModel.swift in Sources */,
+				D0ED1A6C2923A5E2002ABBD5 /* SwitchSettingsCellView.swift in Sources */,
+				D0ED1A6E2923A609002ABBD5 /* CountSettingCellView.swift in Sources */,
 				D0ED1A3E2923A33E002ABBD5 /* AliasForITApp.swift in Sources */,
+				D0ED1A592923A4B5002ABBD5 /* TeamModel.swift in Sources */,
+				D0ED1A702923A639002ABBD5 /* SettingsView.swift in Sources */,
+				D0ED1A722923A64E002ABBD5 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
