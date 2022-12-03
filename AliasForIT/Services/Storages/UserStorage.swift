@@ -13,6 +13,7 @@ final class UserStorage {
     
     private let defaults = UserDefaults.standard
     
+    // MARK: - System
     var alreadyLaunched: Bool {
         get {
             defaults.bool(forKey: Consts.alreadyLaunched)
@@ -22,6 +23,7 @@ final class UserStorage {
         }
     }
     
+    // MARK: - Settings
     var pointsForWin: Int {
         get {
             defaults.integer(forKey: Consts.SettingsKeys.pointsForWin)

@@ -9,5 +9,5 @@ import Foundation
 
 struct RoundModel: Equatable {
     let team: TeamModel
-    let words: [String:Bool]
+    let words: [String]
 }

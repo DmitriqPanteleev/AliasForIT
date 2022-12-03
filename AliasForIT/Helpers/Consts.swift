@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Consts {
     
@@ -17,5 +18,10 @@ struct Consts {
         static let isSoundActive = "isSoundActive"
         static let isCommonLastWord = "isCommonLastWord"
         static let isForfeitForMiss = "isForfeitForMiss"
+    }
+    
+    enum SharedLayout {
+        static let cardWidth = UIScreen.main.bounds.width * 0.6
+        static let cardHeight = UIScreen.main.bounds.height * 0.5
     }
 }

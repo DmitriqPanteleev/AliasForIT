@@ -34,7 +34,9 @@ final class RoundViewModel: ObservableObject {
     }
     
     deinit {
+        #if DEBUG
         print("\(self) DEINITED!!!")
+        #endif
         
         cancellable.forEach { $0.cancel() }
         cancellable.removeAll()
@@ -42,9 +44,10 @@ final class RoundViewModel: ObservableObject {
     
     //MARK: - Bindings
     func setupBindings() {
+        self.output.currentWord = roundModel.words.first!
+        self.output.currentIndex = 0
         setupTimer()
-        setupPass()
-        setupDone()
+        setupAnswer()
     }
     
     func setupTimer() {
@@ -61,6 +64,7 @@ final class RoundViewModel: ObservableObject {
                     self.roundDuration = self.output.roundTime
                     self.timer?.upstream.connect().cancel()
                     self.timer = nil
+                    self.output.isTimerTicking = false
                 }
             }
             .store(in: &cancellable)
@@ -83,33 +87,36 @@ final class RoundViewModel: ObservableObject {
             .store(in: &cancellable)
     }
     
-    func setupPass() {
-        input.pass
+    func setupAnswer() {
+        input.answer
             .sink { [weak self] in
-                self?.output.answeredWords[$0] = false
+                guard let self = self else { return }
+                
+                self.output.answeredWords[self.output.currentWord] = $0
+                self.output.currentIndex += 1
+                
+                if $0 {
+                    self.output.currentScore += 1
+                }
+                
+                self.output.currentWord = self.roundModel.words[self.output.currentIndex]
+                self.input.onAppear.send()
             }
             .store(in: &cancellable)
     }
-    
-    func setupDone() {
-        input.done
-            .sink { [weak self] in
-                self?.output.answeredWords[$0] = true
-            }
-            .store(in: &cancellable)
-    }
-    
     
     struct Input {
         let onAppear = PassthroughSubject<Void, Never>()
         let timerState = PassthroughSubject<Bool, Never>()
-        
-        let pass = PassthroughSubject<String, Never>()
-        let done = PassthroughSubject<String, Never>()
+        let answer = PassthroughSubject<Bool, Never>()
     }
     
     struct Output {
+        var isTimerTicking: Bool = true
         var roundTime: Int = 10
+        var currentIndex: Int = 0
+        var currentWord: String = ""
+        var currentScore: Int = 0
         var answeredWords: [String: Bool] = [:]
     }
 }

@@ -16,7 +16,6 @@ final class SettingsManager {
     }
     
     func bindSettings() {
-        print(user.alreadyLaunched)
         if !user.alreadyLaunched {
             user.pointsForWin = 50
             user.roundTime = 60
