@@ -14,6 +14,8 @@
 		D0E5FB6C293A0EDB006F7F6F /* TimerControllButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FB6B293A0EDB006F7F6F /* TimerControllButtonStyle.swift */; };
 		D0E5FB6F293A0EF9006F7F6F /* TimerControllButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FB6E293A0EF9006F7F6F /* TimerControllButtonView.swift */; };
 		D0E5FB72293A1239006F7F6F /* LinearProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FB71293A1239006F7F6F /* LinearProgressView.swift */; };
+		D0E5FB74293B65C7006F7F6F /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FB73293B65C7006F7F6F /* GameView.swift */; };
+		D0E5FB76293B65D2006F7F6F /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FB75293B65D2006F7F6F /* GameViewModel.swift */; };
 		D0ED1A3E2923A33E002ABBD5 /* AliasForITApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A3D2923A33E002ABBD5 /* AliasForITApp.swift */; };
 		D0ED1A422923A340002ABBD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0ED1A412923A340002ABBD5 /* Assets.xcassets */; };
 		D0ED1A452923A340002ABBD5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0ED1A442923A340002ABBD5 /* Preview Assets.xcassets */; };
@@ -55,6 +57,8 @@
 		D0E5FB6B293A0EDB006F7F6F /* TimerControllButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerControllButtonStyle.swift; sourceTree = "<group>"; };
 		D0E5FB6E293A0EF9006F7F6F /* TimerControllButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerControllButtonView.swift; sourceTree = "<group>"; };
 		D0E5FB71293A1239006F7F6F /* LinearProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearProgressView.swift; sourceTree = "<group>"; };
+		D0E5FB73293B65C7006F7F6F /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		D0E5FB75293B65D2006F7F6F /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		D0ED1A3A2923A33E002ABBD5 /* AliasForIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AliasForIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0ED1A3D2923A33E002ABBD5 /* AliasForITApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasForITApp.swift; sourceTree = "<group>"; };
 		D0ED1A412923A340002ABBD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -285,6 +289,8 @@
 		D0ED1A662923A589002ABBD5 /* GameView */ = {
 			isa = PBXGroup;
 			children = (
+				D0E5FB73293B65C7006F7F6F /* GameView.swift */,
+				D0E5FB75293B65D2006F7F6F /* GameViewModel.swift */,
 			);
 			path = GameView;
 			sourceTree = "<group>";
@@ -411,9 +417,11 @@
 				D0ED1A6A2923A5CB002ABBD5 /* SettingCellStyle.swift in Sources */,
 				D0ED1A5C2923A4E3002ABBD5 /* UserStorage.swift in Sources */,
 				D0ED1A602923A528002ABBD5 /* Consts.swift in Sources */,
+				D0E5FB76293B65D2006F7F6F /* GameViewModel.swift in Sources */,
 				D0ED1A9A2923CC0E002ABBD5 /* RoundViewModel.swift in Sources */,
 				D0ED1A9C2923CC1F002ABBD5 /* RoundView.swift in Sources */,
 				D0E5FB6C293A0EDB006F7F6F /* TimerControllButtonStyle.swift in Sources */,
+				D0E5FB74293B65C7006F7F6F /* GameView.swift in Sources */,
 				D0E5FB72293A1239006F7F6F /* LinearProgressView.swift in Sources */,
 				D0E5FB672939F999006F7F6F /* RoundButtonView.swift in Sources */,
 				D0E5FB692939F9A7006F7F6F /* RoundButtonStyle.swift in Sources */,
