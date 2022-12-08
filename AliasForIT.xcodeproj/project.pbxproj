@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		D0BE04042938EFD9000739E0 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BE04032938EFD9000739E0 /* CardView.swift */; };
+		D0E48AAE293FCF2B006E2555 /* Text + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E48AAD293FCF2B006E2555 /* Text + Extensions.swift */; };
+		D0E48AB02941DCD4006E2555 /* PlayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E48AAF2941DCD4006E2555 /* PlayButtonView.swift */; };
+		D0E48AB22941E328006E2555 /* RoundCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E48AB12941E328006E2555 /* RoundCoordinator.swift */; };
+		D0E48AB42941E335006E2555 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E48AB32941E335006E2555 /* MainCoordinator.swift */; };
+		D0E48AB72941E64C006E2555 /* Stinsen in Frameworks */ = {isa = PBXBuildFile; productRef = D0E48AB62941E64C006E2555 /* Stinsen */; };
 		D0E5FB642939F964006F7F6F /* ButtonsBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FB632939F964006F7F6F /* ButtonsBarView.swift */; };
 		D0E5FB672939F999006F7F6F /* RoundButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FB662939F999006F7F6F /* RoundButtonView.swift */; };
 		D0E5FB692939F9A7006F7F6F /* RoundButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FB682939F9A7006F7F6F /* RoundButtonStyle.swift */; };
@@ -16,6 +21,9 @@
 		D0E5FB72293A1239006F7F6F /* LinearProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FB71293A1239006F7F6F /* LinearProgressView.swift */; };
 		D0E5FB74293B65C7006F7F6F /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FB73293B65C7006F7F6F /* GameView.swift */; };
 		D0E5FB76293B65D2006F7F6F /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FB75293B65D2006F7F6F /* GameViewModel.swift */; };
+		D0E5FB79293CF002006F7F6F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FB78293CF002006F7F6F /* Colors.swift */; };
+		D0E5FB7C293CF26B006F7F6F /* SharpedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FB7B293CF26B006F7F6F /* SharpedCardView.swift */; };
+		D0E5FB7F293DF90D006F7F6F /* TeamCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FB7E293DF90D006F7F6F /* TeamCellView.swift */; };
 		D0ED1A3E2923A33E002ABBD5 /* AliasForITApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A3D2923A33E002ABBD5 /* AliasForITApp.swift */; };
 		D0ED1A422923A340002ABBD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0ED1A412923A340002ABBD5 /* Assets.xcassets */; };
 		D0ED1A452923A340002ABBD5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0ED1A442923A340002ABBD5 /* Preview Assets.xcassets */; };
@@ -24,7 +32,7 @@
 		D0ED1A5C2923A4E3002ABBD5 /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A5B2923A4E3002ABBD5 /* UserStorage.swift */; };
 		D0ED1A5E2923A51A002ABBD5 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A5D2923A51A002ABBD5 /* SettingsManager.swift */; };
 		D0ED1A602923A528002ABBD5 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A5F2923A528002ABBD5 /* Consts.swift */; };
-		D0ED1A632923A561002ABBD5 /* Extensions + String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A622923A561002ABBD5 /* Extensions + String.swift */; };
+		D0ED1A632923A561002ABBD5 /* String + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A622923A561002ABBD5 /* String + Extensions.swift */; };
 		D0ED1A6A2923A5CB002ABBD5 /* SettingCellStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A692923A5CB002ABBD5 /* SettingCellStyle.swift */; };
 		D0ED1A6C2923A5E2002ABBD5 /* SwitchSettingsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A6B2923A5E2002ABBD5 /* SwitchSettingsCellView.swift */; };
 		D0ED1A6E2923A609002ABBD5 /* CountSettingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A6D2923A609002ABBD5 /* CountSettingCellView.swift */; };
@@ -46,11 +54,15 @@
 		D0ED1AA229250258002ABBD5 /* WordsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1AA129250258002ABBD5 /* WordsStorage.swift */; };
 		D0ED1AA829252322002ABBD5 /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1AA729252322002ABBD5 /* Words.swift */; };
 		D0ED1AAD2926054E002ABBD5 /* SwipableCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1AAC2926054E002ABBD5 /* SwipableCardView.swift */; };
-		D0ED1AAF292616B5002ABBD5 /* Extensions + View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1AAE292616B5002ABBD5 /* Extensions + View.swift */; };
+		D0ED1AAF292616B5002ABBD5 /* View + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1AAE292616B5002ABBD5 /* View + Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D0BE04032938EFD9000739E0 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		D0E48AAD293FCF2B006E2555 /* Text + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text + Extensions.swift"; sourceTree = "<group>"; };
+		D0E48AAF2941DCD4006E2555 /* PlayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonView.swift; sourceTree = "<group>"; };
+		D0E48AB12941E328006E2555 /* RoundCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCoordinator.swift; sourceTree = "<group>"; };
+		D0E48AB32941E335006E2555 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		D0E5FB632939F964006F7F6F /* ButtonsBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsBarView.swift; sourceTree = "<group>"; };
 		D0E5FB662939F999006F7F6F /* RoundButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButtonView.swift; sourceTree = "<group>"; };
 		D0E5FB682939F9A7006F7F6F /* RoundButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButtonStyle.swift; sourceTree = "<group>"; };
@@ -59,6 +71,9 @@
 		D0E5FB71293A1239006F7F6F /* LinearProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearProgressView.swift; sourceTree = "<group>"; };
 		D0E5FB73293B65C7006F7F6F /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		D0E5FB75293B65D2006F7F6F /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		D0E5FB78293CF002006F7F6F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		D0E5FB7B293CF26B006F7F6F /* SharpedCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharpedCardView.swift; sourceTree = "<group>"; };
+		D0E5FB7E293DF90D006F7F6F /* TeamCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCellView.swift; sourceTree = "<group>"; };
 		D0ED1A3A2923A33E002ABBD5 /* AliasForIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AliasForIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0ED1A3D2923A33E002ABBD5 /* AliasForITApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasForITApp.swift; sourceTree = "<group>"; };
 		D0ED1A412923A340002ABBD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,7 +83,7 @@
 		D0ED1A5B2923A4E3002ABBD5 /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
 		D0ED1A5D2923A51A002ABBD5 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		D0ED1A5F2923A528002ABBD5 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
-		D0ED1A622923A561002ABBD5 /* Extensions + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + String.swift"; sourceTree = "<group>"; };
+		D0ED1A622923A561002ABBD5 /* String + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extensions.swift"; sourceTree = "<group>"; };
 		D0ED1A692923A5CB002ABBD5 /* SettingCellStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCellStyle.swift; sourceTree = "<group>"; };
 		D0ED1A6B2923A5E2002ABBD5 /* SwitchSettingsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchSettingsCellView.swift; sourceTree = "<group>"; };
 		D0ED1A6D2923A609002ABBD5 /* CountSettingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountSettingCellView.swift; sourceTree = "<group>"; };
@@ -81,7 +96,7 @@
 		D0ED1AA129250258002ABBD5 /* WordsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsStorage.swift; sourceTree = "<group>"; };
 		D0ED1AA729252322002ABBD5 /* Words.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Words.swift; sourceTree = "<group>"; };
 		D0ED1AAC2926054E002ABBD5 /* SwipableCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipableCardView.swift; sourceTree = "<group>"; };
-		D0ED1AAE292616B5002ABBD5 /* Extensions + View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + View.swift"; sourceTree = "<group>"; };
+		D0ED1AAE292616B5002ABBD5 /* View + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,12 +113,21 @@
 				D0ED1A932923AAF6002ABBD5 /* RxCocoa in Frameworks */,
 				D0ED1A842923AA03002ABBD5 /* Alamofire in Frameworks */,
 				D0ED1A8A2923AAB0002ABBD5 /* CombineMoya in Frameworks */,
+				D0E48AB72941E64C006E2555 /* Stinsen in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D0E48AAC293FCF12006E2555 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				D0E48AAF2941DCD4006E2555 /* PlayButtonView.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		D0E5FB652939F975006F7F6F /* RoundButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +152,22 @@
 				D0E5FB71293A1239006F7F6F /* LinearProgressView.swift */,
 			);
 			path = ProgressViews;
+			sourceTree = "<group>";
+		};
+		D0E5FB7A293CF24B006F7F6F /* CardViews */ = {
+			isa = PBXGroup;
+			children = (
+				D0E5FB7B293CF26B006F7F6F /* SharpedCardView.swift */,
+			);
+			path = CardViews;
+			sourceTree = "<group>";
+		};
+		D0E5FB7D293DF8FE006F7F6F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D0E5FB7E293DF90D006F7F6F /* TeamCellView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		D0ED1A312923A33E002ABBD5 = {
@@ -174,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				D0ED1A412923A340002ABBD5 /* Assets.xcassets */,
+				D0E5FB78293CF002006F7F6F /* Colors.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -190,6 +231,8 @@
 		D0ED1A4D2923A39B002ABBD5 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				D0E48AB12941E328006E2555 /* RoundCoordinator.swift */,
+				D0E48AB32941E335006E2555 /* MainCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -235,6 +278,8 @@
 		D0ED1A522923A3D0002ABBD5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D0E48AAC293FCF12006E2555 /* Buttons */,
+				D0E5FB7A293CF24B006F7F6F /* CardViews */,
 				D0E5FB70293A1218006F7F6F /* ProgressViews */,
 				D0E5FB6A293A0EAD006F7F6F /* TimerConrollButton */,
 				D0E5FB652939F975006F7F6F /* RoundButton */,
@@ -263,8 +308,9 @@
 		D0ED1A612923A551002ABBD5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D0ED1A622923A561002ABBD5 /* Extensions + String.swift */,
-				D0ED1AAE292616B5002ABBD5 /* Extensions + View.swift */,
+				D0ED1A622923A561002ABBD5 /* String + Extensions.swift */,
+				D0ED1AAE292616B5002ABBD5 /* View + Extensions.swift */,
+				D0E48AAD293FCF2B006E2555 /* Text + Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -289,6 +335,7 @@
 		D0ED1A662923A589002ABBD5 /* GameView */ = {
 			isa = PBXGroup;
 			children = (
+				D0E5FB7D293DF8FE006F7F6F /* Components */,
 				D0E5FB73293B65C7006F7F6F /* GameView.swift */,
 				D0E5FB75293B65D2006F7F6F /* GameViewModel.swift */,
 			);
@@ -352,6 +399,7 @@
 				D0ED1A922923AAF6002ABBD5 /* RxCocoa */,
 				D0ED1A942923AAF6002ABBD5 /* RxSwift */,
 				D0ED1A972923AB35002ABBD5 /* CombineExt */,
+				D0E48AB62941E64C006E2555 /* Stinsen */,
 			);
 			productName = AliasForIT;
 			productReference = D0ED1A3A2923A33E002ABBD5 /* AliasForIT.app */;
@@ -387,6 +435,7 @@
 				D0ED1A882923AAAF002ABBD5 /* XCRemoteSwiftPackageReference "Moya" */,
 				D0ED1A912923AAF6002ABBD5 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				D0ED1A962923AB35002ABBD5 /* XCRemoteSwiftPackageReference "CombineExt" */,
+				D0E48AB52941E64C006E2555 /* XCRemoteSwiftPackageReference "stinsen" */,
 			);
 			productRefGroup = D0ED1A3B2923A33E002ABBD5 /* Products */;
 			projectDirPath = "";
@@ -415,8 +464,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0ED1A6A2923A5CB002ABBD5 /* SettingCellStyle.swift in Sources */,
+				D0E5FB79293CF002006F7F6F /* Colors.swift in Sources */,
 				D0ED1A5C2923A4E3002ABBD5 /* UserStorage.swift in Sources */,
 				D0ED1A602923A528002ABBD5 /* Consts.swift in Sources */,
+				D0E48AAE293FCF2B006E2555 /* Text + Extensions.swift in Sources */,
 				D0E5FB76293B65D2006F7F6F /* GameViewModel.swift in Sources */,
 				D0ED1A9A2923CC0E002ABBD5 /* RoundViewModel.swift in Sources */,
 				D0ED1A9C2923CC1F002ABBD5 /* RoundView.swift in Sources */,
@@ -428,16 +479,21 @@
 				D0ED1AAD2926054E002ABBD5 /* SwipableCardView.swift in Sources */,
 				D0ED1A9E2923CC2F002ABBD5 /* RoundRouter.swift in Sources */,
 				D0BE04042938EFD9000739E0 /* CardView.swift in Sources */,
+				D0E5FB7F293DF90D006F7F6F /* TeamCellView.swift in Sources */,
 				D0ED1A5E2923A51A002ABBD5 /* SettingsManager.swift in Sources */,
-				D0ED1AAF292616B5002ABBD5 /* Extensions + View.swift in Sources */,
-				D0ED1A632923A561002ABBD5 /* Extensions + String.swift in Sources */,
+				D0ED1AAF292616B5002ABBD5 /* View + Extensions.swift in Sources */,
+				D0ED1A632923A561002ABBD5 /* String + Extensions.swift in Sources */,
+				D0E48AB22941E328006E2555 /* RoundCoordinator.swift in Sources */,
 				D0ED1A572923A4A6002ABBD5 /* RoundModel.swift in Sources */,
 				D0ED1A6C2923A5E2002ABBD5 /* SwitchSettingsCellView.swift in Sources */,
+				D0E5FB7C293CF26B006F7F6F /* SharpedCardView.swift in Sources */,
 				D0ED1A6E2923A609002ABBD5 /* CountSettingCellView.swift in Sources */,
 				D0E5FB6F293A0EF9006F7F6F /* TimerControllButtonView.swift in Sources */,
 				D0ED1A812923A948002ABBD5 /* AppDelegate.swift in Sources */,
 				D0E5FB642939F964006F7F6F /* ButtonsBarView.swift in Sources */,
 				D0ED1AA229250258002ABBD5 /* WordsStorage.swift in Sources */,
+				D0E48AB02941DCD4006E2555 /* PlayButtonView.swift in Sources */,
+				D0E48AB42941E335006E2555 /* MainCoordinator.swift in Sources */,
 				D0ED1A3E2923A33E002ABBD5 /* AliasForITApp.swift in Sources */,
 				D0ED1A592923A4B5002ABBD5 /* TeamModel.swift in Sources */,
 				D0ED1A702923A639002ABBD5 /* SettingsView.swift in Sources */,
@@ -645,6 +701,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D0E48AB52941E64C006E2555 /* XCRemoteSwiftPackageReference "stinsen" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rundfunk47/stinsen";
+			requirement = {
+				kind = exactVersion;
+				version = 2.0.12;
+			};
+		};
 		D0ED1A822923AA03002ABBD5 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -688,6 +752,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D0E48AB62941E64C006E2555 /* Stinsen */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0E48AB52941E64C006E2555 /* XCRemoteSwiftPackageReference "stinsen" */;
+			productName = Stinsen;
+		};
 		D0ED1A832923AA03002ABBD5 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D0ED1A822923AA03002ABBD5 /* XCRemoteSwiftPackageReference "Alamofire" */;

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TeamModel: Equatable {
+struct TeamModel: Equatable, Identifiable {
     let id: Int
     let name: String
     let image: String
@@ -28,13 +28,14 @@ struct TeamModel: Equatable {
     }
     
     var imageSource: URL? {
+        // add placeholder
         guard let source = URL(string: image) else { return nil }
         return source
     }
     
     static func defaultTeam1() -> TeamModel {
         TeamModel(name: "Константы",
-                  image: "https://yt3.ggpht.com/ytc/AMLnZu9CTrwR1EFNZuEqb9TNFEAqBNMyFz1ylQNBNRVgwQ=s900-c-k-c0x00ffffff-no-rj")
+                  image: "https://otvet.imgsmail.ru/download/191308234_8ae84b694b02b5195a81ff67af34a69e_800.gif")
     }
     
     static func defaultTeam2() -> TeamModel {

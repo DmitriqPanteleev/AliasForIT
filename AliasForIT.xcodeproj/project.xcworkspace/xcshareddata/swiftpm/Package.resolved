@@ -53,6 +53,15 @@
         "revision" : "b4307ba0b6425c0ba4178e138799946c3da594f8",
         "version" : "6.5.0"
       }
+    },
+    {
+      "identity" : "stinsen",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/rundfunk47/stinsen",
+      "state" : {
+        "revision" : "eb062387e3a7687955ab0ce5a7dfe110b80a10db",
+        "version" : "2.0.12"
+      }
     }
   ],
   "version" : 2

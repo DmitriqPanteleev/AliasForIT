@@ -6,15 +6,70 @@
 //
 
 import SwiftUI
+import Combine
 
 struct GameView: View {
+    
+    @State var viewModel: GameViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        content
+            .background(Color.appBackground.ignoresSafeArea())
+    }
+}
+
+private extension GameView {
+    var content: some View {
+        VStack(alignment: .leading) {
+            table
+                .padding(.top, 30)
+            pointLeft
+                .padding(.horizontal, 50)
+                .padding(.top)
+            
+            Spacer()
+            playButton
+            endPlayButton
+        }
+        .frame(width: UIScreen.main.bounds.width, alignment: .leading)
+    }
+    
+    var table: some View {
+        SharpedCardView {
+            
+            VStack(alignment: .leading){
+                Text("Команды")
+                    .titleWhite()
+            }
+            .frame(alignment: .leading)
+            
+            VStack(spacing: 10) {
+                ForEach(viewModel.teams) { team in
+                    TeamCellView(model: team)
+                }
+            }
+        }
+        .frame(alignment: .leading)
+        .padding(.horizontal, 14)
+    }
+    
+    var pointLeft: some View {
+        Text("До победы: \(viewModel.output.pointsLeft) очков")
+            .titleTwoWhite()
+    }
+    
+    var playButton: some View {
+        PlayButtonView(action: {})
+            .padding(.horizontal)
+    }
+    
+    var endPlayButton: some View {
+        HStack { }
     }
 }
 
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
-        GameView()
+        GameView(viewModel: GameViewModel(teams: [TeamModel.defaultTeam1(), TeamModel.defaultTeam2()]))
     }
 }

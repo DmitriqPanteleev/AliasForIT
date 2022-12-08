@@ -12,7 +12,9 @@ final class GameViewModel: ObservableObject {
     
     let teams: [TeamModel]
     
-    var currentTeamIndex: Int
+    private var currentTeamIndex: Int
+    private var pointsLeft: [Int] = []
+    
     let input: Input
     @Published var output: Output
     
@@ -56,7 +58,8 @@ final class GameViewModel: ObservableObject {
                 
                 self.output.currentTeam?.score += newScore
                 
-                self.output.pointsLeft[self.currentTeamIndex] -= self.output.currentTeam!.score
+                self.pointsLeft[self.currentTeamIndex] -= self.output.currentTeam!.score
+                self.output.pointsLeft = self.pointsLeft[self.currentTeamIndex]
                 
                 self.currentTeamIndex += self.currentTeamIndex == self.teams.count - 1 ? 1 : -self.teams.count + 1
                 self.output.currentTeam = self.teams[self.currentTeamIndex]
@@ -76,6 +79,6 @@ final class GameViewModel: ObservableObject {
     struct Output {
         var teams: [TeamModel] = []
         var currentTeam: TeamModel? = nil
-        var pointsLeft: [Int] = []
+        var pointsLeft: Int = 0
     }
 }
