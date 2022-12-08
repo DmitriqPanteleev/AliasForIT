@@ -59,7 +59,9 @@ private extension GameView {
     }
     
     var playButton: some View {
-        PlayButtonView(action: {})
+        PlayButtonView(action: {
+            viewModel.input.onPlayTap.send()
+        })
             .padding(.horizontal)
     }
     
@@ -68,8 +70,8 @@ private extension GameView {
     }
 }
 
-struct GameView_Previews: PreviewProvider {
-    static var previews: some View {
-        GameView(viewModel: GameViewModel(teams: [TeamModel.defaultTeam1(), TeamModel.defaultTeam2()]))
-    }
-}
+//struct GameView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        GameView(viewModel: GameViewModel(teams: [TeamModel.defaultTeam1(), TeamModel.defaultTeam2()], router: ))
+//    }
+//}

@@ -32,4 +32,10 @@ extension Text {
             .font(.system(size: 18, weight: .semibold))
             .foregroundColor(.white)
     }
+    
+    func titleThreeYellow() -> Text {
+        self
+            .font(.system(size: 18, weight: .semibold))
+            .foregroundColor(.appYellow)
+    }
 }

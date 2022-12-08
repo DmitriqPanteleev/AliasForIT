@@ -10,4 +10,5 @@ import Foundation
 struct RoundModel: Equatable {
     let team: TeamModel
     let words: [String]
+    var roundDuration: Int
 }

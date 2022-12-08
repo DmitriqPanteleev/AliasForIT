@@ -10,6 +10,8 @@ import Combine
 
 final class GameViewModel: ObservableObject {
     
+    private weak var router: RoundRouter?
+    
     let teams: [TeamModel]
     
     private var currentTeamIndex: Int
@@ -21,8 +23,9 @@ final class GameViewModel: ObservableObject {
     
     private var cancellable = Set<AnyCancellable>()
     
-    init(teams: [TeamModel]) {
+    init(teams: [TeamModel], router: RoundRouter?) {
         
+        self.router = router
         self.currentTeamIndex = 0
         self.teams = teams
         
@@ -47,6 +50,7 @@ final class GameViewModel: ObservableObject {
         output.currentTeam = self.teams[currentTeamIndex]
         
         bindRoundFinish()
+        bindPlayTap()
     }
     
     // TODO: trigger this func in RoundViewModel (on timer ends)
@@ -69,11 +73,24 @@ final class GameViewModel: ObservableObject {
             .store(in: &cancellable)
     }
     
+    func bindPlayTap() {
+        input.onPlayTap
+            .sink { [weak self] in
+                guard let self = self else { return }
+                
+                // Хардкод
+                let roundModel = RoundModel(team: self.output.currentTeam!, words: WordsStorage.getRoundWords(count: UserStorage.shared.roundTime), roundDuration: 10)
+                
+                self.router?.moveToRound(model: roundModel)
+            }
+            .store(in: &cancellable)
+    }
     
     struct Input {
         
         let onAppear = PassthroughSubject<Void, Never>()
         let onRoundFinish = PassthroughSubject<Int, Never>()
+        let onPlayTap = PassthroughSubject<Void, Never>()
     }
     
     struct Output {

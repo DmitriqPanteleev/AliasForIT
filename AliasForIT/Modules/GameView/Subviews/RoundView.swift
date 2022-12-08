@@ -152,8 +152,8 @@ private extension RoundView {
     }
 }
 
-struct RoundView_Previews: PreviewProvider {
-    static var previews: some View {
-        RoundView(viewModel: RoundViewModel(roundModel: RoundModel(team: TeamModel(name: "team", image: "", score: 0), words: []), roundDuration: 10))
-    }
-}
+//struct RoundView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        RoundView(viewModel: RoundViewModel(roundModel: RoundModel(team: TeamModel(name: "team", image: "", score: 0), words: []), roundDuration: 10))
+//    }
+//}

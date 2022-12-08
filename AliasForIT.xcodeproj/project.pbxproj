@@ -128,6 +128,14 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		D0E48AB82941F5A7006E2555 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				D0ED1A9B2923CC1F002ABBD5 /* RoundView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
 		D0E5FB652939F975006F7F6F /* RoundButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -335,9 +343,11 @@
 		D0ED1A662923A589002ABBD5 /* GameView */ = {
 			isa = PBXGroup;
 			children = (
+				D0E48AB82941F5A7006E2555 /* Subviews */,
 				D0E5FB7D293DF8FE006F7F6F /* Components */,
 				D0E5FB73293B65C7006F7F6F /* GameView.swift */,
 				D0E5FB75293B65D2006F7F6F /* GameViewModel.swift */,
+				D0ED1A9D2923CC2F002ABBD5 /* RoundRouter.swift */,
 			);
 			path = GameView;
 			sourceTree = "<group>";
@@ -346,9 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				D0ED1AAB29260536002ABBD5 /* Components */,
-				D0ED1A9B2923CC1F002ABBD5 /* RoundView.swift */,
 				D0ED1A992923CC0E002ABBD5 /* RoundViewModel.swift */,
-				D0ED1A9D2923CC2F002ABBD5 /* RoundRouter.swift */,
 			);
 			path = RoundView;
 			sourceTree = "<group>";

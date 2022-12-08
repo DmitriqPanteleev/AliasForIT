@@ -11,11 +11,10 @@ import Combine
 final class RoundViewModel: ObservableObject {
     
     //MARK: - Services
-    //TODO: make a router
+    private weak var router: RoundRouter?
     
     //MARK: - Variables
-    let roundModel: RoundModel
-    var roundDuration: Int
+    var roundModel: RoundModel
     
     let input: Input
     @Published var output: Output
@@ -23,9 +22,10 @@ final class RoundViewModel: ObservableObject {
     private var timer: Publishers.Autoconnect<Timer.TimerPublisher>?
     private var cancellable = Set<AnyCancellable>()
     
-    init(roundModel: RoundModel, roundDuration: Int) {
+    init(roundModel: RoundModel, router: RoundRouter?) {
+        
         self.roundModel = roundModel
-        self.roundDuration = roundDuration
+        self.router = router
         
         self.input = Input()
         self.output = Output()
@@ -56,12 +56,12 @@ final class RoundViewModel: ObservableObject {
                 guard let self = self else { return }
                 
                 if $0 && self.timer == nil {
-                    self.output.roundTime = self.roundDuration
+                    self.output.roundTime = self.roundModel.roundDuration
                     self.timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
                     
                     self.setupTime()
                 } else {
-                    self.roundDuration = self.output.roundTime
+                    self.roundModel.roundDuration = self.output.roundTime
                     self.timer?.upstream.connect().cancel()
                     self.timer = nil
                     self.output.isTimerTicking = false
@@ -82,6 +82,7 @@ final class RoundViewModel: ObservableObject {
                 } else {
                     self.input.timerState.send(false)
                     // navigate to the next screen with answers
+                    self.router?.pop()
                 }
             }
             .store(in: &cancellable)

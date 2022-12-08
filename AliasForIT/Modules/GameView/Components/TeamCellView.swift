@@ -20,7 +20,9 @@ struct TeamCellView: View {
             Text(model.name)
                 .titleThreeWhite()
             Spacer()
-            
+            Text(model.score.description)
+                .titleThreeYellow()
+                .padding(.trailing, 14)
         }
         .background(Color.black.opacity(0.1))
         .cornerRadius(10)

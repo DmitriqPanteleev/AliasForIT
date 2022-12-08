@@ -14,18 +14,7 @@ struct AliasForITApp: App {
     
     var body: some Scene {
         WindowGroup {
-//            SettingsView(viewModel: SettingsViewModel())
-            RoundView(viewModel: RoundViewModel(
-                roundModel: RoundModel(
-                    team: TeamModel(
-                        name: "name",
-                        image: "",
-                        score: 10
-                    ),
-                    words: WordsStorage.getRoundWords(count: UserStorage.shared.roundTime)
-                ),
-                roundDuration: UserStorage.shared.roundTime)
-            )
+            RoundCoordinator().view()
         }
     }
 }
