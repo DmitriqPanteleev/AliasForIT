@@ -12,6 +12,8 @@ class AppDelegate: NSObject, UIApplicationDelegate { func application(_ applicat
     let settings = SettingsManager()
     settings.bindSettings()
     
+    AppearanceManager.start()
+    
     return true
   }
 }

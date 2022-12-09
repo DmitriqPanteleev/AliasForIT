@@ -123,7 +123,6 @@ private extension RoundView {
     
     @ViewBuilder var background: some View {
         
-//        let circleSize = Consts.SharedLayout.cardWidth
         let circleSize = UIScreen.main.bounds.width + 32
         
         VStack {

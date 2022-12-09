@@ -38,4 +38,11 @@ extension Text {
             .font(.system(size: 18, weight: .semibold))
             .foregroundColor(.appYellow)
     }
+    
+    // Additinal styles
+    func animatedTitle(fontSize: CGFloat) -> Text {
+        self
+            .font(.system(size: fontSize, weight: .regular))
+            .foregroundColor(.white)
+    }
 }

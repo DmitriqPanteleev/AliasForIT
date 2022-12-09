@@ -6,9 +6,15 @@
 //
 
 import Foundation
+import Combine
 
 struct RoundModel: Equatable {
     let team: TeamModel
     let words: [String]
+    
     var roundDuration: Int
+    
+    func getPublisher() -> PassthroughSubject<Int, Never> {
+        return PassthroughSubject<Int, Never>()
+    }
 }

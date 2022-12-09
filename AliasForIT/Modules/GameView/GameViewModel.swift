@@ -13,9 +13,10 @@ final class GameViewModel: ObservableObject {
     private weak var router: RoundRouter?
     
     let teams: [TeamModel]
+    let onRoundFinish: PassthroughSubject<Int, Never>
     
     private var currentTeamIndex: Int
-    private var pointsLeft: [Int] = []
+    private var pointsLeft: [Int]
     
     let input: Input
     @Published var output: Output
@@ -23,11 +24,15 @@ final class GameViewModel: ObservableObject {
     
     private var cancellable = Set<AnyCancellable>()
     
-    init(teams: [TeamModel], router: RoundRouter?) {
+    init(teams: [TeamModel], onRoundFinish: PassthroughSubject<Int, Never>, router: RoundRouter?) {
         
-        self.router = router
         self.currentTeamIndex = 0
+        
         self.teams = teams
+        self.router = router
+        self.onRoundFinish = onRoundFinish
+        
+        self.pointsLeft = Array.init(repeating: UserStorage.shared.pointsForWin, count: self.teams.count)
         
         self.input = Input()
         self.output = Output()
@@ -36,9 +41,9 @@ final class GameViewModel: ObservableObject {
     }
     
     deinit {
-        #if DEBUG
+#if DEBUG
         print("\(self) DEINITED!!!")
-        #endif
+#endif
         
         cancellable.forEach { $0.cancel() }
         cancellable.removeAll()
@@ -55,17 +60,21 @@ final class GameViewModel: ObservableObject {
     
     // TODO: trigger this func in RoundViewModel (on timer ends)
     func bindRoundFinish() {
-        input.onRoundFinish
+        self.onRoundFinish
             .sink { [weak self] newScore in
                 
                 guard let self = self else { return }
                 
+                // Хардкод
+                // Слишком много операций
+                //TODO: оптимизировать
                 self.output.currentTeam?.score += newScore
+                self.output.teams[self.currentTeamIndex].score += newScore
                 
                 self.pointsLeft[self.currentTeamIndex] -= self.output.currentTeam!.score
-                self.output.pointsLeft = self.pointsLeft[self.currentTeamIndex]
+                self.output.pointsLeft = self.currentTeamIndex == self.teams.count - 1 ? self.pointsLeft[0] : self.pointsLeft[self.currentTeamIndex + 1]
                 
-                self.currentTeamIndex += self.currentTeamIndex == self.teams.count - 1 ? 1 : -self.teams.count + 1
+                self.currentTeamIndex = self.currentTeamIndex == self.teams.count - 1 ? 1 : self.currentTeamIndex + 1
                 self.output.currentTeam = self.teams[self.currentTeamIndex]
                 
                 self.input.onAppear.send()
@@ -89,13 +98,12 @@ final class GameViewModel: ObservableObject {
     struct Input {
         
         let onAppear = PassthroughSubject<Void, Never>()
-        let onRoundFinish = PassthroughSubject<Int, Never>()
         let onPlayTap = PassthroughSubject<Void, Never>()
     }
     
     struct Output {
         var teams: [TeamModel] = []
         var currentTeam: TeamModel? = nil
-        var pointsLeft: Int = 0
+        var pointsLeft: Int = UserStorage.shared.pointsForWin
     }
 }

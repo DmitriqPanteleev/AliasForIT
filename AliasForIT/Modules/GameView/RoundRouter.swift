@@ -9,7 +9,8 @@ import Foundation
 
 protocol RoundRouter: AnyObject {
     func moveToRound(model: RoundModel)
-    func pop()
+    func moveToFinish(answeredWords: [AnswerModel])
+    func pop(sendScore: @escaping () -> Void)
 }
 
 extension RoundCoordinator: RoundRouter {
@@ -17,7 +18,13 @@ extension RoundCoordinator: RoundRouter {
         self.route(to: \.round, model)
     }
     
-    func pop() {
-        self.popToRoot()
+    func moveToFinish(answeredWords: [AnswerModel]) {
+        self.route(to: \.finish, answeredWords)
+    }
+    
+    func pop(sendScore: @escaping () -> Void) {
+        self.popToRoot({
+            sendScore()
+        })
     }
 }

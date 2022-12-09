@@ -5,8 +5,8 @@
 //  Created by Дмитрий Пантелеев on 08.12.2022.
 //
 
-import Foundation
 import SwiftUI
+import Combine
 import Stinsen
 
 final class RoundCoordinator: NavigationCoordinatable {
@@ -15,6 +15,9 @@ final class RoundCoordinator: NavigationCoordinatable {
     @Root var start = makeStart
     
     @Route(.fullScreen) var round = makeRound
+    @Route(.push) var finish = makeRoundFinish
+    
+    let onRoundFinish = PassthroughSubject<Int, Never>()
     
 #if DEBUG
     deinit {
@@ -26,15 +29,20 @@ final class RoundCoordinator: NavigationCoordinatable {
 extension RoundCoordinator {
     
     @ViewBuilder func makeStart() -> some View {
-        let viewModel = GameViewModel(teams: [.defaultTeam1(), .defaultTeam2()], router: self)
+        let viewModel = GameViewModel(teams: [.defaultTeam1(), .defaultTeam2()], onRoundFinish: onRoundFinish, router: self)
         GameView(viewModel: viewModel)
     }
     
     @ViewBuilder func makeRound(round: RoundModel) -> some View {
         
-        let viewModel = RoundViewModel(roundModel: round, router: self)
+        let viewModel = RoundViewModel(roundModel: round, onRoundFinish: onRoundFinish, router: self)
         
         RoundView(viewModel: viewModel)
+    }
+    
+    @ViewBuilder func makeRoundFinish(answeredWords: [AnswerModel]) -> some View {
+        RoundFinishedView(answeredWords: answeredWords, sendScore: onRoundFinish)
+            .environmentObject(self)
     }
     
     //TODO: navigate to list of answered words
