@@ -11,6 +11,7 @@ struct TeamModel: Equatable, Identifiable {
     let id: Int
     let name: String
     let image: String
+    
     var score: Int
     
     init(name: String, image: String) {

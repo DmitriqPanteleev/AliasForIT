@@ -15,6 +15,7 @@ final class RoundViewModel: ObservableObject {
     
     //MARK: - Variables
     var roundModel: RoundModel
+    let onRoundFinish: PassthroughSubject<Int, Never>
     
     let input: Input
     @Published var output: Output
@@ -22,9 +23,12 @@ final class RoundViewModel: ObservableObject {
     private var timer: Publishers.Autoconnect<Timer.TimerPublisher>?
     private var cancellable = Set<AnyCancellable>()
     
-    init(roundModel: RoundModel, router: RoundRouter?) {
+    init(roundModel: RoundModel,
+         onRoundFinish: PassthroughSubject<Int, Never>,
+         router: RoundRouter?) {
         
         self.roundModel = roundModel
+        self.onRoundFinish = onRoundFinish
         self.router = router
         
         self.input = Input()
@@ -46,6 +50,7 @@ final class RoundViewModel: ObservableObject {
     func setupBindings() {
         self.output.currentWord = roundModel.words.first!
         self.output.currentIndex = 0
+        
         setupTimer()
         setupAnswer()
     }
@@ -81,8 +86,7 @@ final class RoundViewModel: ObservableObject {
                     self.input.onAppear.send()
                 } else {
                     self.input.timerState.send(false)
-                    // navigate to the next screen with answers
-                    self.router?.pop()
+                    self.router?.moveToFinish(answeredWords: self.output.answeredWords)
                 }
             }
             .store(in: &cancellable)
@@ -93,7 +97,9 @@ final class RoundViewModel: ObservableObject {
             .sink { [weak self] in
                 guard let self = self else { return }
                 
-                self.output.answeredWords[self.output.currentWord] = $0
+                let answerModel = AnswerModel(word: self.output.currentWord, isAnswered: $0)
+                self.output.answeredWords.append(answerModel)
+                
                 self.output.currentIndex += 1
                 
                 if $0 {
@@ -118,7 +124,7 @@ final class RoundViewModel: ObservableObject {
         var currentIndex: Int = 0
         var currentWord: String = ""
         var currentScore: Int = 0
-        var answeredWords: [String: Bool] = [:]
+        var answeredWords: [AnswerModel] = []
     }
 }
 

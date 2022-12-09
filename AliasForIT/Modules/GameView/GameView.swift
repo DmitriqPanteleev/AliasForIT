@@ -10,7 +10,7 @@ import Combine
 
 struct GameView: View {
     
-    @State var viewModel: GameViewModel
+    @StateObject var viewModel: GameViewModel
     
     var body: some View {
         content
@@ -44,7 +44,7 @@ private extension GameView {
             .frame(alignment: .leading)
             
             VStack(spacing: 10) {
-                ForEach(viewModel.teams) { team in
+                ForEach(viewModel.output.teams) { team in
                     TeamCellView(model: team)
                 }
             }
@@ -59,7 +59,7 @@ private extension GameView {
     }
     
     var playButton: some View {
-        PlayButtonView(action: {
+        PlayButtonView(style: .play, action: {
             viewModel.input.onPlayTap.send()
         })
             .padding(.horizontal)
