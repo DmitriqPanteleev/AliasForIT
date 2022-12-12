@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AnswerToggleCell: View {
     
-    @State var model: AnswerModel
+    @Binding var model: AnswerModel
     
     var body: some View {
         cell(model.word, isAnswered: $model.isAnswered)
@@ -40,8 +40,8 @@ private extension AnswerToggleCell {
     }
 }
 
-struct AnswerToggleCell_Previews: PreviewProvider {
-    static var previews: some View {
-        AnswerToggleCell(model: AnswerModel(word: "Word", isAnswered: true))
-    }
-}
+//struct AnswerToggleCell_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AnswerToggleCell(model: AnswerModel(word: "Word", isAnswered: true))
+//    }
+//}

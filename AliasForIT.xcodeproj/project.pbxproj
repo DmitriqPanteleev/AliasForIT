@@ -155,42 +155,35 @@
 		D0E48AAC293FCF12006E2555 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				D0E48AAF2941DCD4006E2555 /* PlayButtonView.swift */,
-				D0A7F930294328710013A084 /* PlayButtonStyle.swift */,
+				D0F0C2B929470464000D7FF5 /* PlayButton */,
+				D0E5FB6A293A0EAD006F7F6F /* TimerConrolButton */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
 		};
-		D0E48AB82941F5A7006E2555 /* Subviews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Subviews;
-			sourceTree = "<group>";
-		};
-		D0E5FB6A293A0EAD006F7F6F /* TimerConrollButton */ = {
+		D0E5FB6A293A0EAD006F7F6F /* TimerConrolButton */ = {
 			isa = PBXGroup;
 			children = (
 				D0E5FB6B293A0EDB006F7F6F /* TimerControllButtonStyle.swift */,
 				D0E5FB6E293A0EF9006F7F6F /* TimerControllButtonView.swift */,
 			);
-			path = TimerConrollButton;
+			path = TimerConrolButton;
 			sourceTree = "<group>";
 		};
-		D0E5FB70293A1218006F7F6F /* ProgressViews */ = {
+		D0E5FB70293A1218006F7F6F /* ProgressView */ = {
 			isa = PBXGroup;
 			children = (
 				D0E5FB71293A1239006F7F6F /* LinearProgressView.swift */,
 			);
-			path = ProgressViews;
+			path = ProgressView;
 			sourceTree = "<group>";
 		};
-		D0E5FB7A293CF24B006F7F6F /* CardViews */ = {
+		D0E5FB7A293CF24B006F7F6F /* CardView */ = {
 			isa = PBXGroup;
 			children = (
 				D0E5FB7B293CF26B006F7F6F /* SharpedCardView.swift */,
 			);
-			path = CardViews;
+			path = CardView;
 			sourceTree = "<group>";
 		};
 		D0E5FB7D293DF8FE006F7F6F /* Components */ = {
@@ -312,9 +305,8 @@
 			children = (
 				D0A7F93229432FFF0013A084 /* AppBar */,
 				D0E48AAC293FCF12006E2555 /* Buttons */,
-				D0E5FB7A293CF24B006F7F6F /* CardViews */,
-				D0E5FB70293A1218006F7F6F /* ProgressViews */,
-				D0E5FB6A293A0EAD006F7F6F /* TimerConrollButton */,
+				D0E5FB7A293CF24B006F7F6F /* CardView */,
+				D0E5FB70293A1218006F7F6F /* ProgressView */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -368,7 +360,6 @@
 		D0ED1A662923A589002ABBD5 /* GameView */ = {
 			isa = PBXGroup;
 			children = (
-				D0E48AB82941F5A7006E2555 /* Subviews */,
 				D0E5FB7D293DF8FE006F7F6F /* Components */,
 				D0E5FB73293B65C7006F7F6F /* GameView.swift */,
 				D0E5FB75293B65D2006F7F6F /* GameViewModel.swift */,
@@ -404,6 +395,15 @@
 				D0A7F92A29430D280013A084 /* CardView */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		D0F0C2B929470464000D7FF5 /* PlayButton */ = {
+			isa = PBXGroup;
+			children = (
+				D0E48AAF2941DCD4006E2555 /* PlayButtonView.swift */,
+				D0A7F930294328710013A084 /* PlayButtonStyle.swift */,
+			);
+			path = PlayButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

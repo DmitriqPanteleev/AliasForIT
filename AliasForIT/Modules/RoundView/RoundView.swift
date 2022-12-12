@@ -14,13 +14,27 @@ struct RoundView: View {
     
     var body: some View {
         content
-            .background(Color.black.ignoresSafeArea())
+            .onAppear {
+                viewModel.input.timerState.send(true)
+            }
+            .onDisappear {
+                viewModel.input.timerState.send(false)
+            }
     }
 }
 
 private extension RoundView {
-
-    var content: some View {
+    
+    @ViewBuilder var content: some View {
+        switch viewModel.output.state {
+        case .playing:
+            playContent
+        case .paused:
+            pausedContent
+        }
+    }
+    
+    var playContent: some View {
         ZStack(alignment: .top) {
             
             background
@@ -36,12 +50,7 @@ private extension RoundView {
             .padding(.bottom, 5)
             .padding(.top, 20)
         }
-        .onAppear {
-            viewModel.input.timerState.send(true)
-        }
-        .onDisappear {
-            viewModel.input.timerState.send(false)
-        }
+        .background(Color.black.ignoresSafeArea())
     }
     
     var header: some View {
@@ -63,6 +72,29 @@ private extension RoundView {
         .frame(alignment: .center)
     }
     
+    @ViewBuilder var background: some View {
+
+        let circleSize = UIScreen.main.bounds.width + 32
+        
+        VStack {
+            Spacer()
+            RoundedRectangle(cornerRadius: circleSize / 5)
+                .path(in: CGRect(origin:
+                                    CGPoint(x: UIScreen.main.bounds.midX - circleSize / 2,
+                                            y: UIScreen.main.bounds.maxY - circleSize / 3),
+                                 size:
+                                    CGSize(width: circleSize,
+                                           height: circleSize)))
+                .gradientForeground(colors: [.appYellow, .appOrange],
+                                    startPoint: .leading,
+                                    endPoint: .trailing)
+        }
+    }
+}
+
+// state of playing
+private extension RoundView {
+    
     var cards: some View {
         ZStack {
             ForEach(viewModel.roundModel.words.reversed(), id: \.self) { word in
@@ -80,15 +112,15 @@ private extension RoundView {
             
             VStack(spacing: 5) {
                 // Хардкод
-                KFImage(URL(string: "https://slovnet.ru/wp-content/uploads/2019/09/4-123.jpg")!)
+                KFImage(viewModel.roundModel.team.imageSource!)
                     .resizable()
                     .frame(width: Consts.SharedLayout.cardWidth / 4, height: Consts.SharedLayout.cardWidth / 4)
                     .cornerRadius(Consts.SharedLayout.cardWidth / 8)
                     .addBorder(.yellow, width: 4, cornerRadius: Consts.SharedLayout.cardWidth / 8)
                 
                 Text(viewModel.roundModel.team.name)
-                    .font(.largeTitle)
-                    .bold()
+                    .titleTwoWhite()
+                    .lineLimit(1)
                     .foregroundColor(.white)
                 
                 HStack {
@@ -105,45 +137,42 @@ private extension RoundView {
         }
         .overlay(alignment: .bottomTrailing) {
             TimerControlButtonView(style: .pause, callback: {
-                timerStateControl(false)
-                
+                self.timerStateControl(false)
             })
         }
     }
+}
+
+// state of pause
+private extension RoundView {
     
-    // TODO: Separate to components and then to do a bottom sheet
-    var resumeButton: some View {
-        Button(action: {
-            timerStateControl(true)
-        }) {
-            Text("resume")
-                .foregroundColor(.yellow)
-        }
-    }
-    
-    @ViewBuilder var background: some View {
-        
-        let circleSize = UIScreen.main.bounds.width + 32
-        
-        VStack {
+    var pausedContent: some View {
+        VStack(alignment: .center) {
+            header
+            
             Spacer()
             
-            RoundedRectangle(cornerRadius: circleSize / 5)
-                .path(in: CGRect(origin:
-                                    CGPoint(x: UIScreen.main.bounds.midX - circleSize / 2,
-                                            y: UIScreen.main.bounds.maxY - circleSize / 3),
-                                 size:
-                                    CGSize(width: circleSize,
-                                           height: circleSize)))
-                .foregroundColor(Color.yellow)
+            Image(systemName: "pause.circle")
+                .foregroundColor(.appYellow)
+                .scaleEffect(2)
+            
+            Spacer()
+            
+            PlayButtonView(style: .next) {
+                self.timerStateControl(true)
+            }
         }
+        .padding(.horizontal)
+        .padding(.bottom, 5)
+        .padding(.top, 20)
+        .background(Color.black.ignoresSafeArea())
     }
 }
 
 private extension RoundView {
     
-    func timerStateControl(_ isTimerTicking: Bool) {
-        viewModel.input.timerState.send(isTimerTicking)
+    func timerStateControl(_ timerState: Bool) {
+        viewModel.input.timerState.send(timerState)
     }
     
     func answer(_ isAnswered: Bool) {

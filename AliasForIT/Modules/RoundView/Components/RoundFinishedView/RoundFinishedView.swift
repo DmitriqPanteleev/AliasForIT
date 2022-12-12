@@ -12,19 +12,19 @@ struct RoundFinishedView: View {
     
     @EnvironmentObject var router: RoundCoordinator.Router
     
-    var answeredWords: [AnswerModel]
+    @State var answeredWords: [AnswerModel]
     let sendScore: PassthroughSubject<Int, Never>
     
     var body: some View {
         VStack {
             ScrollView {
-                AnimatedAppBar(title: "Раунд завершен", subtitle: "Итого: \(answeredWords.filter { $0.isAnswered == true }.count.description)")
-                    .padding(.bottom, 100)
+                AnimatedAppBar(title: "Раунд завершен", subtitle: "Итого: \(answeredWords.filter { $0.isAnswered == true }.count)")
+                    .padding(.bottom, 120)
                     .padding(.horizontal)
-
+                
                 table
             }
-            .coordinateSpace(name: "header")
+            
             button
         }
         .navigationBarBackButtonHidden(true)
@@ -36,7 +36,7 @@ private extension RoundFinishedView {
     
     var table: some View {
         SharpedCardView {
-            ForEach(answeredWords) { model in
+            ForEach($answeredWords) { model in
                 AnswerToggleCell(model: model)
             }
         }
@@ -53,24 +53,24 @@ private extension RoundFinishedView {
     }
 }
 
-struct RoundFinishedView_Previews: PreviewProvider {
-    static var previews: some View {
-        RoundFinishedView(answeredWords: [
-            AnswerModel(word: "Slovo", isAnswered: false),
-            AnswerModel(word: "Slovo", isAnswered: true),
-            AnswerModel(word: "Slovo", isAnswered: true),
-            AnswerModel(word: "Slovo", isAnswered: false),
-            AnswerModel(word: "Slovo", isAnswered: true),
-            AnswerModel(word: "Slovo", isAnswered: false),
-            AnswerModel(word: "Slovo", isAnswered: true),
-            AnswerModel(word: "Slovo", isAnswered: false),
-            AnswerModel(word: "Slovo", isAnswered: true),
-            AnswerModel(word: "Slovo", isAnswered: false),
-            AnswerModel(word: "Slovo", isAnswered: true),
-            AnswerModel(word: "Slovo", isAnswered: true),
-            AnswerModel(word: "Slovo", isAnswered: false),
-            AnswerModel(word: "Slovo", isAnswered: true)
-        ],
-                          sendScore: PassthroughSubject<Int, Never>())
-    }
-}
+//struct RoundFinishedView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        RoundFinishedView(answeredWords: [
+//            AnswerModel(word: "Slovo", isAnswered: false),
+//            AnswerModel(word: "Slovo", isAnswered: true),
+//            AnswerModel(word: "Slovo", isAnswered: true),
+//            AnswerModel(word: "Slovo", isAnswered: false),
+//            AnswerModel(word: "Slovo", isAnswered: true),
+//            AnswerModel(word: "Slovo", isAnswered: false),
+//            AnswerModel(word: "Slovo", isAnswered: true),
+//            AnswerModel(word: "Slovo", isAnswered: false),
+//            AnswerModel(word: "Slovo", isAnswered: true),
+//            AnswerModel(word: "Slovo", isAnswered: false),
+//            AnswerModel(word: "Slovo", isAnswered: true),
+//            AnswerModel(word: "Slovo", isAnswered: true),
+//            AnswerModel(word: "Slovo", isAnswered: false),
+//            AnswerModel(word: "Slovo", isAnswered: true)
+//        ],
+//                          sendScore: PassthroughSubject<Int, Never>())
+//    }
+//}

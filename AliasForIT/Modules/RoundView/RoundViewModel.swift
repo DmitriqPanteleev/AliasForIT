@@ -53,6 +53,7 @@ final class RoundViewModel: ObservableObject {
         
         setupTimer()
         setupAnswer()
+        setupState()
     }
     
     func setupTimer() {
@@ -112,6 +113,19 @@ final class RoundViewModel: ObservableObject {
             .store(in: &cancellable)
     }
     
+    func setupState() {
+        input.timerState
+            .sink { [weak self] in
+                
+                if $0 {
+                    self?.output.state = .playing
+                } else {
+                    self?.output.state = .paused
+                }
+            }
+            .store(in: &cancellable)
+    }
+    
     struct Input {
         let onAppear = PassthroughSubject<Void, Never>()
         let timerState = PassthroughSubject<Bool, Never>()
@@ -119,6 +133,7 @@ final class RoundViewModel: ObservableObject {
     }
     
     struct Output {
+        var state: RoundViewState = .playing
         var isTimerTicking: Bool = true
         var roundTime: Int = 10
         var currentIndex: Int = 0
@@ -128,3 +143,8 @@ final class RoundViewModel: ObservableObject {
     }
 }
 
+// сделать адекватно, на подумать
+enum RoundViewState {
+    case playing
+    case paused
+}

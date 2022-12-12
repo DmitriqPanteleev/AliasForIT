@@ -28,17 +28,17 @@ private extension AnimatedAppBar {
             
             VStack(alignment: .leading) {
                 Text(title)
-                    .animatedTitle(fontSize: min(27, 27 + CGFloat(minY / 5)))
+                    .animatedTitle(fontSize: min(27, 27 + CGFloat(minY / 2)))
                     .opacity(minY <= -0.5 ? 1 / (-minY * 0.5) : 1)
                     .padding(.bottom, minY <= -0.5 * 2 ? minY : 10)
                 
                 Text(subtitle)
-                    .animatedTitle(fontSize: min(21, 21 + CGFloat(minY / 5)))
+                    .animatedTitle(fontSize: min(21, 21 + CGFloat(minY / 2)))
                     .opacity(minY <= -0.5 ? 1 / (-minY * 3) : 1)
             }
-            .padding(.top, minY)
+            .padding(.top, minY + 16)
             .frame(width: size.width, height: size.height, alignment: .topLeading)
-            .offset(y: -minY * 1.5)
+            .offset(y: -minY + 16)
         }
     }
 }

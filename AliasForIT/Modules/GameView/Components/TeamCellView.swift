@@ -28,7 +28,7 @@ struct TeamCellView: View {
         .cornerRadius(10)
         .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 2).foregroundColor(.appCard)
             .shadow(radius: 4, x: 0, y: 4)
-            .shadow(radius: 4, x: 0, y: 4))
+            .shadow(radius: 2, x: 0, y: 2))
         
     }
 }

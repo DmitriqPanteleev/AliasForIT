@@ -5,8 +5,8 @@
 //  Created by Дмитрий Пантелеев on 17.11.2022.
 //
 
-import Foundation
 import SwiftUI
+import Combine
 
 extension View {
     
@@ -23,4 +23,14 @@ extension View {
              return clipShape(roundedRect)
                   .overlay(roundedRect.strokeBorder(content, lineWidth: width))
          }
+    
+    public func gradientForeground(colors: [Color], startPoint: UnitPoint, endPoint: UnitPoint) -> some View {
+        self.overlay(
+            LinearGradient(
+                colors: colors,
+                startPoint: startPoint,
+                endPoint: endPoint)
+        )
+            .mask(self)
+    }
 }
