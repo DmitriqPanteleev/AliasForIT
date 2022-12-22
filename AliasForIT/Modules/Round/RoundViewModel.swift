@@ -51,12 +51,12 @@ final class RoundViewModel: ObservableObject {
         self.output.currentWord = roundModel.words.first!
         self.output.currentIndex = 0
         
-        setupTimer()
-        setupAnswer()
-        setupState()
+        bindTimer()
+        bindAnswer()
+        bindState()
     }
     
-    func setupTimer() {
+    func bindTimer() {
         input.timerState
             .sink { [weak self] in
                 guard let self = self else { return }
@@ -65,7 +65,7 @@ final class RoundViewModel: ObservableObject {
                     self.output.roundTime = self.roundModel.roundDuration
                     self.timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
                     
-                    self.setupTime()
+                    self.bindTime()
                 } else {
                     self.roundModel.roundDuration = self.output.roundTime
                     self.timer?.upstream.connect().cancel()
@@ -76,7 +76,7 @@ final class RoundViewModel: ObservableObject {
             .store(in: &cancellable)
     }
     
-    func setupTime() {
+    func bindTime() {
         timer?
             .sink { [weak self] _ in
 
@@ -93,7 +93,7 @@ final class RoundViewModel: ObservableObject {
             .store(in: &cancellable)
     }
     
-    func setupAnswer() {
+    func bindAnswer() {
         input.answer
             .sink { [weak self] in
                 guard let self = self else { return }
@@ -113,7 +113,7 @@ final class RoundViewModel: ObservableObject {
             .store(in: &cancellable)
     }
     
-    func setupState() {
+    func bindState() {
         input.timerState
             .sink { [weak self] in
                 
@@ -126,10 +126,19 @@ final class RoundViewModel: ObservableObject {
             .store(in: &cancellable)
     }
     
+    func bindOnCloseTap() {
+        input.onCloseTap
+            .sink {
+                self.router?.moveToFinish(answeredWords: self.output.answeredWords)
+            }
+            .store(in: &cancellable)
+    }
+    
     struct Input {
         let onAppear = PassthroughSubject<Void, Never>()
         let timerState = PassthroughSubject<Bool, Never>()
         let answer = PassthroughSubject<Bool, Never>()
+        let onCloseTap = PassthroughSubject<Void, Never>()
     }
     
     struct Output {

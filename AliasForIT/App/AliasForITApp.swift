@@ -14,7 +14,7 @@ struct AliasForITApp: App {
     
     var body: some Scene {
         WindowGroup {
-            RoundCoordinator().view()
+            MainCoordinator().view()
         }
     }
 }

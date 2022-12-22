@@ -12,15 +12,19 @@ import Combine
 
 final class SettingsViewModel: ObservableObject {
     
+    let onBackTrigger: PassthroughSubject<Void, Never>
     
     let input: Input
     @Published var output: Output
     
     private var cancellable = Set<AnyCancellable>()
     
-    init() {
+    init(onBackTrigger: PassthroughSubject<Void, Never>) {
+        
         self.input = Input()
         self.output = Output()
+        
+        self.onBackTrigger = onBackTrigger
         
         setupBindings()
     }

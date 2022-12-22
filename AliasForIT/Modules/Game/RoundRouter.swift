@@ -11,6 +11,7 @@ protocol RoundRouter: AnyObject {
     func moveToRound(model: RoundModel)
     func moveToFinish(answeredWords: [AnswerModel])
     func pop(sendScore: @escaping () -> Void)
+    func exit()
 }
 
 extension RoundCoordinator: RoundRouter {
@@ -23,8 +24,12 @@ extension RoundCoordinator: RoundRouter {
     }
     
     func pop(sendScore: @escaping () -> Void) {
-        self.popToRoot({
+        self.popToRoot {
             sendScore()
-        })
+        }
+    }
+    
+    func exit() {
+        self.dismissCoordinator()
     }
 }

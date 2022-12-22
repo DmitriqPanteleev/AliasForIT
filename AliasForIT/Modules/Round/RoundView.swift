@@ -34,25 +34,6 @@ private extension RoundView {
         }
     }
     
-    var playContent: some View {
-        ZStack(alignment: .top) {
-            
-            background
-                .ignoresSafeArea()
-            
-            VStack(alignment: .center) {
-                header
-                cards
-                Spacer()
-                scoreTable
-            }
-            .padding(.horizontal)
-            .padding(.bottom, 5)
-            .padding(.top, 20)
-        }
-        .background(Color.black.ignoresSafeArea())
-    }
-    
     var header: some View {
         HStack {
             
@@ -94,6 +75,25 @@ private extension RoundView {
 
 // state of playing
 private extension RoundView {
+    
+    var playContent: some View {
+        ZStack(alignment: .top) {
+            
+            background
+                .ignoresSafeArea()
+            
+            VStack(alignment: .center) {
+                header
+                cards
+                Spacer()
+                scoreTable
+            }
+            .padding(.horizontal)
+            .padding(.bottom, 5)
+            .padding(.top, 20)
+        }
+        .background(Color.black.ignoresSafeArea())
+    }
     
     var cards: some View {
         ZStack {
@@ -160,6 +160,11 @@ private extension RoundView {
             
             PlayButtonView(style: .next) {
                 self.timerStateControl(true)
+            }
+            .padding(.bottom, 10)
+            
+            PlayButtonView(style: .stop) {
+                viewModel.input.onCloseTap.send()
             }
         }
         .padding(.horizontal)

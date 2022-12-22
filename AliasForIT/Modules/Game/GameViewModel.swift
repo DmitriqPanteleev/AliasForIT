@@ -56,6 +56,7 @@ final class GameViewModel: ObservableObject {
         
         bindRoundFinish()
         bindPlayTap()
+        bindStopTap()
     }
     
     // TODO: trigger this func in RoundViewModel (on timer ends)
@@ -74,7 +75,7 @@ final class GameViewModel: ObservableObject {
                 self.pointsLeft[self.currentTeamIndex] -= self.output.currentTeam!.score
                 self.output.pointsLeft = self.currentTeamIndex == self.teams.count - 1 ? self.pointsLeft[0] : self.pointsLeft[self.currentTeamIndex + 1]
                 
-                self.currentTeamIndex = self.currentTeamIndex == self.teams.count - 1 ? 1 : self.currentTeamIndex + 1
+                self.currentTeamIndex = self.currentTeamIndex == self.teams.count - 1 ? 0 : self.currentTeamIndex + 1
                 self.output.currentTeam = self.teams[self.currentTeamIndex]
                 
                 self.input.onAppear.send()
@@ -87,18 +88,31 @@ final class GameViewModel: ObservableObject {
             .sink { [weak self] in
                 guard let self = self else { return }
                 
-                // Хардкод
-                let roundModel = RoundModel(team: self.output.currentTeam!, words: WordsStorage.getRoundWords(count: UserStorage.shared.roundTime), roundDuration: 10)
+                if self.output.pointsLeft > 0 {
+                    // Хардкод
+                    let roundModel = RoundModel(team: self.output.currentTeam!, words: WordsStorage.getRoundWords(count: UserStorage.shared.roundTime), roundDuration: 10)
+                    
+                    self.router?.moveToRound(model: roundModel)
+                } else {
+                    self.router?.exit()
+                }
                 
-                self.router?.moveToRound(model: roundModel)
+            }
+            .store(in: &cancellable)
+    }
+    
+    func bindStopTap() {
+        input.onStopTap
+            .sink {
+                self.router?.exit()
             }
             .store(in: &cancellable)
     }
     
     struct Input {
-        
         let onAppear = PassthroughSubject<Void, Never>()
         let onPlayTap = PassthroughSubject<Void, Never>()
+        let onStopTap = PassthroughSubject<Void, Never>()
     }
     
     struct Output {

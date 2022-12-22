@@ -31,16 +31,17 @@ struct CountSettingCellView: View {
 private extension CountSettingCellView {
     var counter: some View {
         HStack(spacing: 10) {
-            Button(action: increment) {
-                Image(systemName: "plus")
+            
+            Button(action: decrement) {
+                Image(systemName: "minus")
                     .foregroundColor(.yellow)
             }
             
             Text(String(option))
                 .foregroundColor(.yellow)
             
-            Button(action: decrement) {
-                Image(systemName: "minus")
+            Button(action: increment) {
+                Image(systemName: "plus")
                     .foregroundColor(.yellow)
             }
         }

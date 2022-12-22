@@ -15,6 +15,9 @@ struct GameView: View {
     var body: some View {
         content
             .background(Color.appBackground.ignoresSafeArea())
+            .onAppear {
+                viewModel.input.onAppear.send()
+            }
     }
 }
 
@@ -28,8 +31,7 @@ private extension GameView {
                 .padding(.top)
             
             Spacer()
-            playButton
-            endPlayButton
+            playButtonBlock
         }
         .frame(width: UIScreen.main.bounds.width, alignment: .leading)
     }
@@ -58,16 +60,22 @@ private extension GameView {
             .titleTwoWhite()
     }
     
-    var playButton: some View {
-        PlayButtonView(style: .play, action: {
-            viewModel.input.onPlayTap.send()
-        })
-            .padding(.horizontal)
+    @ViewBuilder var playButtonBlock: some View {
+        VStack {
+            
+            if (viewModel.output.pointsLeft > 0) {
+                PlayButtonView(style: .play) {
+                    viewModel.input.onPlayTap.send()
+                }
+            }
+            
+            PlayButtonView(style: .stop) {
+                viewModel.input.onStopTap.send()
+            }
+        }
+        .padding(.horizontal)
     }
     
-    var endPlayButton: some View {
-        HStack { }
-    }
 }
 
 //struct GameView_Previews: PreviewProvider {

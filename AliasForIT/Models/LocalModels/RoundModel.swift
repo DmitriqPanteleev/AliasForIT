@@ -13,8 +13,4 @@ struct RoundModel: Equatable {
     let words: [String]
     
     var roundDuration: Int
-    
-    func getPublisher() -> PassthroughSubject<Int, Never> {
-        return PassthroughSubject<Int, Never>()
-    }
 }

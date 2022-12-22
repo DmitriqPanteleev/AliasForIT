@@ -9,9 +9,9 @@ import Foundation
 
 struct TeamModel: Equatable, Identifiable {
     let id: Int
-    let name: String
-    let image: String
     
+    var name: String
+    var image: String
     var score: Int
     
     init(name: String, image: String) {
@@ -21,8 +21,8 @@ struct TeamModel: Equatable, Identifiable {
         self.score = 0
     }
     
-    init(name: String, image: String, score: Int) {
-        self.id = UUID().hashValue
+    init(id: Int ,name: String, image: String, score: Int) {
+        self.id = id
         self.name = name
         self.image = image
         self.score = score
@@ -42,5 +42,9 @@ struct TeamModel: Equatable, Identifiable {
     static func defaultTeam2() -> TeamModel {
         TeamModel(name: "Умер в конце драйва",
                   image: "https://i.pinimg.com/originals/56/6c/aa/566caa613d4c3ea046f1db3b30487e41.jpg")
+    }
+    
+    static func emptyTeam() -> TeamModel {
+        TeamModel(name: "Название команды", image: "")
     }
 }

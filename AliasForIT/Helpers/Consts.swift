@@ -11,6 +11,7 @@ import UIKit
 struct Consts {
     
     static let alreadyLaunched = "alreadyLaunched"
+    static let isGameStarted = "isGameStarted"
     
     enum SettingsKeys {
         static let pointsForWin = "pointsForWin"

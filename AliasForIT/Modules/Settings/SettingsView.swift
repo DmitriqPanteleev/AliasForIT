@@ -15,10 +15,16 @@ struct SettingsView: View {
     
     var body: some View {
         VStack {
+            Text("Настройки игры")
+                .titleWhite()
+                .padding()
             cellsBlock
             Spacer()
         }
-        .background(Color.black.ignoresSafeArea())
+        .background(Color.appBackground.ignoresSafeArea())
+        .onDisappear {
+            viewModel.onBackTrigger.send()
+        }
     }
 }
 
@@ -42,13 +48,13 @@ private extension SettingsView {
                                    style: .lastWord,
                                    onChange: viewModel.input.onChangeLastWord)
         }
-        .padding(.horizontal, 16)
+        .padding(.horizontal)
         .padding(.vertical, 10)
     }
 }
 
-struct SettingsView_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsView(viewModel: SettingsViewModel())
-    }
-}
+//struct SettingsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SettingsView(viewModel: SettingsViewModel())
+//    }
+//}

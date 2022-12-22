@@ -15,23 +15,15 @@ struct PlayButtonView: View {
     var body: some View {
         HStack {
             Text(style.title)
-                .titleThreeWhite()
+                .titleThreeWhite(style.titleColor)
         }
         .frame(height: 56)
         .frame(maxWidth: UIScreen.main.bounds.width)
-        .background(LinearGradient(
-            colors:
-                [
-                    .appYellow,
-                    .appOrange
-                ],
-            startPoint: .bottomLeading,
-            endPoint: .center))
+        .background(style.background)
         .cornerRadius(100)
         .onTapGesture {
             action()
         }
-        .padding(.bottom, 10 + (UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? 0))
     }
 }
 
