@@ -54,6 +54,7 @@ final class RoundViewModel: ObservableObject {
         bindTimer()
         bindAnswer()
         bindState()
+        bindOnCloseTap()
     }
     
     func bindTimer() {

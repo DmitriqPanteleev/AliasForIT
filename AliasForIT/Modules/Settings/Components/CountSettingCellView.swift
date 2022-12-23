@@ -32,18 +32,18 @@ private extension CountSettingCellView {
     var counter: some View {
         HStack(spacing: 10) {
             
-            Button(action: decrement) {
-                Image(systemName: "minus")
-                    .foregroundColor(.yellow)
-            }
+            Image(systemName: "minus")
+                .foregroundColor(.yellow)
+                .background(Circle().frame(width: 30, height: 30).foregroundColor(.appBackground))
+                .onTapGesture(perform: decrement)
             
             Text(String(option))
                 .foregroundColor(.yellow)
             
-            Button(action: increment) {
-                Image(systemName: "plus")
-                    .foregroundColor(.yellow)
-            }
+            Image(systemName: "plus")
+                .foregroundColor(.yellow)
+                .background(Circle().frame(width: 30, height: 30).foregroundColor(.appBackground))
+                .onTapGesture(perform: increment)
         }
     }
 }

@@ -15,22 +15,25 @@ final class EditTeamViewModel: ObservableObject {
     let input: Input
     @Published var output: Output
     
-    let saveChanges: PassthroughSubject<TeamModel, Never>
+    let onSave: PassthroughSubject<Void, Never>
     
+    private var isEdit: Bool
     private var cancellable = Set<AnyCancellable>()
     
-    init(router: MainRouter?, model: TeamModel? = nil, saveChanges: PassthroughSubject<TeamModel, Never>) {
+    init(onSave: PassthroughSubject<Void, Never>, model: TeamModel? = nil, router: MainRouter?) {
         self.router = router
         
         self.input = Input()
         
         if let model = model {
+            self.isEdit = true
             self.output = Output(id: model.id, name: model.name, image: model.image)
         } else {
+            self.isEdit = false
             self.output = Output()
         }
         
-        self.saveChanges = saveChanges
+        self.onSave = onSave
         
         setupBindings()
     }
@@ -46,17 +49,50 @@ final class EditTeamViewModel: ObservableObject {
     
     func setupBindings() {
         bindOnSave()
+        bindImageTap()
     }
     
     func bindOnSave() {
-        input.onSave
-            .sink {
+        input.onSaveTap
+            .combineLatest($output)
+            .sink { _, output in
                 self.router?.pop {
-                    self.saveChanges.send(TeamModel(id: self.output.id,
-                                                    name: self.output.name,
-                                                    image: self.output.image,
-                                                    score: 0))
+                    
+                    if self.isEdit {
+                        let team = TeamModel(
+                            id: output.id,
+                            name: output.name,
+                            image: output.image,
+                            score: 0)
+                        
+                        
+                        
+                        let index = TeamsStorage.shared.teams.firstIndex {
+                            $0.id == output.id
+                        }
+                        
+                        TeamsStorage.shared.teams.remove(at: index!)
+                        TeamsStorage.shared.teams.insert(team, at: index!)
+                        
+                    } else {
+                        let team = TeamModel(
+                            id: output.id,
+                            name: output.name,
+                            image: output.image,
+                            score: 0)
+                        
+                        TeamsStorage.shared.teams.append(team)
+                    }
                 }
+            }
+            .store(in: &cancellable)
+    }
+    
+    func bindImageTap() {
+        input.onImageTap
+            .sink { [weak self] image in  
+                self?.output.isSelectedImage = image
+                self?.output.image = image
             }
             .store(in: &cancellable)
     }
@@ -65,12 +101,17 @@ final class EditTeamViewModel: ObservableObject {
 extension EditTeamViewModel {
     
     struct Input {
-        let onSave = PassthroughSubject<Void, Never>()
+        let onSaveTap = PassthroughSubject<Void, Never>()
+        let onImageTap = PassthroughSubject<String, Never>()
     }
     
     struct Output {
         var id: Int = UUID().hashValue
         var name: String = ""
         var image: String = ""
+        
+        var images: [String] = UserStorage.shared.defaultAvatars
+        
+        var isSelectedImage: String = ""
     }
 }

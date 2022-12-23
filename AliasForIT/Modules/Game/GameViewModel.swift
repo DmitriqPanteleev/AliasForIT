@@ -89,8 +89,10 @@ final class GameViewModel: ObservableObject {
                 guard let self = self else { return }
                 
                 if self.output.pointsLeft > 0 {
-                    // Хардкод
-                    let roundModel = RoundModel(team: self.output.currentTeam!, words: WordsStorage.getRoundWords(count: UserStorage.shared.roundTime), roundDuration: 10)
+                    
+                    let roundModel = RoundModel(team: self.output.currentTeam!,
+                                                words: WordsStorage.getRoundWords(count: UserStorage.shared.roundTime * 2),
+                                                roundDuration: UserStorage.shared.roundTime)
                     
                     self.router?.moveToRound(model: roundModel)
                 } else {

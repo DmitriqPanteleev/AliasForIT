@@ -70,8 +70,6 @@ private extension MainView {
                         .titleTwoWhite()
                     Spacer()
                     AddButtonView {
-                        // Хардкод
-                        viewModel.input.editState.send(false)
                         viewModel.input.onAddTap.send(nil)
                     }
                 }
@@ -83,17 +81,18 @@ private extension MainView {
                     EditableTeamCellView(model: viewModel.output.teams.first!,
                                          onEdit: {
                         viewModel.input.onAddTap.send(viewModel.output.teams.first!)
-                        viewModel.input.editState.send(true)
                     },
-                                         onDelete: {})
+                                         onDelete: {
+                        viewModel.input.onDelete.send(viewModel.output.teams.first!.id)
+                    })
                     .padding(.bottom, 4)
                     Text("Добавьте еще 1 команду")
                         .titleThreeWhite()
                 } else {
                     ForEach(viewModel.output.teams) { team in
                         EditableTeamCellView(model: team,
-                                             onEdit: { viewModel.input.editState.send(true); viewModel.input.onAddTap.send(team) },
-                                             onDelete: {})
+                                             onEdit: { viewModel.input.onAddTap.send(team) },
+                                             onDelete: { viewModel.input.onDelete.send(team.id)})
                     }
                 }
                 

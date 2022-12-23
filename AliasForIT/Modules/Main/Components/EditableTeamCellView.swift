@@ -47,10 +47,9 @@ struct EditableTeamCellView: View {
 
 private extension EditableTeamCellView {
     @ViewBuilder var avatar: some View {
-        KFImage.init(model.imageSource)
+        Image(model.image)
             .resizable()
-            .resizing(referenceSize: CGSize(width: UIScreen.main.bounds.width * (40/375), height: UIScreen.main.bounds.width * (40/375)), mode: .aspectFill)
-            .cropping(size: CGSize(width: UIScreen.main.bounds.width * (40/375), height: UIScreen.main.bounds.width * (40/375)))
+            .scaledToFill()
             .frame(width: UIScreen.main.bounds.width * (40/375), height: UIScreen.main.bounds.width * (40/375))
             .cornerRadius(80)
             .overlay(RoundedRectangle(cornerRadius: 80).stroke(lineWidth: 1).foregroundColor(.appCard))

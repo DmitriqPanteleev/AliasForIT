@@ -54,54 +54,10 @@ struct SwipableCardView: View {
                             }
                         }
                 )
-//        .gesture(
-//            DragGesture(minimumDistance: 5)
-//                .onChanged { gesture in
-//                    offset = gesture.translation
-//
-//                    withAnimation {
-//                        changeColor(width: offset.width)
-//                    }
-//                } .onEnded { _ in
-//                    withAnimation {
-//                        swipeCard(width: offset.width)
-//                    }
-//                }
-//        )
     }
 }
 
-//private extension SwipableCardView {
-//
-//    func changeColor(width: CGFloat) {
-//        switch width {
-//        case -500...(-30):
-//            backgroundColor = .red
-//        case 30...500:
-//            backgroundColor = .yellow
-//        default:
-//            backgroundColor = .black
-//        }
-//    }
-//
-//    func swipeCard(width: CGFloat) {
-//        switch width {
-//        case -500...(-30):
-//            viewModel.input.answer.send(true)
-//            offset = CGSize(width: -500, height: 0)
-//        case 30...500:
-//            viewModel.input.answer.send(false)
-//            offset = CGSize(width: 500, height: 0)
-//        default: offset = .zero
-//        }
-//    }
-//}
 
-//extension CGPoint {
-//    func distance(to point: CGPoint) -> CGFloat {
-//        return sqrt(pow((point.x - x), 2) + pow((point.y - y), 2))
-//    }
-//}
 
 //struct SwipableCardView_Previews: PreviewProvider {
 //    static var previews: some View {

@@ -34,14 +34,18 @@ struct TeamModel: Equatable, Identifiable {
         return source
     }
     
+    
+    
+    
+    // MARK: - Mock teams
     static func defaultTeam1() -> TeamModel {
         TeamModel(name: "Константы",
-                  image: "https://otvet.imgsmail.ru/download/191308234_8ae84b694b02b5195a81ff67af34a69e_800.gif")
+                  image: "const")
     }
     
     static func defaultTeam2() -> TeamModel {
-        TeamModel(name: "Умер в конце драйва",
-                  image: "https://i.pinimg.com/originals/56/6c/aa/566caa613d4c3ea046f1db3b30487e41.jpg")
+        TeamModel(name: "Ворота",
+                  image: "gates")
     }
     
     static func emptyTeam() -> TeamModel {

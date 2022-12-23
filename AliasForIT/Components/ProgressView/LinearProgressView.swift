@@ -10,9 +10,10 @@ import SwiftUI
 struct LinearProgressView: View {
     
     @Binding var progress: Int
+    let total: Int
     
     var body: some View {
-        ProgressView(value: Double(progress), total: 60)
+        ProgressView(value: Double(progress), total: Double(total))
             .tint(.yellow)
     }
 }

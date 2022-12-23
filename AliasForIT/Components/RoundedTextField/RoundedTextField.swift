@@ -11,13 +11,13 @@ struct RoundedTextField: View {
     
     @State private var text = ""
     
-    var teamName: String
+    @Binding var teamName: String
     let placeholder: String
     
-    init(teamName: String, placeholder: String) {
-        self.teamName = teamName
+    init(teamName: Binding<String>, placeholder: String) {
+        self._teamName = teamName
         self.placeholder = placeholder
-        self._text = State(wrappedValue: teamName)
+        self._text = State(initialValue: teamName.wrappedValue)
     }
     
     var body: some View {
@@ -42,6 +42,9 @@ private extension RoundedTextField {
                 .foregroundColor(.white)
                 .background(Color.appBackground)
                 .padding(10)
+                .onChange(of: text, perform: { newValue in
+                    teamName = newValue
+                })
             clearButton
                 .padding(.trailing, 12)
         }

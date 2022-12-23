@@ -16,12 +16,15 @@ final class UserStorage {
     // MARK: - System
     var alreadyLaunched: Bool {
         get {
-            defaults.bool(forKey: Consts.alreadyLaunched)
+            defaults.bool(forKey: Consts.SettingsKeys.alreadyLaunched)
         }
         set {
-            defaults.set(newValue, forKey: Consts.alreadyLaunched)
+            defaults.set(newValue, forKey: Consts.SettingsKeys.alreadyLaunched)
         }
     }
+    
+    // MARK: - Personal
+    let defaultAvatars: [String] = ["elon", "facebook", "silicon", "mrrobot", "profsoft"]
     
     // MARK: - Settings
     var pointsForWin: Int {

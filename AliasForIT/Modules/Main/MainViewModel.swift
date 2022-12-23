@@ -12,18 +12,18 @@ final class MainViewModel: ObservableObject {
     
     private weak var router: MainRouter?
     
-    let onSetSettings: PassthroughSubject<Void, Never>
+    let onUpdate: PassthroughSubject<Void, Never>
     
     let input: Input
     @Published var output: Output
     
     private var cancellable = Set<AnyCancellable>()
     
-    init(onSetSettings: PassthroughSubject<Void, Never>, router: MainRouter?) {
+    init(onUpdate: PassthroughSubject<Void, Never>, router: MainRouter?) {
         
         self.router = router
         
-        self.onSetSettings = onSetSettings
+        self.onUpdate = onUpdate
         
         self.input = Input()
         self.output = Output()
@@ -43,30 +43,54 @@ final class MainViewModel: ObservableObject {
     func setupBindings() {
         
         bindOnAppear()
+        bindOnUpdate()
         
+        bindOnAddTap()
+        bindOnDeleteTap()
         bindOnSettingsTap()
         bindOnPlayTap()
-        
-        bindOnSetSettings()
     }
     
     func bindOnAppear() {
         input.onAppear
             .sink {
+                self.output.teams = TeamsStorage.shared.teams
                 self.output.roundTime = UserStorage.shared.roundTime
                 self.output.wordsForWin = UserStorage.shared.pointsForWin
             }
             .store(in: &cancellable)
     }
     
-    func bindOnSetSettings() {
-        self.onSetSettings
+    func bindOnUpdate() {
+        self.onUpdate
             .sink {
                 self.input.onAppear.send()
             }
             .store(in: &cancellable)
     }
     
+    func bindOnAddTap() {
+        input.onAddTap
+            .sink { [weak self] model in
+                self?.router?.moveToEditTeam(model: model)
+            }
+            .store(in: &cancellable)
+    }
+    
+    func bindOnDeleteTap() {
+        input.onDelete
+            .sink { [weak self] id in
+                
+                let index = TeamsStorage.shared.teams.firstIndex {
+                    $0.id == id
+                }
+                
+                TeamsStorage.shared.teams.remove(at: index!)
+                
+                self?.input.onAppear.send()
+            }
+            .store(in: &cancellable)
+    }
     
     func bindOnSettingsTap() {
         input.onSettingsTap
@@ -98,9 +122,7 @@ final class MainViewModel: ObservableObject {
     struct Input {
         let onAppear = PassthroughSubject<Void, Never>()
         
-        let editState = PassthroughSubject<Bool, Never>()
         let onAddTap = PassthroughSubject<TeamModel?, Never>()
-        let confirmAdd = PassthroughSubject<TeamModel, Never>()
         let onDelete = PassthroughSubject<Int, Never>()
         
         let onSettingsTap = PassthroughSubject<Void, Never>()
@@ -111,7 +133,7 @@ final class MainViewModel: ObservableObject {
     }
     
     struct Output {
-        var teams: [TeamModel] = [.defaultTeam1(), .defaultTeam2()]
+        var teams: [TeamModel] = TeamsStorage.shared.teams
         
         var roundTime = UserStorage.shared.roundTime
         var wordsForWin = UserStorage.shared.pointsForWin

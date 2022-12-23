@@ -10,10 +10,12 @@ import UIKit
 
 struct Consts {
     
-    static let alreadyLaunched = "alreadyLaunched"
-    static let isGameStarted = "isGameStarted"
-    
     enum SettingsKeys {
+        static let alreadyLaunched = "alreadyLaunched"
+        static let isGameStarted = "isGameStarted"
+        
+        static let teams = "teams"
+        
         static let pointsForWin = "pointsForWin"
         static let roundTime = "roundTime"
         static let isSoundActive = "isSoundActive"

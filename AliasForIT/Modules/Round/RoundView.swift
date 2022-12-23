@@ -44,7 +44,7 @@ private extension RoundView {
                 Text("\(viewModel.output.roundTime)")
                     .foregroundColor(.yellow)
                 
-                LinearProgressView(progress: $viewModel.output.roundTime)
+                LinearProgressView(progress: $viewModel.output.roundTime, total: UserStorage.shared.roundTime)
             }
             .frame(width: Consts.SharedLayout.cardWidth)
             
@@ -111,9 +111,10 @@ private extension RoundView {
             Spacer()
             
             VStack(spacing: 5) {
-                // Хардкод
-                KFImage(viewModel.roundModel.team.imageSource!)
+                
+                Image(viewModel.roundModel.team.image)
                     .resizable()
+                    .scaledToFill()
                     .frame(width: Consts.SharedLayout.cardWidth / 4, height: Consts.SharedLayout.cardWidth / 4)
                     .cornerRadius(Consts.SharedLayout.cardWidth / 8)
                     .addBorder(.yellow, width: 4, cornerRadius: Consts.SharedLayout.cardWidth / 8)
