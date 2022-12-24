@@ -27,10 +27,10 @@ extension Text {
             .foregroundColor(.yellow)
     }
     
-    func titleThreeWhite() -> Text {
+    func titleThreeWhite(_ color: Color? = nil) -> Text {
         self
             .font(.system(size: 18, weight: .semibold))
-            .foregroundColor(.white)
+            .foregroundColor(color ?? .white)
     }
     
     func titleThreeYellow() -> Text {
@@ -38,6 +38,7 @@ extension Text {
             .font(.system(size: 18, weight: .semibold))
             .foregroundColor(.appYellow)
     }
+    
     
     // Additinal styles
     func animatedTitle(fontSize: CGFloat) -> Text {

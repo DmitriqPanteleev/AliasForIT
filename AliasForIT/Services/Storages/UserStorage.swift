@@ -10,18 +10,22 @@ import Foundation
 final class UserStorage {
     
     static let shared = UserStorage()
+    private init() {}
     
     private let defaults = UserDefaults.standard
     
     // MARK: - System
     var alreadyLaunched: Bool {
         get {
-            defaults.bool(forKey: Consts.alreadyLaunched)
+            defaults.bool(forKey: Consts.SettingsKeys.alreadyLaunched)
         }
         set {
-            defaults.set(newValue, forKey: Consts.alreadyLaunched)
+            defaults.set(newValue, forKey: Consts.SettingsKeys.alreadyLaunched)
         }
     }
+    
+    // MARK: - Personal
+    let defaultAvatars: [String] = ["elon", "facebook", "silicon", "mrrobot", "profsoft"]
     
     // MARK: - Settings
     var pointsForWin: Int {
@@ -59,6 +63,4 @@ final class UserStorage {
             defaults.set(newValue, forKey: Consts.SettingsKeys.isCommonLastWord)
         }
     }
-    
-    private init() {}
 }

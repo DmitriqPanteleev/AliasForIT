@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D062F1F62955AEC500B79C14 /* AvatarCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D062F1F52955AEC500B79C14 /* AvatarCellView.swift */; };
+		D077131B2954A1B400F6EC90 /* TeamsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D077131A2954A1B400F6EC90 /* TeamsStorage.swift */; };
 		D0A7F92929430D140013A084 /* RoundFinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7F92829430D140013A084 /* RoundFinishedView.swift */; };
 		D0A7F92D294312410013A084 /* AnswerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7F92C294312410013A084 /* AnswerModel.swift */; };
 		D0A7F92F294321AC0013A084 /* AnswerToggleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7F92E294321AC0013A084 /* AnswerToggleCell.swift */; };
@@ -17,7 +19,6 @@
 		D0E48AAE293FCF2B006E2555 /* Text + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E48AAD293FCF2B006E2555 /* Text + Extensions.swift */; };
 		D0E48AB02941DCD4006E2555 /* PlayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E48AAF2941DCD4006E2555 /* PlayButtonView.swift */; };
 		D0E48AB22941E328006E2555 /* RoundCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E48AB12941E328006E2555 /* RoundCoordinator.swift */; };
-		D0E48AB42941E335006E2555 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E48AB32941E335006E2555 /* MainCoordinator.swift */; };
 		D0E48AB72941E64C006E2555 /* Stinsen in Frameworks */ = {isa = PBXBuildFile; productRef = D0E48AB62941E64C006E2555 /* Stinsen */; };
 		D0E5FB6C293A0EDB006F7F6F /* TimerControllButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FB6B293A0EDB006F7F6F /* TimerControllButtonStyle.swift */; };
 		D0E5FB6F293A0EF9006F7F6F /* TimerControllButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FB6E293A0EF9006F7F6F /* TimerControllButtonView.swift */; };
@@ -55,12 +56,22 @@
 		D0ED1A9C2923CC1F002ABBD5 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A9B2923CC1F002ABBD5 /* RoundView.swift */; };
 		D0ED1A9E2923CC2F002ABBD5 /* RoundRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A9D2923CC2F002ABBD5 /* RoundRouter.swift */; };
 		D0ED1AA229250258002ABBD5 /* WordsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1AA129250258002ABBD5 /* WordsStorage.swift */; };
-		D0ED1AA829252322002ABBD5 /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1AA729252322002ABBD5 /* Words.swift */; };
 		D0ED1AAD2926054E002ABBD5 /* SwipableCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1AAC2926054E002ABBD5 /* SwipableCardView.swift */; };
 		D0ED1AAF292616B5002ABBD5 /* View + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1AAE292616B5002ABBD5 /* View + Extensions.swift */; };
+		D0F0C2BD29472C54000D7FF5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0C2BC29472C54000D7FF5 /* MainView.swift */; };
+		D0F0C2BF29472C5F000D7FF5 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0C2BE29472C5F000D7FF5 /* MainViewModel.swift */; };
+		D0F0C2C22947368C000D7FF5 /* AddButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0C2C12947368C000D7FF5 /* AddButtonView.swift */; };
+		D0F0C2C4294739AC000D7FF5 /* EditableTeamCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0C2C3294739AC000D7FF5 /* EditableTeamCellView.swift */; };
+		D0F0C2C6294743AD000D7FF5 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0C2C5294743AD000D7FF5 /* MainRouter.swift */; };
+		D0F0C2CB2947499D000D7FF5 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0C2CA2947499D000D7FF5 /* RoundedTextField.swift */; };
+		D0FCA33729505D7600599E69 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FCA33629505D7600599E69 /* MainCoordinator.swift */; };
+		D0FCA33D2951C47300599E69 /* EditTeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FCA33C2951C47300599E69 /* EditTeamViewModel.swift */; };
+		D0FCA33F2951C49000599E69 /* EditTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FCA33E2951C49000599E69 /* EditTeamView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D062F1F52955AEC500B79C14 /* AvatarCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCellView.swift; sourceTree = "<group>"; };
+		D077131A2954A1B400F6EC90 /* TeamsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsStorage.swift; sourceTree = "<group>"; };
 		D0A7F92829430D140013A084 /* RoundFinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundFinishedView.swift; sourceTree = "<group>"; };
 		D0A7F92C294312410013A084 /* AnswerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerModel.swift; sourceTree = "<group>"; };
 		D0A7F92E294321AC0013A084 /* AnswerToggleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerToggleCell.swift; sourceTree = "<group>"; };
@@ -71,7 +82,6 @@
 		D0E48AAD293FCF2B006E2555 /* Text + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text + Extensions.swift"; sourceTree = "<group>"; };
 		D0E48AAF2941DCD4006E2555 /* PlayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonView.swift; sourceTree = "<group>"; };
 		D0E48AB12941E328006E2555 /* RoundCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCoordinator.swift; sourceTree = "<group>"; };
-		D0E48AB32941E335006E2555 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		D0E5FB6B293A0EDB006F7F6F /* TimerControllButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerControllButtonStyle.swift; sourceTree = "<group>"; };
 		D0E5FB6E293A0EF9006F7F6F /* TimerControllButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerControllButtonView.swift; sourceTree = "<group>"; };
 		D0E5FB71293A1239006F7F6F /* LinearProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearProgressView.swift; sourceTree = "<group>"; };
@@ -100,9 +110,17 @@
 		D0ED1A9B2923CC1F002ABBD5 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
 		D0ED1A9D2923CC2F002ABBD5 /* RoundRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundRouter.swift; sourceTree = "<group>"; };
 		D0ED1AA129250258002ABBD5 /* WordsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsStorage.swift; sourceTree = "<group>"; };
-		D0ED1AA729252322002ABBD5 /* Words.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Words.swift; sourceTree = "<group>"; };
 		D0ED1AAC2926054E002ABBD5 /* SwipableCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipableCardView.swift; sourceTree = "<group>"; };
 		D0ED1AAE292616B5002ABBD5 /* View + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Extensions.swift"; sourceTree = "<group>"; };
+		D0F0C2BC29472C54000D7FF5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		D0F0C2BE29472C5F000D7FF5 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		D0F0C2C12947368C000D7FF5 /* AddButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButtonView.swift; sourceTree = "<group>"; };
+		D0F0C2C3294739AC000D7FF5 /* EditableTeamCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableTeamCellView.swift; sourceTree = "<group>"; };
+		D0F0C2C5294743AD000D7FF5 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		D0F0C2CA2947499D000D7FF5 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		D0FCA33629505D7600599E69 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		D0FCA33C2951C47300599E69 /* EditTeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTeamViewModel.swift; sourceTree = "<group>"; };
+		D0FCA33E2951C49000599E69 /* EditTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTeamView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +144,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D062F1F42955AE8E00B79C14 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D0F0C2C3294739AC000D7FF5 /* EditableTeamCellView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		D0A7F92A29430D280013A084 /* CardView */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,42 +181,36 @@
 		D0E48AAC293FCF12006E2555 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				D0E48AAF2941DCD4006E2555 /* PlayButtonView.swift */,
-				D0A7F930294328710013A084 /* PlayButtonStyle.swift */,
+				D0FCA3382950682900599E69 /* AddButton */,
+				D0F0C2B929470464000D7FF5 /* PlayButton */,
+				D0E5FB6A293A0EAD006F7F6F /* TimerConrolButton */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
 		};
-		D0E48AB82941F5A7006E2555 /* Subviews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Subviews;
-			sourceTree = "<group>";
-		};
-		D0E5FB6A293A0EAD006F7F6F /* TimerConrollButton */ = {
+		D0E5FB6A293A0EAD006F7F6F /* TimerConrolButton */ = {
 			isa = PBXGroup;
 			children = (
 				D0E5FB6B293A0EDB006F7F6F /* TimerControllButtonStyle.swift */,
 				D0E5FB6E293A0EF9006F7F6F /* TimerControllButtonView.swift */,
 			);
-			path = TimerConrollButton;
+			path = TimerConrolButton;
 			sourceTree = "<group>";
 		};
-		D0E5FB70293A1218006F7F6F /* ProgressViews */ = {
+		D0E5FB70293A1218006F7F6F /* ProgressView */ = {
 			isa = PBXGroup;
 			children = (
 				D0E5FB71293A1239006F7F6F /* LinearProgressView.swift */,
 			);
-			path = ProgressViews;
+			path = ProgressView;
 			sourceTree = "<group>";
 		};
-		D0E5FB7A293CF24B006F7F6F /* CardViews */ = {
+		D0E5FB7A293CF24B006F7F6F /* CardView */ = {
 			isa = PBXGroup;
 			children = (
 				D0E5FB7B293CF26B006F7F6F /* SharpedCardView.swift */,
 			);
-			path = CardViews;
+			path = CardView;
 			sourceTree = "<group>";
 		};
 		D0E5FB7D293DF8FE006F7F6F /* Components */ = {
@@ -262,8 +282,8 @@
 		D0ED1A4D2923A39B002ABBD5 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				D0FCA33629505D7600599E69 /* MainCoordinator.swift */,
 				D0E48AB12941E328006E2555 /* RoundCoordinator.swift */,
-				D0E48AB32941E335006E2555 /* MainCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -279,10 +299,11 @@
 		D0ED1A4F2923A3AB002ABBD5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				D0ED1A652923A57F002ABBD5 /* MainView */,
-				D0ED1A662923A589002ABBD5 /* GameView */,
-				D0ED1A672923A592002ABBD5 /* RoundView */,
-				D0ED1A642923A578002ABBD5 /* SettingsView */,
+				D0FCA33B2951C45200599E69 /* EditTeam */,
+				D0ED1A652923A57F002ABBD5 /* Main */,
+				D0ED1A662923A589002ABBD5 /* Game */,
+				D0ED1A672923A592002ABBD5 /* Round */,
+				D0ED1A642923A578002ABBD5 /* Settings */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -292,7 +313,6 @@
 			children = (
 				D0ED1A612923A551002ABBD5 /* Extensions */,
 				D0ED1A5F2923A528002ABBD5 /* Consts.swift */,
-				D0ED1AA729252322002ABBD5 /* Words.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -312,9 +332,9 @@
 			children = (
 				D0A7F93229432FFF0013A084 /* AppBar */,
 				D0E48AAC293FCF12006E2555 /* Buttons */,
-				D0E5FB7A293CF24B006F7F6F /* CardViews */,
-				D0E5FB70293A1218006F7F6F /* ProgressViews */,
-				D0E5FB6A293A0EAD006F7F6F /* TimerConrollButton */,
+				D0E5FB7A293CF24B006F7F6F /* CardView */,
+				D0F0C2C929474981000D7FF5 /* RoundedTextField */,
+				D0E5FB70293A1218006F7F6F /* ProgressView */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -334,6 +354,7 @@
 			children = (
 				D0ED1A5B2923A4E3002ABBD5 /* UserStorage.swift */,
 				D0ED1AA129250258002ABBD5 /* WordsStorage.swift */,
+				D077131A2954A1B400F6EC90 /* TeamsStorage.swift */,
 			);
 			path = Storages;
 			sourceTree = "<group>";
@@ -348,43 +369,46 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		D0ED1A642923A578002ABBD5 /* SettingsView */ = {
+		D0ED1A642923A578002ABBD5 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
 				D0ED1A682923A5AF002ABBD5 /* Components */,
 				D0ED1A6F2923A639002ABBD5 /* SettingsView.swift */,
 				D0ED1A712923A64E002ABBD5 /* SettingsViewModel.swift */,
 			);
-			path = SettingsView;
+			path = Settings;
 			sourceTree = "<group>";
 		};
-		D0ED1A652923A57F002ABBD5 /* MainView */ = {
+		D0ED1A652923A57F002ABBD5 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				D062F1F42955AE8E00B79C14 /* Components */,
+				D0F0C2BC29472C54000D7FF5 /* MainView.swift */,
+				D0F0C2BE29472C5F000D7FF5 /* MainViewModel.swift */,
+				D0F0C2C5294743AD000D7FF5 /* MainRouter.swift */,
 			);
-			path = MainView;
+			path = Main;
 			sourceTree = "<group>";
 		};
-		D0ED1A662923A589002ABBD5 /* GameView */ = {
+		D0ED1A662923A589002ABBD5 /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				D0E48AB82941F5A7006E2555 /* Subviews */,
 				D0E5FB7D293DF8FE006F7F6F /* Components */,
 				D0E5FB73293B65C7006F7F6F /* GameView.swift */,
 				D0E5FB75293B65D2006F7F6F /* GameViewModel.swift */,
 				D0ED1A9D2923CC2F002ABBD5 /* RoundRouter.swift */,
 			);
-			path = GameView;
+			path = Game;
 			sourceTree = "<group>";
 		};
-		D0ED1A672923A592002ABBD5 /* RoundView */ = {
+		D0ED1A672923A592002ABBD5 /* Round */ = {
 			isa = PBXGroup;
 			children = (
 				D0ED1AAB29260536002ABBD5 /* Components */,
 				D0ED1A9B2923CC1F002ABBD5 /* RoundView.swift */,
 				D0ED1A992923CC0E002ABBD5 /* RoundViewModel.swift */,
 			);
-			path = RoundView;
+			path = Round;
 			sourceTree = "<group>";
 		};
 		D0ED1A682923A5AF002ABBD5 /* Components */ = {
@@ -404,6 +428,49 @@
 				D0A7F92A29430D280013A084 /* CardView */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		D0F0C2B929470464000D7FF5 /* PlayButton */ = {
+			isa = PBXGroup;
+			children = (
+				D0E48AAF2941DCD4006E2555 /* PlayButtonView.swift */,
+				D0A7F930294328710013A084 /* PlayButtonStyle.swift */,
+			);
+			path = PlayButton;
+			sourceTree = "<group>";
+		};
+		D0F0C2C02947367C000D7FF5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D062F1F52955AEC500B79C14 /* AvatarCellView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D0F0C2C929474981000D7FF5 /* RoundedTextField */ = {
+			isa = PBXGroup;
+			children = (
+				D0F0C2CA2947499D000D7FF5 /* RoundedTextField.swift */,
+			);
+			path = RoundedTextField;
+			sourceTree = "<group>";
+		};
+		D0FCA3382950682900599E69 /* AddButton */ = {
+			isa = PBXGroup;
+			children = (
+				D0F0C2C12947368C000D7FF5 /* AddButtonView.swift */,
+			);
+			path = AddButton;
+			sourceTree = "<group>";
+		};
+		D0FCA33B2951C45200599E69 /* EditTeam */ = {
+			isa = PBXGroup;
+			children = (
+				D0F0C2C02947367C000D7FF5 /* Components */,
+				D0FCA33E2951C49000599E69 /* EditTeamView.swift */,
+				D0FCA33C2951C47300599E69 /* EditTeamViewModel.swift */,
+			);
+			path = EditTeam;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -517,24 +584,33 @@
 				D0A7F92D294312410013A084 /* AnswerModel.swift in Sources */,
 				D0A7F92F294321AC0013A084 /* AnswerToggleCell.swift in Sources */,
 				D0ED1A5E2923A51A002ABBD5 /* SettingsManager.swift in Sources */,
+				D0FCA33D2951C47300599E69 /* EditTeamViewModel.swift in Sources */,
 				D0ED1AAF292616B5002ABBD5 /* View + Extensions.swift in Sources */,
 				D0ED1A632923A561002ABBD5 /* String + Extensions.swift in Sources */,
 				D0E48AB22941E328006E2555 /* RoundCoordinator.swift in Sources */,
+				D0F0C2C6294743AD000D7FF5 /* MainRouter.swift in Sources */,
 				D0ED1A572923A4A6002ABBD5 /* RoundModel.swift in Sources */,
 				D0ED1A6C2923A5E2002ABBD5 /* SwitchSettingsCellView.swift in Sources */,
+				D077131B2954A1B400F6EC90 /* TeamsStorage.swift in Sources */,
 				D0E5FB7C293CF26B006F7F6F /* SharpedCardView.swift in Sources */,
 				D0ED1A6E2923A609002ABBD5 /* CountSettingCellView.swift in Sources */,
+				D0F0C2C22947368C000D7FF5 /* AddButtonView.swift in Sources */,
+				D0FCA33729505D7600599E69 /* MainCoordinator.swift in Sources */,
 				D0E5FB6F293A0EF9006F7F6F /* TimerControllButtonView.swift in Sources */,
 				D0ED1A812923A948002ABBD5 /* AppDelegate.swift in Sources */,
+				D0F0C2C4294739AC000D7FF5 /* EditableTeamCellView.swift in Sources */,
 				D0ED1AA229250258002ABBD5 /* WordsStorage.swift in Sources */,
+				D0FCA33F2951C49000599E69 /* EditTeamView.swift in Sources */,
 				D0E48AB02941DCD4006E2555 /* PlayButtonView.swift in Sources */,
-				D0E48AB42941E335006E2555 /* MainCoordinator.swift in Sources */,
+				D0F0C2BD29472C54000D7FF5 /* MainView.swift in Sources */,
 				D0ED1A3E2923A33E002ABBD5 /* AliasForITApp.swift in Sources */,
+				D062F1F62955AEC500B79C14 /* AvatarCellView.swift in Sources */,
 				D0ED1A592923A4B5002ABBD5 /* TeamModel.swift in Sources */,
 				D0ED1A702923A639002ABBD5 /* SettingsView.swift in Sources */,
 				D0ED1A722923A64E002ABBD5 /* SettingsViewModel.swift in Sources */,
 				D0A7F93629434CDD0013A084 /* AppearanceManager.swift in Sources */,
-				D0ED1AA829252322002ABBD5 /* Words.swift in Sources */,
+				D0F0C2BF29472C5F000D7FF5 /* MainViewModel.swift in Sources */,
+				D0F0C2CB2947499D000D7FF5 /* RoundedTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

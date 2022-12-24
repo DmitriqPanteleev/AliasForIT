@@ -18,7 +18,7 @@ final class SettingsManager {
     func bindSettings() {
         if !user.alreadyLaunched {
             user.pointsForWin = 50
-            user.roundTime = 60
+            user.roundTime = 30
             user.isSoundActive = true
             user.isCommonLastWord = false
         }

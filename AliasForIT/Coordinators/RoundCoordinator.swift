@@ -10,33 +10,44 @@ import Combine
 import Stinsen
 
 final class RoundCoordinator: NavigationCoordinatable {
-    var stack = Stinsen.NavigationStack(initial: \RoundCoordinator.start)
     
-    @Root var start = makeStart
+    // TODO: переделать навигацию, хранить переменную о начатой игре,
+    // в зависимости от нее менять Root навигатора и после конца игры очищать
+    // для этого сделать провайдер в FinishedRoundView, переделать логику Route
+    var stack = Stinsen.NavigationStack<RoundCoordinator>(initial: \.game)
+    
+    @Root var game = makeGame
     
     @Route(.fullScreen) var round = makeRound
     @Route(.push) var finish = makeRoundFinish
     
-    let onRoundFinish = PassthroughSubject<Int, Never>()
+    private let teams: [TeamModel]
+    private let onRoundFinish = PassthroughSubject<Int, Never>()
     
-#if DEBUG
+    init(teams: [TeamModel]) {
+        self.teams = teams
+    }
+    
+    #if DEBUG
     deinit {
         print("Coordinator \(self) DEINITED!!!")
     }
-#endif
+    #endif
 }
 
 extension RoundCoordinator {
-    
-    @ViewBuilder func makeStart() -> some View {
-        let viewModel = GameViewModel(teams: [.defaultTeam1(), .defaultTeam2()], onRoundFinish: onRoundFinish, router: self)
+        
+    @ViewBuilder func makeGame() -> some View {
+        let viewModel = GameViewModel(teams: self.teams,
+                                      onRoundFinish: onRoundFinish,
+                                      router: self)
         GameView(viewModel: viewModel)
     }
     
     @ViewBuilder func makeRound(round: RoundModel) -> some View {
-        
-        let viewModel = RoundViewModel(roundModel: round, onRoundFinish: onRoundFinish, router: self)
-        
+        let viewModel = RoundViewModel(roundModel: round,
+                                       onRoundFinish: onRoundFinish,
+                                       router: self)
         RoundView(viewModel: viewModel)
     }
     
@@ -44,6 +55,4 @@ extension RoundCoordinator {
         RoundFinishedView(answeredWords: answeredWords, sendScore: onRoundFinish)
             .environmentObject(self)
     }
-    
-    //TODO: navigate to list of answered words
 }

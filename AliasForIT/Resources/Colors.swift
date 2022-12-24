@@ -14,6 +14,7 @@ extension Color {
         case appCard
         case appOrange
         case appYellow
+        case appRed
     }
 }
 
@@ -30,6 +31,7 @@ extension Color {
     static let appCard = Color(.appCard)
     static let appOrange = Color(.appOrange)
     static let appYellow = Color(.appYellow)
+    static let appRed = Color(.appRed)
 }
 
 extension UIColor {
