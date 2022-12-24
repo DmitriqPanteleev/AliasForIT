@@ -14,10 +14,13 @@ struct SettingsView: View {
     @StateObject var viewModel: SettingsViewModel
     
     var body: some View {
+        
         VStack {
+            
             Text("Настройки игры")
                 .titleWhite()
                 .padding()
+            
             cellsBlock
             Spacer()
         }
@@ -32,6 +35,7 @@ private extension SettingsView {
     
     var cellsBlock: some View {
         VStack(spacing: 30) {
+            
             CountSettingCellView(option: viewModel.output.points,
                                  style: .points,
                                  onChange: viewModel.input.onChangePoints)

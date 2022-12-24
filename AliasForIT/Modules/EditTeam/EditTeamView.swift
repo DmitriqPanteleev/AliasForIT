@@ -16,17 +16,17 @@ struct EditTeamView: View {
     var body: some View {
         
         VStack(alignment: .leading, spacing: 20) {
+            
             RoundedTextField(teamName: $viewModel.output.name, placeholder: "Название команды")
+            
             defaultImages
                 .padding(.bottom, 30)
+            
             confirmButton
         }
         .frame(height: UIScreen.main.bounds.height)
         .padding(.horizontal)
         .background(Color.appBackground.ignoresSafeArea())
-        .onDisappear {
-            viewModel.onSave.send()
-        }
     }
 }
 
@@ -35,10 +35,12 @@ private extension EditTeamView {
     var defaultImages: some View {
         
         VStack(alignment: .leading, spacing: 10) {
+            
             Text("Аватарка")
                 .titleThreeWhite()
             
             LazyVGrid(columns: columns, alignment: .center, spacing: 10) {
+                
                 ForEach(viewModel.output.images, id: \.self) { image in
                     AvatarCellView(isSelected: $viewModel.output.isSelectedImage, image: image)
                         .onTapGesture {
@@ -50,10 +52,17 @@ private extension EditTeamView {
     }
     
     var confirmButton: some View {
-        PlayButtonView(style: .next) {
-            viewModel.input.onSaveTap.send()
-        }
+        PlayButtonView(style: .next, action: save)
+            .disabled(viewModel.output.isSelectedImage.isEmpty && viewModel.output.name.isEmpty)
     }
+}
+
+private extension EditTeamView {
+    
+    func save() {
+        viewModel.input.onSaveTap.send()
+    }
+    
 }
 
 //struct EditTeamView_Previews: PreviewProvider {

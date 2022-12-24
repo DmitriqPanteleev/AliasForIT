@@ -15,22 +15,23 @@ struct GameView: View {
     var body: some View {
         content
             .background(Color.appBackground.ignoresSafeArea())
-            .onAppear {
-                viewModel.input.onAppear.send()
-            }
+            .onAppear(perform: onAppear)
     }
 }
 
 private extension GameView {
     var content: some View {
         VStack(alignment: .leading) {
+            
             table
                 .padding(.top, 30)
+            
             pointLeft
                 .padding(.horizontal, 50)
                 .padding(.top)
             
             Spacer()
+            
             playButtonBlock
         }
         .frame(width: UIScreen.main.bounds.width, alignment: .leading)
@@ -56,26 +57,48 @@ private extension GameView {
     }
     
     var pointLeft: some View {
-        Text("До победы: \(viewModel.output.pointsLeft) очков")
-            .titleTwoWhite()
+        
+        HStack(spacing: 0) {
+            
+            Text("До победы:")
+                .titleTwoWhite()
+            
+             Text(" \(viewModel.output.pointsLeft) ")
+                .titleTwoYellow()
+            
+            Text("очков")
+                .titleTwoWhite()
+        }
     }
     
     @ViewBuilder var playButtonBlock: some View {
+        
         VStack {
             
             if (viewModel.output.pointsLeft > 0) {
-                PlayButtonView(style: .play) {
-                    viewModel.input.onPlayTap.send()
-                }
+                PlayButtonView(style: .play, action: onPlayTap)
             }
             
-            PlayButtonView(style: .stop) {
-                viewModel.input.onStopTap.send()
-            }
+            PlayButtonView(style: .stop, action: onStopTap)
         }
         .padding(.horizontal)
     }
     
+}
+
+private extension GameView {
+    
+    func onAppear() {
+        viewModel.input.onAppear.send()
+    }
+    
+    func onPlayTap() {
+        viewModel.input.onPlayTap.send()
+    }
+    
+    func onStopTap() {
+        viewModel.input.onStopTap.send()
+    }
 }
 
 //struct GameView_Previews: PreviewProvider {

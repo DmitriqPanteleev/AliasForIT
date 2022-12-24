@@ -18,7 +18,10 @@ struct AvatarCellView: View {
             .scaledToFill()
             .frame(width: UIScreen.main.bounds.width * (80/375), height: UIScreen.main.bounds.width * (80/375))
             .cornerRadius(160)
-            .overlay(RoundedRectangle(cornerRadius: 160).stroke(lineWidth: 1).foregroundColor(isSelected == image ? .appOrange : .appBackground))
+            .overlay(
+                RoundedRectangle(cornerRadius: 160).stroke(lineWidth: 1)
+                    .foregroundColor(isSelected == image ? .appOrange : .appCard)
+            )
     }
 }
 

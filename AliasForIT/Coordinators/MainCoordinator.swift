@@ -32,22 +32,19 @@ final class MainCoordinator: NavigationCoordinatable {
 extension MainCoordinator {
     
     @ViewBuilder func makeStart() -> some View {
-        
         let viewModel = MainViewModel(onUpdate: onBackTrigger, router: self)
-        
         MainView(viewModel: viewModel)
     }
     
     @ViewBuilder func makeEditTeam(model: TeamModel?) -> some View {
-        
-        let viewModel = EditTeamViewModel(onSave: onBackTrigger, model: model, router: self)
-        
+        let viewModel = EditTeamViewModel(onSave: onBackTrigger,
+                                          model: model,
+                                          router: self)
         EditTeamView(viewModel: viewModel)
     }
     
     @ViewBuilder func makeSettingsScreen() -> some View {
         let viewModel = SettingsViewModel(onBackTrigger: onBackTrigger)
-        
         SettingsView(viewModel: viewModel)
     }
     

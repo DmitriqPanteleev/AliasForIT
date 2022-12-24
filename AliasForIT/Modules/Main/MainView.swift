@@ -15,9 +15,7 @@ struct MainView: View {
     var body: some View {
         content
             .background(Color.appBackground.ignoresSafeArea())
-            .onAppear {
-                viewModel.input.onAppear.send()
-            }
+            .onAppear(perform: onAppear)
     }
 }
 
@@ -32,14 +30,13 @@ private extension MainView {
                     .titleWhite()
                 
                 Spacer()
+                
                 Image(systemName: "slider.vertical.3")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 20, height: 20)
                     .foregroundColor(.white)
-                    .onTapGesture {
-                        viewModel.input.onSettingsTap.send()
-                    }
+                    .onTapGesture(perform: onSettingsTap)
             }
             .padding()
             
@@ -54,7 +51,7 @@ private extension MainView {
                 .padding(.horizontal, 14)
             }
             
-            PlayButtonView(style: .play, action: {viewModel.input.onPlayTap.send()})
+            PlayButtonView(style: .play, action: onPlayTap)
                 .padding(.horizontal, 14)
                 .disabled(viewModel.output.teams.count < 2)
             
@@ -68,39 +65,47 @@ private extension MainView {
                 HStack {
                     Text("Команды")
                         .titleTwoWhite()
+                    
                     Spacer()
+                    
                     AddButtonView {
-                        viewModel.input.onAddTap.send(nil)
+                        onAddTap()
                     }
                 }
                 
                 if viewModel.output.teams.isEmpty {
+                    
                     Text("В игре участвуют минимум 2 команды")
                         .titleThreeWhite()
+                        .frame(alignment: .center)
+                        .padding(8)
+                    
                 } else if viewModel.output.teams.count == 1 {
+                    
                     EditableTeamCellView(model: viewModel.output.teams.first!,
-                                         onEdit: {
-                        viewModel.input.onAddTap.send(viewModel.output.teams.first!)
-                    },
-                                         onDelete: {
-                        viewModel.input.onDelete.send(viewModel.output.teams.first!.id)
-                    })
-                    .padding(.bottom, 4)
+                                         onEdit: { onAddTap(viewModel.output.teams.first!) },
+                                         onDelete: { onDeleteTap(viewModel.output.teams.first!.id) })
+                    .padding(.bottom, 8)
+                    
                     Text("Добавьте еще 1 команду")
                         .titleThreeWhite()
+                        .frame(alignment: .center)
+                    
                 } else {
+                    
                     ForEach(viewModel.output.teams) { team in
                         EditableTeamCellView(model: team,
-                                             onEdit: { viewModel.input.onAddTap.send(team) },
-                                             onDelete: { viewModel.input.onDelete.send(team.id)})
+                                             onEdit: { onAddTap(team) },
+                                             onDelete: { onDeleteTap(team.id)})
                     }
+                    
                 }
-                
             }
         }
     }
     
     var settings: some View {
+        
         VStack {
             SharpedCardView {
                 HStack {
@@ -140,6 +145,29 @@ private extension MainView {
             
             // Card for rules
         }
+    }
+}
+
+private extension MainView {
+    
+    func onAppear() {
+        viewModel.input.onAppear.send()
+    }
+    
+    func onSettingsTap() {
+        viewModel.input.onSettingsTap.send()
+    }
+    
+    func onAddTap(_ team: TeamModel? = nil) {
+        viewModel.input.onAddTap.send(team)
+    }
+    
+    func onDeleteTap(_ id: Int) {
+        viewModel.input.onDelete.send(id)
+    }
+    
+    func onPlayTap() {
+        viewModel.input.onPlayTap.send()
     }
 }
 

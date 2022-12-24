@@ -14,12 +14,16 @@ struct TeamCellView: View {
     
     var body: some View {
         HStack(spacing: 10) {
+            
             avatar
                 .padding(.leading, 14)
                 .padding(.vertical, 14)
+            
             Text(model.name)
                 .titleThreeWhite()
+            
             Spacer()
+            
             Text(model.score.description)
                 .titleThreeYellow()
                 .padding(.trailing, 14)

@@ -10,20 +10,23 @@ import Combine
 
 final class GameViewModel: ObservableObject {
     
+    // MARK: - Services
     private weak var router: RoundRouter?
     
+    // MARK: - External
     let teams: [TeamModel]
     let onRoundFinish: PassthroughSubject<Int, Never>
     
+    // MARK: - Private variables
     private var currentTeamIndex: Int
     private var pointsLeft: [Int]
+    private var cancellable = Set<AnyCancellable>()
     
+    // MARK: - Connection with view
     let input: Input
     @Published var output: Output
     
-    
-    private var cancellable = Set<AnyCancellable>()
-    
+    // MARK: - Initializer
     init(teams: [TeamModel], onRoundFinish: PassthroughSubject<Int, Never>, router: RoundRouter?) {
         
         self.currentTeamIndex = 0
@@ -40,15 +43,17 @@ final class GameViewModel: ObservableObject {
         setupBindings()
     }
     
+    // MARK: - Deinitializer
     deinit {
-#if DEBUG
+    #if DEBUG
         print("\(self) DEINITED!!!")
-#endif
+    #endif
         
         cancellable.forEach { $0.cancel() }
         cancellable.removeAll()
     }
     
+    // MARK: - Setup all bindings
     func setupBindings() {
         
         output.teams = self.teams
@@ -59,7 +64,6 @@ final class GameViewModel: ObservableObject {
         bindStopTap()
     }
     
-    // TODO: trigger this func in RoundViewModel (on timer ends)
     func bindRoundFinish() {
         self.onRoundFinish
             .sink { [weak self] newScore in
@@ -67,8 +71,7 @@ final class GameViewModel: ObservableObject {
                 guard let self = self else { return }
                 
                 // Хардкод
-                // Слишком много операций
-                //TODO: оптимизировать
+                //TODO: структурировать
                 self.output.currentTeam?.score += newScore
                 self.output.teams[self.currentTeamIndex].score += newScore
                 
@@ -86,6 +89,7 @@ final class GameViewModel: ObservableObject {
     func bindPlayTap() {
         input.onPlayTap
             .sink { [weak self] in
+                
                 guard let self = self else { return }
                 
                 if self.output.pointsLeft > 0 {
@@ -95,10 +99,7 @@ final class GameViewModel: ObservableObject {
                                                 roundDuration: UserStorage.shared.roundTime)
                     
                     self.router?.moveToRound(model: roundModel)
-                } else {
-                    self.router?.exit()
                 }
-                
             }
             .store(in: &cancellable)
     }

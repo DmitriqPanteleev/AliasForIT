@@ -10,6 +10,7 @@ import Foundation
 final class UserStorage {
     
     static let shared = UserStorage()
+    private init() {}
     
     private let defaults = UserDefaults.standard
     
@@ -62,6 +63,4 @@ final class UserStorage {
             defaults.set(newValue, forKey: Consts.SettingsKeys.isCommonLastWord)
         }
     }
-    
-    private init() {}
 }

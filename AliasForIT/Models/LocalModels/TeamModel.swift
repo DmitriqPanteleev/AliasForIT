@@ -9,7 +9,6 @@ import Foundation
 
 struct TeamModel: Equatable, Identifiable {
     let id: Int
-    
     var name: String
     var image: String
     var score: Int
@@ -21,7 +20,7 @@ struct TeamModel: Equatable, Identifiable {
         self.score = 0
     }
     
-    init(id: Int ,name: String, image: String, score: Int) {
+    init(id: Int, name: String, image: String, score: Int) {
         self.id = id
         self.name = name
         self.image = image
@@ -33,9 +32,6 @@ struct TeamModel: Equatable, Identifiable {
         guard let source = URL(string: image) else { return nil }
         return source
     }
-    
-    
-    
     
     // MARK: - Mock teams
     static func defaultTeam1() -> TeamModel {

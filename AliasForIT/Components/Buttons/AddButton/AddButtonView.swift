@@ -19,11 +19,7 @@ struct AddButtonView: View {
         .frame(width: 30, height: 30)
         .foregroundColor(.white)
         .background(LinearGradient(
-            colors:
-                [
-                    .appYellow,
-                    .appOrange
-                ],
+            colors: [.appYellow, .appOrange],
             startPoint: .bottomLeading,
             endPoint: .center))
         .cornerRadius(15)

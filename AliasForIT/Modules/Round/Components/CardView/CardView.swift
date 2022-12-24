@@ -31,7 +31,9 @@ private extension CardView {
     var title: some View {
         Text(word)
             .foregroundColor(.white)
-            .frame(width: Consts.SharedLayout.cardWidth, height: Consts.SharedLayout.cardHeight)
+            .frame(width: Consts.SharedLayout.cardWidth,
+                   height: Consts.SharedLayout.cardHeight,
+                   alignment: .center)
     }
 }
 

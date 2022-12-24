@@ -38,14 +38,16 @@ final class RoundCoordinator: NavigationCoordinatable {
 extension RoundCoordinator {
         
     @ViewBuilder func makeGame() -> some View {
-        let viewModel = GameViewModel(teams: self.teams, onRoundFinish: onRoundFinish, router: self)
+        let viewModel = GameViewModel(teams: self.teams,
+                                      onRoundFinish: onRoundFinish,
+                                      router: self)
         GameView(viewModel: viewModel)
     }
     
     @ViewBuilder func makeRound(round: RoundModel) -> some View {
-        
-        let viewModel = RoundViewModel(roundModel: round, onRoundFinish: onRoundFinish, router: self)
-        
+        let viewModel = RoundViewModel(roundModel: round,
+                                       onRoundFinish: onRoundFinish,
+                                       router: self)
         RoundView(viewModel: viewModel)
     }
     

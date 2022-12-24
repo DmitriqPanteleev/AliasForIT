@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-// TODO: сделать цвета для разных кейсов
 enum PlayButtonStyle {
     case play
     case next
@@ -41,25 +40,17 @@ extension PlayButtonStyle {
     var background: some View {
         switch self {
         case .play:
-            return LinearGradient(
-                colors:
-                    [
-                        .appYellow,
-                        .appOrange
-                    ],
-                startPoint: .bottomLeading,
-                endPoint: .center)
+            return LinearGradient(colors: [.appYellow,.appOrange],
+                                  startPoint: .bottomLeading,
+                                  endPoint: .center)
         case .next:
-            return LinearGradient(
-                colors:
-                    [
-                        .appYellow,
-                        .appOrange
-                    ],
-                startPoint: .bottomLeading,
-                endPoint: .center)
+            return LinearGradient(colors: [.appYellow,.appOrange],
+                                  startPoint: .bottomLeading,
+                                  endPoint: .center)
         case .stop:
-            return LinearGradient(colors: [.clear, .clear], startPoint: .center, endPoint: .center)
+            return LinearGradient(colors: [.clear, .clear],
+                                  startPoint: .center,
+                                  endPoint: .center)
         }
     }
 }

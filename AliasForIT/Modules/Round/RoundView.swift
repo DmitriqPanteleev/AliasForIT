@@ -26,12 +26,14 @@ struct RoundView: View {
 private extension RoundView {
     
     @ViewBuilder var content: some View {
+        
         switch viewModel.output.state {
         case .playing:
             playContent
         case .paused:
             pausedContent
         }
+        
     }
     
     var header: some View {
@@ -45,6 +47,7 @@ private extension RoundView {
                     .foregroundColor(.yellow)
                 
                 LinearProgressView(progress: $viewModel.output.roundTime, total: UserStorage.shared.roundTime)
+                
             }
             .frame(width: Consts.SharedLayout.cardWidth)
             
@@ -58,6 +61,7 @@ private extension RoundView {
         let circleSize = UIScreen.main.bounds.width + 32
         
         VStack {
+            
             Spacer()
             RoundedRectangle(cornerRadius: circleSize / 5)
                 .path(in: CGRect(origin:
@@ -97,10 +101,12 @@ private extension RoundView {
     
     var cards: some View {
         ZStack {
+            
             ForEach(viewModel.roundModel.words.reversed(), id: \.self) { word in
                 SwipableCardView(word: word, action: viewModel.input.answer)
                     .environmentObject(viewModel)
             }
+            
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
     }
@@ -137,9 +143,9 @@ private extension RoundView {
             Spacer()
         }
         .overlay(alignment: .bottomTrailing) {
-            TimerControlButtonView(style: .pause, callback: {
+            TimerControlButtonView(style: .pause) {
                 self.timerStateControl(false)
-            })
+            }
         }
     }
 }
@@ -149,10 +155,12 @@ private extension RoundView {
     
     var pausedContent: some View {
         VStack(alignment: .center) {
+            
             header
             
             Spacer()
             
+            // Хардкод
             Image(systemName: "pause.circle")
                 .foregroundColor(.appYellow)
                 .scaleEffect(2)
@@ -164,9 +172,8 @@ private extension RoundView {
             }
             .padding(.bottom, 10)
             
-            PlayButtonView(style: .stop) {
-                viewModel.input.onCloseTap.send()
-            }
+            PlayButtonView(style: .stop, action: closeRound)
+            
         }
         .padding(.horizontal)
         .padding(.bottom, 5)
@@ -183,6 +190,10 @@ private extension RoundView {
     
     func answer(_ isAnswered: Bool) {
         viewModel.input.answer.send(isAnswered)
+    }
+    
+    func closeRound() {
+        viewModel.input.onCloseTap.send()
     }
 }
 

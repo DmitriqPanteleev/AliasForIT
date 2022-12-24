@@ -21,9 +21,7 @@ struct PlayButtonView: View {
         .frame(maxWidth: UIScreen.main.bounds.width)
         .background(style.background)
         .cornerRadius(100)
-        .onTapGesture {
-            action()
-        }
+        .onTapGesture(perform: action)
     }
 }
 
