@@ -96,7 +96,7 @@ private extension RoundView {
             .padding(.bottom, 5)
             .padding(.top, 20)
         }
-        .background(Color.black.ignoresSafeArea())
+        .background(Color.appBackground.ignoresSafeArea())
     }
     
     var cards: some View {
@@ -178,7 +178,7 @@ private extension RoundView {
         .padding(.horizontal)
         .padding(.bottom, 5)
         .padding(.top, 20)
-        .background(Color.black.ignoresSafeArea())
+        .background(Color.appBackground.ignoresSafeArea())
     }
 }
 

@@ -95,7 +95,7 @@ final class GameViewModel: ObservableObject {
                 if self.output.pointsLeft > 0 {
                     
                     let roundModel = RoundModel(team: self.output.currentTeam!,
-                                                words: WordsStorage.getRoundWords(count: UserStorage.shared.roundTime * 2),
+                                                words: WordsStorage.getRoundWords(count: UserStorage.shared.roundTime),
                                                 roundDuration: UserStorage.shared.roundTime)
                     
                     self.router?.moveToRound(model: roundModel)

@@ -14,7 +14,7 @@ struct SwipableCardView: View {
     let action: PassthroughSubject<Bool, Never>
     
     @State private var offset = CGSize.zero
-    @State private var backgroundColor = Color.black
+    @State private var backgroundColor = Color.appBackground
     
     var body: some View {
         CardView(backgroundColor: $backgroundColor, word: word)
@@ -31,7 +31,7 @@ struct SwipableCardView: View {
                                     offset.width = 0
                                 }
                             case let x where x > 30:
-                                withAnimation(.linear(duration: 0.3)) {
+                                withAnimation(.linear(duration: 0.5)) {
                                     offset.width = 500
                                     backgroundColor = .yellow
                                     action.send(true)
@@ -41,14 +41,14 @@ struct SwipableCardView: View {
                                     offset.width = 0
                                 }
                             case let x where x < -30:
-                                withAnimation(.linear(duration: 0.3)) {
+                                withAnimation(.linear(duration: 0.5)) {
                                     backgroundColor = .red
                                     offset.width  = -500
                                     action.send(false)
                                 }
                             default:
                                 withAnimation(.interpolatingSpring(mass: 1.0, stiffness: 100, damping: 12, initialVelocity: 0)) {
-                                    backgroundColor = .black
+                                    backgroundColor = .appBackground
                                     offset.width = 0
                                 }
                             }
