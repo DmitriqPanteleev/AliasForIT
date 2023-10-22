@@ -10,41 +10,35 @@ import Foundation
 struct TeamModel: Equatable, Identifiable {
     let id: Int
     var name: String
-    var image: String
+    var image: TeamImage
     var score: Int
     
-    init(name: String, image: String) {
+    // MARK: - Initializers
+    init(name: String, image: TeamImage) {
         self.id = UUID().hashValue
         self.name = name
         self.image = image
         self.score = 0
     }
     
-    init(id: Int, name: String, image: String, score: Int) {
+    init(id: Int, name: String, image: TeamImage, score: Int) {
         self.id = id
         self.name = name
         self.image = image
         self.score = score
     }
     
-    var imageSource: URL? {
-        // add placeholder
-        guard let source = URL(string: image) else { return nil }
-        return source
-    }
     
-    // MARK: - Mock teams
+    // MARK: - Mock Teams
     static func defaultTeam1() -> TeamModel {
-        TeamModel(name: "Константы",
-                  image: "const")
+        TeamModel(name: "Константы", image: .elon)
     }
     
     static func defaultTeam2() -> TeamModel {
-        TeamModel(name: "Ворота",
-                  image: "gates")
+        TeamModel(name: "Ворота", image: .facebook)
     }
     
     static func emptyTeam() -> TeamModel {
-        TeamModel(name: "Название команды", image: "")
+        TeamModel(name: "Название команды", image: .mrrobot)
     }
 }

@@ -6,20 +6,26 @@
 //
 
 import SwiftUI
-import Combine
+import Combine // TODO: убрать потом
 
 struct MainView: View {
     
     @StateObject var viewModel: MainViewModel
     
     var body: some View {
-        content
-            .background(Color.appBackground.ignoresSafeArea())
-            .onAppear(perform: onAppear)
+        viewContent()
     }
 }
 
 private extension MainView {
+    
+    func viewContent() -> some View {
+        VStack(spacing: 24) {
+            MainHeader(settingsSubject: PassthroughSubject<Void, Never>())
+            TeamTabControl(selectedTeam: .constant(0), teamCount: 3)
+            Spacer()
+        }
+    }
     
     var content: some View {
         VStack(spacing: 16) {
@@ -171,8 +177,11 @@ private extension MainView {
     }
 }
 
-//struct MainView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MainView(viewModel: <#T##MainViewModel#>)
-//    }
-//}
+#if DEBUG
+import Combine
+struct MainView_Previews: PreviewProvider {
+    static var previews: some View {
+        MainView(viewModel: MainViewModel(onUpdate: PassthroughSubject<Void, Never>(), router: nil))
+    }
+}
+#endif

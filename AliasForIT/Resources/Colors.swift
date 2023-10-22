@@ -15,6 +15,12 @@ extension Color {
         case appOrange
         case appYellow
         case appRed
+        
+        // MARK: - New Colors
+        case appDarkBlue
+        case appGray
+        case appDarkGray
+        case appLightGray
     }
 }
 
@@ -32,6 +38,12 @@ extension Color {
     static let appOrange = Color(.appOrange)
     static let appYellow = Color(.appYellow)
     static let appRed = Color(.appRed)
+    
+    // MARK: - New Colors
+    static let appDarkBlue = Color(.appDarkBlue)
+    static let appGray = Color(.appGray)
+    static let appDarkGray = Color(.appDarkGray)
+    static let appLightGray = Color(.appLightGray)
 }
 
 extension UIColor {

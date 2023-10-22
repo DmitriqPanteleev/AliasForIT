@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D01401F32AE4155E00048B27 /* MainHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01401F22AE4155E00048B27 /* MainHeader.swift */; };
+		D01401F62AE418DF00048B27 /* Button+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01401F52AE418DF00048B27 /* Button+Extensions.swift */; };
+		D01401F82AE4199600048B27 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01401F72AE4199600048B27 /* Images.swift */; };
+		D01401FC2AE41BE400048B27 /* TeamTabControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01401FB2AE41BE400048B27 /* TeamTabControl.swift */; };
+		D01402012AE422A900048B27 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01402002AE422A900048B27 /* TeamCell.swift */; };
 		D062F1F62955AEC500B79C14 /* AvatarCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D062F1F52955AEC500B79C14 /* AvatarCellView.swift */; };
 		D077131B2954A1B400F6EC90 /* TeamsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D077131A2954A1B400F6EC90 /* TeamsStorage.swift */; };
 		D0A7F92929430D140013A084 /* RoundFinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7F92829430D140013A084 /* RoundFinishedView.swift */; };
@@ -70,6 +75,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D01401F22AE4155E00048B27 /* MainHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeader.swift; sourceTree = "<group>"; };
+		D01401F52AE418DF00048B27 /* Button+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Extensions.swift"; sourceTree = "<group>"; };
+		D01401F72AE4199600048B27 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		D01401FB2AE41BE400048B27 /* TeamTabControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTabControl.swift; sourceTree = "<group>"; };
+		D01402002AE422A900048B27 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
 		D062F1F52955AEC500B79C14 /* AvatarCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCellView.swift; sourceTree = "<group>"; };
 		D077131A2954A1B400F6EC90 /* TeamsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsStorage.swift; sourceTree = "<group>"; };
 		D0A7F92829430D140013A084 /* RoundFinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundFinishedView.swift; sourceTree = "<group>"; };
@@ -144,12 +154,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D062F1F42955AE8E00B79C14 /* Components */ = {
+		D01401F12AE4154400048B27 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D01401F22AE4155E00048B27 /* MainHeader.swift */,
+				D01401FB2AE41BE400048B27 /* TeamTabControl.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D01401F42AE418CA00048B27 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				D01401F52AE418DF00048B27 /* Button+Extensions.swift */,
+				D0ED1AAE292616B5002ABBD5 /* View + Extensions.swift */,
+				D0E48AAD293FCF2B006E2555 /* Text + Extensions.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		D01401FD2AE4227D00048B27 /* Old */ = {
+			isa = PBXGroup;
+			children = (
+				D0A7F93229432FFF0013A084 /* AppBar */,
+				D0E48AAC293FCF12006E2555 /* Buttons */,
+				D0E5FB7A293CF24B006F7F6F /* CardView */,
+				D0F0C2C929474981000D7FF5 /* RoundedTextField */,
+				D0E5FB70293A1218006F7F6F /* ProgressView */,
+			);
+			path = Old;
+			sourceTree = "<group>";
+		};
+		D01401FE2AE4228700048B27 /* Scrolls */ = {
+			isa = PBXGroup;
+			children = (
+				D01401FF2AE4229500048B27 /* TeamScrollView */,
+			);
+			path = Scrolls;
+			sourceTree = "<group>";
+		};
+		D01401FF2AE4229500048B27 /* TeamScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				D01402002AE422A900048B27 /* TeamCell.swift */,
+			);
+			path = TeamScrollView;
+			sourceTree = "<group>";
+		};
+		D062F1F42955AE8E00B79C14 /* C */ = {
 			isa = PBXGroup;
 			children = (
 				D0F0C2C3294739AC000D7FF5 /* EditableTeamCellView.swift */,
 			);
-			path = Components;
+			path = C;
 			sourceTree = "<group>";
 		};
 		D0A7F92A29430D280013A084 /* CardView */ = {
@@ -266,6 +323,7 @@
 			children = (
 				D0ED1A412923A340002ABBD5 /* Assets.xcassets */,
 				D0E5FB78293CF002006F7F6F /* Colors.swift */,
+				D01401F72AE4199600048B27 /* Images.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -291,7 +349,7 @@
 		D0ED1A4E2923A3A3002ABBD5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D0ED1A552923A498002ABBD5 /* LocalModels */,
+				D0ED1A552923A498002ABBD5 /* Local */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -330,23 +388,20 @@
 		D0ED1A522923A3D0002ABBD5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				D0A7F93229432FFF0013A084 /* AppBar */,
-				D0E48AAC293FCF12006E2555 /* Buttons */,
-				D0E5FB7A293CF24B006F7F6F /* CardView */,
-				D0F0C2C929474981000D7FF5 /* RoundedTextField */,
-				D0E5FB70293A1218006F7F6F /* ProgressView */,
+				D01401FE2AE4228700048B27 /* Scrolls */,
+				D01401FD2AE4227D00048B27 /* Old */,
 			);
 			path = Components;
 			sourceTree = "<group>";
 		};
-		D0ED1A552923A498002ABBD5 /* LocalModels */ = {
+		D0ED1A552923A498002ABBD5 /* Local */ = {
 			isa = PBXGroup;
 			children = (
 				D0ED1A562923A4A6002ABBD5 /* RoundModel.swift */,
 				D0ED1A582923A4B5002ABBD5 /* TeamModel.swift */,
 				D0A7F92C294312410013A084 /* AnswerModel.swift */,
 			);
-			path = LocalModels;
+			path = Local;
 			sourceTree = "<group>";
 		};
 		D0ED1A5A2923A4D6002ABBD5 /* Storages */ = {
@@ -362,9 +417,8 @@
 		D0ED1A612923A551002ABBD5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D01401F42AE418CA00048B27 /* SwiftUI */,
 				D0ED1A622923A561002ABBD5 /* String + Extensions.swift */,
-				D0ED1AAE292616B5002ABBD5 /* View + Extensions.swift */,
-				D0E48AAD293FCF2B006E2555 /* Text + Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -382,7 +436,8 @@
 		D0ED1A652923A57F002ABBD5 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				D062F1F42955AE8E00B79C14 /* Components */,
+				D01401F12AE4154400048B27 /* Components */,
+				D062F1F42955AE8E00B79C14 /* C */,
 				D0F0C2BC29472C54000D7FF5 /* MainView.swift */,
 				D0F0C2BE29472C5F000D7FF5 /* MainViewModel.swift */,
 				D0F0C2C5294743AD000D7FF5 /* MainRouter.swift */,
@@ -580,6 +635,7 @@
 				D0ED1AAD2926054E002ABBD5 /* SwipableCardView.swift in Sources */,
 				D0ED1A9E2923CC2F002ABBD5 /* RoundRouter.swift in Sources */,
 				D0BE04042938EFD9000739E0 /* CardView.swift in Sources */,
+				D01401F32AE4155E00048B27 /* MainHeader.swift in Sources */,
 				D0E5FB7F293DF90D006F7F6F /* TeamCellView.swift in Sources */,
 				D0A7F92D294312410013A084 /* AnswerModel.swift in Sources */,
 				D0A7F92F294321AC0013A084 /* AnswerToggleCell.swift in Sources */,
@@ -588,16 +644,20 @@
 				D0ED1AAF292616B5002ABBD5 /* View + Extensions.swift in Sources */,
 				D0ED1A632923A561002ABBD5 /* String + Extensions.swift in Sources */,
 				D0E48AB22941E328006E2555 /* RoundCoordinator.swift in Sources */,
+				D01401FC2AE41BE400048B27 /* TeamTabControl.swift in Sources */,
 				D0F0C2C6294743AD000D7FF5 /* MainRouter.swift in Sources */,
 				D0ED1A572923A4A6002ABBD5 /* RoundModel.swift in Sources */,
 				D0ED1A6C2923A5E2002ABBD5 /* SwitchSettingsCellView.swift in Sources */,
+				D01402012AE422A900048B27 /* TeamCell.swift in Sources */,
 				D077131B2954A1B400F6EC90 /* TeamsStorage.swift in Sources */,
 				D0E5FB7C293CF26B006F7F6F /* SharpedCardView.swift in Sources */,
+				D01401F62AE418DF00048B27 /* Button+Extensions.swift in Sources */,
 				D0ED1A6E2923A609002ABBD5 /* CountSettingCellView.swift in Sources */,
 				D0F0C2C22947368C000D7FF5 /* AddButtonView.swift in Sources */,
 				D0FCA33729505D7600599E69 /* MainCoordinator.swift in Sources */,
 				D0E5FB6F293A0EF9006F7F6F /* TimerControllButtonView.swift in Sources */,
 				D0ED1A812923A948002ABBD5 /* AppDelegate.swift in Sources */,
+				D01401F82AE4199600048B27 /* Images.swift in Sources */,
 				D0F0C2C4294739AC000D7FF5 /* EditableTeamCellView.swift in Sources */,
 				D0ED1AA229250258002ABBD5 /* WordsStorage.swift in Sources */,
 				D0FCA33F2951C49000599E69 /* EditTeamView.swift in Sources */,
@@ -846,7 +906,7 @@
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
 			requirement = {
 				kind = exactVersion;
-				version = 7.3.2;
+				version = 7.9.1;
 			};
 		};
 		D0ED1A882923AAAF002ABBD5 /* XCRemoteSwiftPackageReference "Moya" */ = {
