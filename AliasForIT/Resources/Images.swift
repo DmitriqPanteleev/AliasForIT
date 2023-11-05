@@ -9,13 +9,24 @@ import SwiftUI
 
 enum SystemImage: String {
     case settings = "gearshape.fill"
+    case photo
+    case checkMark = "checkmark.rectangle.portrait.fill"
+    case playFill = "play.fill"
+//    case addTeam = "person.badge.plus"
+    case addTeam = "plus"
+    
+    // MARK: - Settings
+    case timeInterval = "clock.arrow.circlepath"
+    case wordsForWin = "list.bullet.circle"
+    case levelMode = "chart.bar"
+    case packs = "archivebox.circle.fill"
 }
 
 enum TeamImage: String {
-    case elon = "elon"
-    case facebook = "facebook"
-    case silicon = "silicon"
-    case mrrobot = "mrrobot"
+    case elon
+    case facebook
+    case silicon
+    case mrrobot
 }
 
 extension Image {
@@ -23,7 +34,7 @@ extension Image {
         self.init(systemName: systemImage.rawValue)
     }
     
-    init(_ systemImage: TeamImage) {
-        self.init(systemName: systemImage.rawValue)
+    init(_ teamImage: TeamImage) {
+        self.init(teamImage.rawValue)
     }
 }

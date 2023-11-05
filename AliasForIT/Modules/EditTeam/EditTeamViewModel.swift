@@ -33,7 +33,7 @@ final class EditTeamViewModel: ObservableObject {
         
         if let model = model {
             self.isEdit = true
-            self.output = Output(id: model.id, name: model.name, image: model.image)
+            self.output = Output(id: model.id, name: model.name, image: model.image.rawValue)
         } else {
             self.isEdit = false
             self.output = Output()
@@ -70,7 +70,7 @@ final class EditTeamViewModel: ObservableObject {
                     let team = TeamModel(
                         id: output.id,
                         name: output.name,
-                        image: output.image,
+                        image: TeamImage(rawValue: output.image) ?? .elon,
                         score: 0)
                     
                     if self.isEdit {

@@ -10,6 +10,8 @@ import Combine // TODO: убрать потом
 
 struct MainView: View {
     
+    @State private var selectedTeam = 0
+    @State var models: [TeamModel] = [.defaultTeam1(), .defaultTeam2(), .defaultTeam1()]
     @StateObject var viewModel: MainViewModel
     
     var body: some View {
@@ -20,11 +22,53 @@ struct MainView: View {
 private extension MainView {
     
     func viewContent() -> some View {
+        VStack(spacing: 0) {
+            topTeamBlock
+            VStack {
+                MainSettingsGrid(tapSubject: SettingSubject())
+                Spacer()
+                buttonBlock
+            }
+            .padding(.top)
+            .background(Color.appLightGray)
+            .cornerRadius(24, corners: [.topLeft, .topRight])
+            .ignoresSafeArea()
+        }
+    }
+    
+    var topTeamBlock: some View {
         VStack(spacing: 24) {
             MainHeader(settingsSubject: PassthroughSubject<Void, Never>())
-            TeamTabControl(selectedTeam: .constant(0), teamCount: 3)
+            TeamTabControl(selectedTeam: $selectedTeam,
+                           teamCount: models.count)
+            TeamScrollView(selectedTeam: $selectedTeam,
+                           models: $models,
+                           addPhotoSubject: PassthroughSubject<Void, Never>(),
+                           editNameSubject: PassthroughSubject<String, Never>())
+        }
+        .background(Color.white)
+    }
+    
+    @ViewBuilder
+    var buttonBlock: some View {
+        
+        let connectedScenes = UIApplication.shared.connectedScenes
+            .filter { $0.activationState == .foregroundActive }
+            .compactMap { $0 as? UIWindowScene }
+        
+        let window = connectedScenes.first?
+            .windows
+            .first { $0.isKeyWindow }
+        
+        let bottomSafeArea = window?.safeAreaInsets.bottom
+        
+        HStack(spacing: 40) {
+            Spacer()
+            PlayButton(tapSubject: VoidSubject())
+                .disabled(models.count < 2)
             Spacer()
         }
+        .padding(.bottom, bottomSafeArea)
     }
     
     var content: some View {

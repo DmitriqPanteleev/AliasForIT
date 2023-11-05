@@ -9,9 +9,8 @@ import SwiftUI
 import Combine
 
 struct MainHeader: View {
-    
     let mode: String = "Классический режим"
-    let settingsSubject: PassthroughSubject<Void, Never>
+    let settingsSubject: VoidSubject
     
     var body: some View {
         HStack(alignment: .top) {
@@ -35,14 +34,21 @@ private extension MainHeader {
         }
     }
     
+    @ViewBuilder
     func settingsButtonView() -> some View {
-        Button(publisher: settingsSubject) {
-            Image(.settings)
+        
+        let buttonSize: CGFloat = 14
+        
+        Button(subject: settingsSubject) {
+            Image(.addTeam)
                 .resizable()
-                .frame(width: 22, height: 22)
+                .frame(width: buttonSize, height: buttonSize)
+                .foregroundColor(.white)
+                .padding(10)
+                .background(Color.appDarkBlue.cornerRadius(buttonSize * 2))
         }
         .padding(6)
-        .tint(.appDarkBlue)
+        .padding(.horizontal, 10)
     }
 }
 

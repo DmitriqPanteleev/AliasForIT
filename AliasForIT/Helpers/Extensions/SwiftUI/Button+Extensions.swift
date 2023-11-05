@@ -9,13 +9,13 @@ import SwiftUI
 import Combine
 
 extension Button {
-    init(publisher: PassthroughSubject<Void, Never>, label: () -> Label) {
-        self.init(action: publisher.send, label: label)
+    init(subject: VoidSubject, label: () -> Label) {
+        self.init(action: subject.send, label: label)
     }
     
-    init<T>(publisher: PassthroughSubject<T, Never>, model: T, label: () -> Label) {
+    init<T>(subject: PassthroughSubject<T, Never>, model: T, label: () -> Label) {
         self.init(action: {
-            publisher.send(model)
+            subject.send(model)
         }, label: label)
     }
 }
