@@ -15,18 +15,29 @@ fileprivate struct Layout {
 
 struct TeamCell: View {
     
+    @State private var isDeleting = false
+    
     let isSelected: Bool
     @Binding var model: TeamModel
     
     let addPhotoSubject: VoidSubject
     let editNameSubject: StringSubject
+    let deleteSubject: VoidSubject
     
     var body: some View {
         VStack(spacing: 10) {
             avatarView()
             nameView()
         }
+        .onChange(of: isSelected) { newValue in
+            if !newValue {
+                withAnimation {
+                    isDeleting = false
+                }
+            }
+        }
         .animation(.spring(), value: isSelected)
+        .animation(.easeInOut, value: isDeleting)
     }
 }
 
@@ -36,8 +47,14 @@ private extension TeamCell {
             .resizable()
             .scaledToFill()
             .frame(width: Layout.imageSize, height: Layout.imageSize)
+            .overlay(alignment: .center, content: deleteTeamOverlay)
             .mask { Circle() }
             .overlay(alignment: .bottomTrailing, content: addPhotoButton)
+            .onLongPressGesture(minimumDuration: 0.5,
+                                maximumDistance: .infinity) {
+                guard isSelected else { return }
+                isDeleting.toggle()
+            }
     }
     
     @ViewBuilder
@@ -55,6 +72,16 @@ private extension TeamCell {
                               actionSubject: addPhotoSubject)
         }
     }
+    
+    @ViewBuilder
+    func deleteTeamOverlay() -> some View {
+        if isDeleting {
+            ZStack {
+                Color.red.opacity(0.25)
+                DeleteTeamButton(deleteSubject: deleteSubject)
+            }
+        }
+    }
 }
 
 
@@ -66,7 +93,8 @@ struct TeamCell_Previews: PreviewProvider {
             TeamCell(isSelected: true,
                      model: .constant(.defaultTeam1()),
                      addPhotoSubject: VoidSubject(),
-                     editNameSubject: StringSubject())
+                     editNameSubject: StringSubject(),
+                     deleteSubject: VoidSubject())
             Spacer()
         }
     }

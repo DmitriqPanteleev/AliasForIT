@@ -39,8 +39,19 @@ extension Text {
             .foregroundColor(.appYellow)
     }
     
+    // MARK: - New Text Styles
+    func teamTitle(isCurrentTeam: Bool = true) -> Self {
+        self
+            .font(.system(size: 20, weight: .light))
+            .foregroundColor(isCurrentTeam ? .appDarkBlue : .appDarkGray)
+    }
     
-    // Additinal styles
+    func scoreTitleStyle(isBig: Bool = false, isCurrent: Bool = true) -> Self {
+        self
+            .font(.system(size: isBig ? 28 : 14, weight: .regular))
+            .foregroundColor(isCurrent ? .appDarkBlue : .appDarkGray)
+    }
+    
     func animatedTitle(fontSize: CGFloat) -> Text {
         self
             .font(.system(size: fontSize, weight: .regular))

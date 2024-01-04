@@ -17,7 +17,7 @@ final class GameViewModel: ObservableObject {
     let teams: [TeamModel]
     let onRoundFinish: PassthroughSubject<Int, Never>
     
-    // MARK: - Private variables
+    // MARK: - Internal variables
     private var currentTeamIndex: Int
     private var pointsLeft: [Int]
     private var cancellable = Set<AnyCancellable>()
@@ -66,12 +66,8 @@ final class GameViewModel: ObservableObject {
     
     func bindRoundFinish() {
         self.onRoundFinish
-            .sink { [weak self] newScore in
-                
+            .handleEvents(receiveOutput: { [weak self] newScore in
                 guard let self = self else { return }
-                
-                // Хардкод
-                //TODO: структурировать
                 self.output.currentTeam?.score += newScore
                 self.output.teams[self.currentTeamIndex].score += newScore
                 
@@ -80,8 +76,9 @@ final class GameViewModel: ObservableObject {
                 
                 self.currentTeamIndex = self.currentTeamIndex == self.teams.count - 1 ? 0 : self.currentTeamIndex + 1
                 self.output.currentTeam = self.teams[self.currentTeamIndex]
-                
-                self.input.onAppear.send()
+            })
+            .sink { [weak self] newScore in
+                self?.input.onAppear.send()
             }
             .store(in: &cancellable)
     }

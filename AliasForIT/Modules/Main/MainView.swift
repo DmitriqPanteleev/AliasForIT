@@ -44,11 +44,13 @@ private extension MainView {
             TeamScrollView(selectedTeam: $selectedTeam,
                            models: $models,
                            addPhotoSubject: PassthroughSubject<Void, Never>(),
-                           editNameSubject: PassthroughSubject<String, Never>())
+                           editNameSubject: PassthroughSubject<String, Never>(),
+                           deleteSubject: VoidSubject())
         }
         .background(Color.white)
     }
     
+    // TODO: возможно переместить сюда кнопку добавления команды
     @ViewBuilder
     var buttonBlock: some View {
         
@@ -73,38 +75,9 @@ private extension MainView {
     
     var content: some View {
         VStack(spacing: 16) {
-            
-            HStack {
-                // TODO: CustomAppBar
-                Text("Начать игру")
-                    .titleWhite()
-                
-                Spacer()
-                
-                Image(systemName: "slider.vertical.3")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 20, height: 20)
-                    .foregroundColor(.white)
-                    .onTapGesture(perform: onSettingsTap)
-            }
-            .padding()
-            
-            ScrollView {
-                VStack(spacing: 6) {
-                    
-                    teams
-                        .padding(.bottom, 10)
-                    
-                    settings
-                }
-                .padding(.horizontal, 14)
-            }
-            
             PlayButtonView(style: .play, action: onPlayTap)
                 .padding(.horizontal, 14)
                 .disabled(viewModel.output.teams.count < 2)
-            
         }
     }
     
@@ -113,11 +86,6 @@ private extension MainView {
         SharpedCardView {
             VStack {
                 HStack {
-                    Text("Команды")
-                        .titleTwoWhite()
-                    
-                    Spacer()
-                    
                     AddButtonView {
                         onAddTap()
                     }

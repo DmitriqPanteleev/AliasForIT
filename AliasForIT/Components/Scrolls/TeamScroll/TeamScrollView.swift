@@ -15,6 +15,7 @@ struct TeamScrollView: View {
     
     let addPhotoSubject: VoidSubject
     let editNameSubject: StringSubject
+    let deleteSubject: VoidSubject
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
@@ -36,9 +37,10 @@ private extension TeamScrollView {
         TeamCell(isSelected: index == selectedTeam,
                  model: model,
                  addPhotoSubject: addPhotoSubject,
-                 editNameSubject: editNameSubject)
+                 editNameSubject: editNameSubject,
+                 deleteSubject: deleteSubject)
         .scaleEffect(index == selectedTeam ? 1 : 0.85, anchor: .bottom)
-        .blur(radius: index == selectedTeam ? 0 : 2)
+        .blur(radius: index == selectedTeam ? 0 : 1)
         .onTapGesture {
             withAnimation {
                 selectedTeam = index
@@ -70,8 +72,9 @@ struct TeamScrollView_Previews: PreviewProvider {
     static var previews: some View {
         TeamScrollView(selectedTeam: .constant(0),
                        models: .constant([.defaultTeam1(), .defaultTeam2(), .defaultTeam1()]),
-                       addPhotoSubject: PassthroughSubject<Void, Never>(),
-                       editNameSubject: PassthroughSubject<String, Never>())
+                       addPhotoSubject: VoidSubject(),
+                       editNameSubject: StringSubject(),
+                       deleteSubject: VoidSubject())
     }
 }
 #endif

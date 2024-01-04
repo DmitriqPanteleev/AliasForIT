@@ -84,6 +84,13 @@
 		D0FCA33729505D7600599E69 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FCA33629505D7600599E69 /* MainCoordinator.swift */; };
 		D0FCA33D2951C47300599E69 /* EditTeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FCA33C2951C47300599E69 /* EditTeamViewModel.swift */; };
 		D0FCA33F2951C49000599E69 /* EditTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FCA33E2951C49000599E69 /* EditTeamView.swift */; };
+		D0FDEF862AF84DA900F310FD /* DeleteTeamButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FDEF852AF84DA900F310FD /* DeleteTeamButton.swift */; };
+		D0FDEF892AF8513500F310FD /* GameHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FDEF882AF8513500F310FD /* GameHeaderView.swift */; };
+		D0FDEF8B2AF8533700F310FD /* TeamScoreList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FDEF8A2AF8533700F310FD /* TeamScoreList.swift */; };
+		D0FDEF8E2AF8535900F310FD /* TeamScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FDEF8D2AF8535900F310FD /* TeamScoreCell.swift */; };
+		D0FDEF912AF8551900F310FD /* GameTeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FDEF902AF8551900F310FD /* GameTeamCell.swift */; };
+		D0FDEF942AF856CF00F310FD /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FDEF932AF856CF00F310FD /* ScoreView.swift */; };
+		D0FDEF962AF90BB600F310FD /* ScoreViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FDEF952AF90BB600F310FD /* ScoreViewStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -155,6 +162,13 @@
 		D0FCA33629505D7600599E69 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		D0FCA33C2951C47300599E69 /* EditTeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTeamViewModel.swift; sourceTree = "<group>"; };
 		D0FCA33E2951C49000599E69 /* EditTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTeamView.swift; sourceTree = "<group>"; };
+		D0FDEF852AF84DA900F310FD /* DeleteTeamButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTeamButton.swift; sourceTree = "<group>"; };
+		D0FDEF882AF8513500F310FD /* GameHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHeaderView.swift; sourceTree = "<group>"; };
+		D0FDEF8A2AF8533700F310FD /* TeamScoreList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamScoreList.swift; sourceTree = "<group>"; };
+		D0FDEF8D2AF8535900F310FD /* TeamScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamScoreCell.swift; sourceTree = "<group>"; };
+		D0FDEF902AF8551900F310FD /* GameTeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTeamCell.swift; sourceTree = "<group>"; };
+		D0FDEF932AF856CF00F310FD /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
+		D0FDEF952AF90BB600F310FD /* ScoreViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,18 +318,20 @@
 			path = CardView;
 			sourceTree = "<group>";
 		};
-		D0E5FB7D293DF8FE006F7F6F /* Components */ = {
+		D0E5FB7D293DF8FE006F7F6F /* OldComponents */ = {
 			isa = PBXGroup;
 			children = (
 				D0E5FB7E293DF90D006F7F6F /* TeamCellView.swift */,
 			);
-			path = Components;
+			path = OldComponents;
 			sourceTree = "<group>";
 		};
 		D0EA27422AF7D4E3005A1B40 /* Team */ = {
 			isa = PBXGroup;
 			children = (
+				D0FDEF922AF856BE00F310FD /* Score */,
 				D01402002AE422A900048B27 /* TeamCell.swift */,
+				D0FDEF902AF8551900F310FD /* GameTeamCell.swift */,
 			);
 			path = Team;
 			sourceTree = "<group>";
@@ -323,6 +339,7 @@
 		D0EA27432AF7D4F8005A1B40 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				D0FDEF822AF84D6A00F310FD /* TeamDelete */,
 				D0EA27532AF7FD8F005A1B40 /* Play */,
 				D0EA274F2AF7F305005A1B40 /* SettingCard */,
 				D0EA274C2AF7E01C005A1B40 /* TeamName */,
@@ -548,7 +565,8 @@
 		D0ED1A662923A589002ABBD5 /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				D0E5FB7D293DF8FE006F7F6F /* Components */,
+				D0FDEF872AF8510C00F310FD /* Components */,
+				D0E5FB7D293DF8FE006F7F6F /* OldComponents */,
 				D0E5FB73293B65C7006F7F6F /* GameView.swift */,
 				D0E5FB75293B65D2006F7F6F /* GameViewModel.swift */,
 				D0ED1A9D2923CC2F002ABBD5 /* RoundRouter.swift */,
@@ -626,6 +644,41 @@
 				D0FCA33C2951C47300599E69 /* EditTeamViewModel.swift */,
 			);
 			path = EditTeam;
+			sourceTree = "<group>";
+		};
+		D0FDEF822AF84D6A00F310FD /* TeamDelete */ = {
+			isa = PBXGroup;
+			children = (
+				D0FDEF852AF84DA900F310FD /* DeleteTeamButton.swift */,
+			);
+			path = TeamDelete;
+			sourceTree = "<group>";
+		};
+		D0FDEF872AF8510C00F310FD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D0FDEF8C2AF8534800F310FD /* Team */,
+				D0FDEF882AF8513500F310FD /* GameHeaderView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D0FDEF8C2AF8534800F310FD /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				D0FDEF8A2AF8533700F310FD /* TeamScoreList.swift */,
+				D0FDEF8D2AF8535900F310FD /* TeamScoreCell.swift */,
+			);
+			path = Team;
+			sourceTree = "<group>";
+		};
+		D0FDEF922AF856BE00F310FD /* Score */ = {
+			isa = PBXGroup;
+			children = (
+				D0FDEF932AF856CF00F310FD /* ScoreView.swift */,
+				D0FDEF952AF90BB600F310FD /* ScoreViewStyle.swift */,
+			);
+			path = Score;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -720,6 +773,7 @@
 			files = (
 				D0ED1A6A2923A5CB002ABBD5 /* SettingCellStyle.swift in Sources */,
 				D0E5FB79293CF002006F7F6F /* Colors.swift in Sources */,
+				D0FDEF892AF8513500F310FD /* GameHeaderView.swift in Sources */,
 				D0ED1A5C2923A4E3002ABBD5 /* UserStorage.swift in Sources */,
 				D0ED1A602923A528002ABBD5 /* Consts.swift in Sources */,
 				D0E48AAE293FCF2B006E2555 /* Text + Extensions.swift in Sources */,
@@ -749,6 +803,7 @@
 				D0ED1AAF292616B5002ABBD5 /* View + Extensions.swift in Sources */,
 				D0ED1A632923A561002ABBD5 /* String + Extensions.swift in Sources */,
 				D0E48AB22941E328006E2555 /* RoundCoordinator.swift in Sources */,
+				D0FDEF8E2AF8535900F310FD /* TeamScoreCell.swift in Sources */,
 				D01401FC2AE41BE400048B27 /* TeamTabControl.swift in Sources */,
 				D0F0C2C6294743AD000D7FF5 /* MainRouter.swift in Sources */,
 				D0ED1A572923A4A6002ABBD5 /* RoundModel.swift in Sources */,
@@ -758,23 +813,28 @@
 				D01402012AE422A900048B27 /* TeamCell.swift in Sources */,
 				D077131B2954A1B400F6EC90 /* TeamsStorage.swift in Sources */,
 				D0E5FB7C293CF26B006F7F6F /* SharpedCardView.swift in Sources */,
+				D0FDEF8B2AF8533700F310FD /* TeamScoreList.swift in Sources */,
 				D01401F62AE418DF00048B27 /* Button+Extensions.swift in Sources */,
 				D0EA27512AF7F320005A1B40 /* SettingCardButtonStyle.swift in Sources */,
 				D0ED1A6E2923A609002ABBD5 /* CountSettingCellView.swift in Sources */,
 				D0F0C2C22947368C000D7FF5 /* AddButtonView.swift in Sources */,
 				D0EA27472AF7D6C3005A1B40 /* Typealiases.swift in Sources */,
+				D0FDEF912AF8551900F310FD /* GameTeamCell.swift in Sources */,
 				D0FCA33729505D7600599E69 /* MainCoordinator.swift in Sources */,
 				D0E5FB6F293A0EF9006F7F6F /* TimerControllButtonView.swift in Sources */,
 				D0ED1A812923A948002ABBD5 /* AppDelegate.swift in Sources */,
 				D01401F82AE4199600048B27 /* Images.swift in Sources */,
+				D0FDEF942AF856CF00F310FD /* ScoreView.swift in Sources */,
 				D0F0C2C4294739AC000D7FF5 /* EditableTeamCellView.swift in Sources */,
 				D0ED1AA229250258002ABBD5 /* WordsStorage.swift in Sources */,
+				D0FDEF862AF84DA900F310FD /* DeleteTeamButton.swift in Sources */,
 				D01402092AE5338000048B27 /* TeamScrollView.swift in Sources */,
 				D0FCA33F2951C49000599E69 /* EditTeamView.swift in Sources */,
 				D0E48AB02941DCD4006E2555 /* PlayButtonView.swift in Sources */,
 				D0EA27562AF80AC0005A1B40 /* Setting.swift in Sources */,
 				D0F0C2BD29472C54000D7FF5 /* MainView.swift in Sources */,
 				D0ED1A3E2923A33E002ABBD5 /* AliasForITApp.swift in Sources */,
+				D0FDEF962AF90BB600F310FD /* ScoreViewStyle.swift in Sources */,
 				D062F1F62955AEC500B79C14 /* AvatarCellView.swift in Sources */,
 				D0ED1A592923A4B5002ABBD5 /* TeamModel.swift in Sources */,
 				D0ED1A702923A639002ABBD5 /* SettingsView.swift in Sources */,

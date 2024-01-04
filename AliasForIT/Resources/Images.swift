@@ -14,6 +14,8 @@ enum SystemImage: String {
     case playFill = "play.fill"
 //    case addTeam = "person.badge.plus"
     case addTeam = "plus"
+    case removeTeam = "trash.fill"
+    case close = "xmark"
     
     // MARK: - Settings
     case timeInterval = "clock.arrow.circlepath"
