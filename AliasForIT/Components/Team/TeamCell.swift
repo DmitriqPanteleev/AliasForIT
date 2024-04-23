@@ -26,8 +26,8 @@ struct TeamCell: View {
     
     var body: some View {
         VStack(spacing: 10) {
-            avatarView()
-            nameView()
+            avatarView
+            nameView
         }
         .onChange(of: isSelected) { newValue in
             if !newValue {
@@ -38,11 +38,12 @@ struct TeamCell: View {
         }
         .animation(.spring(), value: isSelected)
         .animation(.easeInOut, value: isDeleting)
+        .animation(.smooth, value: model.image)
     }
 }
 
 private extension TeamCell {
-    func avatarView() -> some View {
+    var avatarView: some View {
         Image(model.image)
             .resizable()
             .scaledToFill()
@@ -58,7 +59,7 @@ private extension TeamCell {
     }
     
     @ViewBuilder
-    func nameView() -> some View {
+    var nameView: some View {
         if isSelected {
             TeamNameFieldButton(name: $model.name)
                 .frame(height: 40)

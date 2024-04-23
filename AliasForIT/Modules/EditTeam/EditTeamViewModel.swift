@@ -73,18 +73,18 @@ final class EditTeamViewModel: ObservableObject {
                         image: TeamImage(rawValue: output.image) ?? .elon,
                         score: 0)
                     
-                    if self.isEdit {
-                        
-                        let index = TeamsStorage.shared.teams.firstIndex {
-                            $0.id == output.id
-                        }
-                        
-                        TeamsStorage.shared.teams.remove(at: index!)
-                        TeamsStorage.shared.teams.insert(team, at: index!)
-                        
-                    } else {
-                        TeamsStorage.shared.teams.append(team)
-                    }
+//                    if self.isEdit {
+//                        
+//                        let index = TeamsStorage.shared.teams.firstIndex {
+//                            $0.id == output.id
+//                        }
+//                        
+//                        TeamsStorage.shared.teams.remove(at: index!)
+//                        TeamsStorage.shared.teams.insert(team, at: index!)
+//                        
+//                    } else {
+//                        TeamsStorage.shared.teams.append(team)
+//                    }
                     
                     self.onSave.send()
                 }

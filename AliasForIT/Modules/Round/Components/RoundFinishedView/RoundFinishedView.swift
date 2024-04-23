@@ -10,7 +10,7 @@ import Combine
 
 struct RoundFinishedView: View {
     
-    @EnvironmentObject var router: RoundCoordinator.Router
+    @EnvironmentObject var router: GameCoordinator.Router
     
     @State var answeredWords: [AnswerModel]
     let sendScore: PassthroughSubject<Int, Never>

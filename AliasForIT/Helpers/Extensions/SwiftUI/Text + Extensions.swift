@@ -57,4 +57,10 @@ extension Text {
             .font(.system(size: fontSize, weight: .regular))
             .foregroundColor(.white)
     }
+    
+    func buttonTitle() -> Text {
+        self
+            .font(.system(size: 15, weight: .regular))
+            .foregroundColor(.white)
+    }
 }

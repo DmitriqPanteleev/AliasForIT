@@ -46,7 +46,8 @@ private extension RoundView {
                 Text("\(viewModel.output.roundTime)")
                     .foregroundColor(.yellow)
                 
-                LinearProgressView(progress: $viewModel.output.roundTime, total: UserStorage.shared.roundTime)
+                LinearProgressView(progress: $viewModel.output.roundTime, 
+                                   total: viewModel.output.totalRoundTime)
                 
             }
             .frame(width: Consts.SharedLayout.cardWidth)

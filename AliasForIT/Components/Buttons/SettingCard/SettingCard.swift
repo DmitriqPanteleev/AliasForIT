@@ -15,14 +15,16 @@ struct SettingCard: View {
     
     var body: some View {
         Button(subject: tapSabject, model: model) {
-            VStack(alignment: .leading, spacing: 8) {
-                iconView()
-                titleView()
-                valueView()
+            VStack(alignment: model == .rules ? .center : .leading, spacing: 8) {
+                iconView
+                titleView
+                valueView
             }
             .padding(.horizontal, 12)
             .padding(.vertical, 17)
-            .frame(maxWidth: .infinity, alignment: .leading)
+            .frame(maxWidth: .infinity,
+                   maxHeight: .infinity,
+                   alignment: model == .rules ? .center : .leading)
             .background(Color.white)
             .cornerRadius(12)
         }
@@ -31,7 +33,7 @@ struct SettingCard: View {
 }
 
 private extension SettingCard {
-    func iconView() -> some View {
+    var iconView: some View {
         Image(model.image)
             .resizable()
             .frame(width: 20, height: 20)
@@ -41,14 +43,26 @@ private extension SettingCard {
             .cornerRadius(36)
     }
     
-    func titleView() -> some View {
+    var titleView: some View {
         Text(model.title)
             .foregroundColor(.appDarkGray)
             .font(.system(size: 16, weight: .thin))
     }
     
-    func valueView() -> some View {
-        Text("1:00")
+    @ViewBuilder
+    var valueView: some View {
+        switch model {
+        case let .timeInterval(interval):
+            valueText(String(interval))
+        case let .wordsForWin(words):
+            valueText(String(words))
+        case .rules:
+            EmptyView()
+        }
+    }
+    
+    func valueText(_ value: String) -> some View {
+        Text(value)
             .foregroundColor(.appDarkBlue)
             .font(.system(size: 28))
     }
@@ -56,7 +70,7 @@ private extension SettingCard {
 
 struct SettingCard_Previews: PreviewProvider {
     static var previews: some View {
-        SettingCard(model: .wordsForWin, tapSabject: SettingSubject())
+        SettingCard(model: .wordsForWin(20), tapSabject: SettingSubject())
             .frame(width: .infinity, height: .infinity)
             .background(Color.black)
     }

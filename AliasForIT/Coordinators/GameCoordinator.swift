@@ -9,23 +9,27 @@ import SwiftUI
 import Combine
 import Stinsen
 
-final class RoundCoordinator: NavigationCoordinatable {
+final class GameCoordinator: NavigationCoordinatable {
     
-    // TODO: переделать навигацию, хранить переменную о начатой игре,
-    // в зависимости от нее менять Root навигатора и после конца игры очищать
-    // для этого сделать провайдер в FinishedRoundView, переделать логику Route
-    var stack = Stinsen.NavigationStack<RoundCoordinator>(initial: \.game)
+    var stack = Stinsen.NavigationStack<GameCoordinator>(initial: \.game)
     
+    // MARK: Routes
     @Root var game = makeGame
-    
     @Route(.fullScreen) var round = makeRound
     @Route(.push) var finish = makeRoundFinish
     
+    // MARK: Dependencies
+    private let settingsManager: GameConfigurable
+    
+    // MARK: External
     private let teams: [TeamModel]
+    
+    // MARK: Internal
     private let onRoundFinish = PassthroughSubject<Int, Never>()
     
-    init(teams: [TeamModel]) {
+    init(teams: [TeamModel], settingsManager: GameConfigurable) {
         self.teams = teams
+        self.settingsManager = settingsManager
     }
     
     #if DEBUG
@@ -35,17 +39,19 @@ final class RoundCoordinator: NavigationCoordinatable {
     #endif
 }
 
-extension RoundCoordinator {
+extension GameCoordinator {
         
     @ViewBuilder func makeGame() -> some View {
-        let viewModel = GameViewModel(teams: self.teams,
+        let viewModel = GameViewModel(teams: teams,
+                                      settingsManager: settingsManager,
                                       onRoundFinish: onRoundFinish,
                                       router: self)
         GameView(viewModel: viewModel)
     }
     
     @ViewBuilder func makeRound(round: RoundModel) -> some View {
-        let viewModel = RoundViewModel(roundModel: round,
+        let viewModel = RoundViewModel(roundModel: round, 
+                                       settingsManager: settingsManager,
                                        onRoundFinish: onRoundFinish,
                                        router: self)
         RoundView(viewModel: viewModel)

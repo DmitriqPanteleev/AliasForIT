@@ -56,6 +56,9 @@ private extension GameView {
 
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
-        GameView(viewModel: GameViewModel(teams: [TeamModel.defaultTeam1(), TeamModel.defaultTeam2()], onRoundFinish: PassthroughSubject<Int, Never>(), router: nil))
+        GameView(viewModel: GameViewModel(teams: [TeamModel.defaultTeam1(), TeamModel.defaultTeam2()],
+                                          settingsManager: SettingsManager(),
+                                          onRoundFinish: PassthroughSubject<Int, Never>(),
+                                          router: nil))
     }
 }

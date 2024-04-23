@@ -11,6 +11,7 @@ import Combine
 final class GameViewModel: ObservableObject {
     
     // MARK: - Services
+    private let settingsManager: GameConfigurable
     private weak var router: RoundRouter?
     
     // MARK: - External
@@ -27,18 +28,24 @@ final class GameViewModel: ObservableObject {
     @Published var output: Output
     
     // MARK: - Initializer
-    init(teams: [TeamModel], onRoundFinish: PassthroughSubject<Int, Never>, router: RoundRouter?) {
+    init(teams: [TeamModel], 
+         settingsManager: GameConfigurable,
+         onRoundFinish: PassthroughSubject<Int, Never>,
+         router: RoundRouter?)
+    {
+        self.settingsManager = settingsManager
+        self.router = router
         
         self.currentTeamIndex = 0
-        
         self.teams = teams
-        self.router = router
+        
         self.onRoundFinish = onRoundFinish
         
-        self.pointsLeft = Array.init(repeating: UserStorage.shared.pointsForWin, count: self.teams.count)
+        self.pointsLeft = Array.init(repeating: settingsManager.pointsForWin,
+                                     count: self.teams.count)
         
         self.input = Input()
-        self.output = Output()
+        self.output = Output(pointsLeft: settingsManager.pointsForWin)
         
         setupBindings()
     }
@@ -92,8 +99,8 @@ final class GameViewModel: ObservableObject {
                 if self.output.pointsLeft > 0 {
                     
                     let roundModel = RoundModel(team: self.output.currentTeam!,
-                                                words: WordsStorage.getRoundWords(count: UserStorage.shared.roundTime),
-                                                roundDuration: UserStorage.shared.roundTime)
+                                                words: WordsStorage.getRoundWords(count: self.settingsManager.pointsForWin),
+                                                roundDuration: self.settingsManager.roundTime)
                     
                     self.router?.moveToRound(model: roundModel)
                 }
@@ -118,6 +125,6 @@ final class GameViewModel: ObservableObject {
     struct Output {
         var teams: [TeamModel] = []
         var currentTeam: TeamModel? = nil
-        var pointsLeft: Int = UserStorage.shared.pointsForWin
+        var pointsLeft: Int
     }
 }

@@ -7,11 +7,10 @@
 
 import Foundation
 
-enum SettingItem: CaseIterable {
-    case timeInterval
-    case wordsForWin
-    case mode
-    case wordsPacks
+enum SettingItem: Equatable {
+    case timeInterval(Int)
+    case wordsForWin(Int)
+    case rules
 }
 
 extension SettingItem {
@@ -22,10 +21,8 @@ extension SettingItem {
             return "Время раунда"
         case .wordsForWin:
             return "Слов до победы"
-        case .mode:
-            return "Уровень сложности"
-        case .wordsPacks:
-            return "Наборы слов"
+        case .rules:
+            return "Правила"
         }
     }
     
@@ -35,10 +32,12 @@ extension SettingItem {
             return .timeInterval
         case .wordsForWin:
             return .wordsForWin
-        case .mode:
-            return .levelMode
-        case .wordsPacks:
-            return .packs
+        case .rules:
+            return .wordsForWin
         }
+    }
+    
+    static func allCases(interval: Int, words: Int) -> [SettingItem] {
+        [.timeInterval(interval), .wordsForWin(words)]
     }
 }

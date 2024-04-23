@@ -39,6 +39,10 @@ struct DeleteTeamButton: View {
             isDeleteAnimation = false
         }
     }
+    
+    private func deleteAction() {
+        
+    }
 }
 
 struct DeleteTeamButton_Previews: PreviewProvider {

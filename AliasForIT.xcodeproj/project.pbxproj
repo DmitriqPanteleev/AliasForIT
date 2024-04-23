@@ -14,20 +14,30 @@
 		D01402012AE422A900048B27 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01402002AE422A900048B27 /* TeamCell.swift */; };
 		D01402092AE5338000048B27 /* TeamScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01402082AE5338000048B27 /* TeamScrollView.swift */; };
 		D062F1F62955AEC500B79C14 /* AvatarCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D062F1F52955AEC500B79C14 /* AvatarCellView.swift */; };
+		D0651C162BD57ED9005A2AE7 /* ScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0651C152BD57ED9005A2AE7 /* ScreenSize.swift */; };
+		D0651C1A2BD5A2DE005A2AE7 /* TeamControlable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0651C192BD5A2DE005A2AE7 /* TeamControlable.swift */; };
+		D0651C1C2BD5A2F2005A2AE7 /* TeamEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0651C1B2BD5A2F2005A2AE7 /* TeamEditable.swift */; };
+		D0651C202BD5A3BE005A2AE7 /* GameConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0651C1F2BD5A3BE005A2AE7 /* GameConfigurable.swift */; };
+		D0651C232BD5A44A005A2AE7 /* SettingUpdateOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0651C222BD5A44A005A2AE7 /* SettingUpdateOption.swift */; };
+		D0651C252BD5A487005A2AE7 /* SettingsEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0651C242BD5A487005A2AE7 /* SettingsEditable.swift */; };
+		D0651C272BD5A502005A2AE7 /* SettingsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0651C262BD5A502005A2AE7 /* SettingsConfiguration.swift */; };
 		D077131B2954A1B400F6EC90 /* TeamsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D077131A2954A1B400F6EC90 /* TeamsStorage.swift */; };
 		D07CCED62AE55C3500AB730B /* SettingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07CCED52AE55C3500AB730B /* SettingCard.swift */; };
 		D07CCED82AE5608100AB730B /* MainSettingsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07CCED72AE5608100AB730B /* MainSettingsGrid.swift */; };
 		D08F422D2AE54B780035D29E /* SettingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08F422C2AE54B780035D29E /* SettingItem.swift */; };
+		D0A78F572BD7EC6200FB65C9 /* TextButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A78F562BD7EC6200FB65C9 /* TextButtonStyle.swift */; };
 		D0A7F92929430D140013A084 /* RoundFinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7F92829430D140013A084 /* RoundFinishedView.swift */; };
 		D0A7F92D294312410013A084 /* AnswerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7F92C294312410013A084 /* AnswerModel.swift */; };
 		D0A7F92F294321AC0013A084 /* AnswerToggleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7F92E294321AC0013A084 /* AnswerToggleCell.swift */; };
 		D0A7F931294328710013A084 /* PlayButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7F930294328710013A084 /* PlayButtonStyle.swift */; };
 		D0A7F934294330130013A084 /* AnimatedAppBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7F933294330130013A084 /* AnimatedAppBar.swift */; };
 		D0A7F93629434CDD0013A084 /* AppearanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7F93529434CDD0013A084 /* AppearanceManager.swift */; };
+		D0A958E72BD6BB5800FAEB61 /* TeamImageSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A958E62BD6BB5800FAEB61 /* TeamImageSheet.swift */; };
+		D0AE9E1A2BD57E2500F7B48F /* SafeAreaInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE9E192BD57E2500F7B48F /* SafeAreaInsets.swift */; };
 		D0BE04042938EFD9000739E0 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BE04032938EFD9000739E0 /* CardView.swift */; };
 		D0E48AAE293FCF2B006E2555 /* Text + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E48AAD293FCF2B006E2555 /* Text + Extensions.swift */; };
 		D0E48AB02941DCD4006E2555 /* PlayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E48AAF2941DCD4006E2555 /* PlayButtonView.swift */; };
-		D0E48AB22941E328006E2555 /* RoundCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E48AB12941E328006E2555 /* RoundCoordinator.swift */; };
+		D0E48AB22941E328006E2555 /* GameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E48AB12941E328006E2555 /* GameCoordinator.swift */; };
 		D0E48AB72941E64C006E2555 /* Stinsen in Frameworks */ = {isa = PBXBuildFile; productRef = D0E48AB62941E64C006E2555 /* Stinsen */; };
 		D0E5FB6C293A0EDB006F7F6F /* TimerControllButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FB6B293A0EDB006F7F6F /* TimerControllButtonStyle.swift */; };
 		D0E5FB6F293A0EF9006F7F6F /* TimerControllButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FB6E293A0EF9006F7F6F /* TimerControllButtonView.swift */; };
@@ -53,12 +63,7 @@
 		D0ED1A5C2923A4E3002ABBD5 /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A5B2923A4E3002ABBD5 /* UserStorage.swift */; };
 		D0ED1A5E2923A51A002ABBD5 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A5D2923A51A002ABBD5 /* SettingsManager.swift */; };
 		D0ED1A602923A528002ABBD5 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A5F2923A528002ABBD5 /* Consts.swift */; };
-		D0ED1A632923A561002ABBD5 /* String + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A622923A561002ABBD5 /* String + Extensions.swift */; };
-		D0ED1A6A2923A5CB002ABBD5 /* SettingCellStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A692923A5CB002ABBD5 /* SettingCellStyle.swift */; };
-		D0ED1A6C2923A5E2002ABBD5 /* SwitchSettingsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A6B2923A5E2002ABBD5 /* SwitchSettingsCellView.swift */; };
-		D0ED1A6E2923A609002ABBD5 /* CountSettingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A6D2923A609002ABBD5 /* CountSettingCellView.swift */; };
-		D0ED1A702923A639002ABBD5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A6F2923A639002ABBD5 /* SettingsView.swift */; };
-		D0ED1A722923A64E002ABBD5 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A712923A64E002ABBD5 /* SettingsViewModel.swift */; };
+		D0ED1A632923A561002ABBD5 /* Optional+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A622923A561002ABBD5 /* Optional+Extensions.swift */; };
 		D0ED1A812923A948002ABBD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A802923A948002ABBD5 /* AppDelegate.swift */; };
 		D0ED1A842923AA03002ABBD5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D0ED1A832923AA03002ABBD5 /* Alamofire */; };
 		D0ED1A872923AA4B002ABBD5 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D0ED1A862923AA4B002ABBD5 /* Kingfisher */; };
@@ -78,7 +83,6 @@
 		D0F0C2BD29472C54000D7FF5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0C2BC29472C54000D7FF5 /* MainView.swift */; };
 		D0F0C2BF29472C5F000D7FF5 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0C2BE29472C5F000D7FF5 /* MainViewModel.swift */; };
 		D0F0C2C22947368C000D7FF5 /* AddButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0C2C12947368C000D7FF5 /* AddButtonView.swift */; };
-		D0F0C2C4294739AC000D7FF5 /* EditableTeamCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0C2C3294739AC000D7FF5 /* EditableTeamCellView.swift */; };
 		D0F0C2C6294743AD000D7FF5 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0C2C5294743AD000D7FF5 /* MainRouter.swift */; };
 		D0F0C2CB2947499D000D7FF5 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0C2CA2947499D000D7FF5 /* RoundedTextField.swift */; };
 		D0FCA33729505D7600599E69 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FCA33629505D7600599E69 /* MainCoordinator.swift */; };
@@ -101,20 +105,30 @@
 		D01402002AE422A900048B27 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
 		D01402082AE5338000048B27 /* TeamScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamScrollView.swift; sourceTree = "<group>"; };
 		D062F1F52955AEC500B79C14 /* AvatarCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCellView.swift; sourceTree = "<group>"; };
+		D0651C152BD57ED9005A2AE7 /* ScreenSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSize.swift; sourceTree = "<group>"; };
+		D0651C192BD5A2DE005A2AE7 /* TeamControlable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamControlable.swift; sourceTree = "<group>"; };
+		D0651C1B2BD5A2F2005A2AE7 /* TeamEditable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamEditable.swift; sourceTree = "<group>"; };
+		D0651C1F2BD5A3BE005A2AE7 /* GameConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameConfigurable.swift; sourceTree = "<group>"; };
+		D0651C222BD5A44A005A2AE7 /* SettingUpdateOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingUpdateOption.swift; sourceTree = "<group>"; };
+		D0651C242BD5A487005A2AE7 /* SettingsEditable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEditable.swift; sourceTree = "<group>"; };
+		D0651C262BD5A502005A2AE7 /* SettingsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsConfiguration.swift; sourceTree = "<group>"; };
 		D077131A2954A1B400F6EC90 /* TeamsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsStorage.swift; sourceTree = "<group>"; };
 		D07CCED52AE55C3500AB730B /* SettingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCard.swift; sourceTree = "<group>"; };
 		D07CCED72AE5608100AB730B /* MainSettingsGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSettingsGrid.swift; sourceTree = "<group>"; };
 		D08F422C2AE54B780035D29E /* SettingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingItem.swift; sourceTree = "<group>"; };
+		D0A78F562BD7EC6200FB65C9 /* TextButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButtonStyle.swift; sourceTree = "<group>"; };
 		D0A7F92829430D140013A084 /* RoundFinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundFinishedView.swift; sourceTree = "<group>"; };
 		D0A7F92C294312410013A084 /* AnswerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerModel.swift; sourceTree = "<group>"; };
 		D0A7F92E294321AC0013A084 /* AnswerToggleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerToggleCell.swift; sourceTree = "<group>"; };
 		D0A7F930294328710013A084 /* PlayButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonStyle.swift; sourceTree = "<group>"; };
 		D0A7F933294330130013A084 /* AnimatedAppBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedAppBar.swift; sourceTree = "<group>"; };
 		D0A7F93529434CDD0013A084 /* AppearanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceManager.swift; sourceTree = "<group>"; };
+		D0A958E62BD6BB5800FAEB61 /* TeamImageSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamImageSheet.swift; sourceTree = "<group>"; };
+		D0AE9E192BD57E2500F7B48F /* SafeAreaInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaInsets.swift; sourceTree = "<group>"; };
 		D0BE04032938EFD9000739E0 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		D0E48AAD293FCF2B006E2555 /* Text + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text + Extensions.swift"; sourceTree = "<group>"; };
 		D0E48AAF2941DCD4006E2555 /* PlayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonView.swift; sourceTree = "<group>"; };
-		D0E48AB12941E328006E2555 /* RoundCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCoordinator.swift; sourceTree = "<group>"; };
+		D0E48AB12941E328006E2555 /* GameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCoordinator.swift; sourceTree = "<group>"; };
 		D0E5FB6B293A0EDB006F7F6F /* TimerControllButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerControllButtonStyle.swift; sourceTree = "<group>"; };
 		D0E5FB6E293A0EF9006F7F6F /* TimerControllButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerControllButtonView.swift; sourceTree = "<group>"; };
 		D0E5FB71293A1239006F7F6F /* LinearProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearProgressView.swift; sourceTree = "<group>"; };
@@ -140,12 +154,7 @@
 		D0ED1A5B2923A4E3002ABBD5 /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
 		D0ED1A5D2923A51A002ABBD5 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		D0ED1A5F2923A528002ABBD5 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
-		D0ED1A622923A561002ABBD5 /* String + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extensions.swift"; sourceTree = "<group>"; };
-		D0ED1A692923A5CB002ABBD5 /* SettingCellStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCellStyle.swift; sourceTree = "<group>"; };
-		D0ED1A6B2923A5E2002ABBD5 /* SwitchSettingsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchSettingsCellView.swift; sourceTree = "<group>"; };
-		D0ED1A6D2923A609002ABBD5 /* CountSettingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountSettingCellView.swift; sourceTree = "<group>"; };
-		D0ED1A6F2923A639002ABBD5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		D0ED1A712923A64E002ABBD5 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		D0ED1A622923A561002ABBD5 /* Optional+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extensions.swift"; sourceTree = "<group>"; };
 		D0ED1A802923A948002ABBD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0ED1A992923CC0E002ABBD5 /* RoundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundViewModel.swift; sourceTree = "<group>"; };
 		D0ED1A9B2923CC1F002ABBD5 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
@@ -156,7 +165,6 @@
 		D0F0C2BC29472C54000D7FF5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		D0F0C2BE29472C5F000D7FF5 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		D0F0C2C12947368C000D7FF5 /* AddButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButtonView.swift; sourceTree = "<group>"; };
-		D0F0C2C3294739AC000D7FF5 /* EditableTeamCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableTeamCellView.swift; sourceTree = "<group>"; };
 		D0F0C2C5294743AD000D7FF5 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		D0F0C2CA2947499D000D7FF5 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		D0FCA33629505D7600599E69 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
@@ -224,28 +232,64 @@
 			path = Old;
 			sourceTree = "<group>";
 		};
-		D01401FE2AE4228700048B27 /* Scrolls */ = {
+		D0651C172BD5A2C5005A2AE7 /* Teams */ = {
 			isa = PBXGroup;
 			children = (
-				D01401FF2AE4229500048B27 /* TeamScroll */,
+				D0651C182BD5A2CC005A2AE7 /* Protocols */,
+				D077131A2954A1B400F6EC90 /* TeamsStorage.swift */,
 			);
-			path = Scrolls;
+			path = Teams;
 			sourceTree = "<group>";
 		};
-		D01401FF2AE4229500048B27 /* TeamScroll */ = {
+		D0651C182BD5A2CC005A2AE7 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				D01402082AE5338000048B27 /* TeamScrollView.swift */,
+				D0651C192BD5A2DE005A2AE7 /* TeamControlable.swift */,
+				D0651C1B2BD5A2F2005A2AE7 /* TeamEditable.swift */,
 			);
-			path = TeamScroll;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
-		D062F1F42955AE8E00B79C14 /* C */ = {
+		D0651C1D2BD5A301005A2AE7 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				D0F0C2C3294739AC000D7FF5 /* EditableTeamCellView.swift */,
+				D0651C212BD5A40C005A2AE7 /* Suppport */,
+				D0651C1E2BD5A391005A2AE7 /* Protocols */,
+				D0ED1A5D2923A51A002ABBD5 /* SettingsManager.swift */,
 			);
-			path = C;
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		D0651C1E2BD5A391005A2AE7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D0651C1F2BD5A3BE005A2AE7 /* GameConfigurable.swift */,
+				D0651C242BD5A487005A2AE7 /* SettingsEditable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D0651C212BD5A40C005A2AE7 /* Suppport */ = {
+			isa = PBXGroup;
+			children = (
+				D0651C222BD5A44A005A2AE7 /* SettingUpdateOption.swift */,
+				D0651C262BD5A502005A2AE7 /* SettingsConfiguration.swift */,
+			);
+			path = Suppport;
+			sourceTree = "<group>";
+		};
+		D0651C282BD5AB07005A2AE7 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		D0651C292BD5AB0C005A2AE7 /* ReviewManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ReviewManager;
 			sourceTree = "<group>";
 		};
 		D08F422B2AE54B6A0035D29E /* Settings */ = {
@@ -255,6 +299,14 @@
 				D07CCED72AE5608100AB730B /* MainSettingsGrid.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		D0A78F552BD7EC2A00FB65C9 /* ButtonStyles */ = {
+			isa = PBXGroup;
+			children = (
+				D0A78F562BD7EC6200FB65C9 /* TextButtonStyle.swift */,
+			);
+			path = ButtonStyles;
 			sourceTree = "<group>";
 		};
 		D0A7F92A29430D280013A084 /* CardView */ = {
@@ -281,6 +333,23 @@
 				D0A7F933294330130013A084 /* AnimatedAppBar.swift */,
 			);
 			path = AppBar;
+			sourceTree = "<group>";
+		};
+		D0A958E52BD6BB3800FAEB61 /* BottomSheets */ = {
+			isa = PBXGroup;
+			children = (
+				D0A958E62BD6BB5800FAEB61 /* TeamImageSheet.swift */,
+			);
+			path = BottomSheets;
+			sourceTree = "<group>";
+		};
+		D0AE9E182BD57E1000F7B48F /* Environments */ = {
+			isa = PBXGroup;
+			children = (
+				D0651C152BD57ED9005A2AE7 /* ScreenSize.swift */,
+				D0AE9E192BD57E2500F7B48F /* SafeAreaInsets.swift */,
+			);
+			path = Environments;
 			sourceTree = "<group>";
 		};
 		D0E48AAC293FCF12006E2555 /* Buttons */ = {
@@ -330,6 +399,7 @@
 			isa = PBXGroup;
 			children = (
 				D0FDEF922AF856BE00F310FD /* Score */,
+				D01402082AE5338000048B27 /* TeamScrollView.swift */,
 				D01402002AE422A900048B27 /* TeamCell.swift */,
 				D0FDEF902AF8551900F310FD /* GameTeamCell.swift */,
 			);
@@ -454,7 +524,7 @@
 			isa = PBXGroup;
 			children = (
 				D0FCA33629505D7600599E69 /* MainCoordinator.swift */,
-				D0E48AB12941E328006E2555 /* RoundCoordinator.swift */,
+				D0E48AB12941E328006E2555 /* GameCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -475,7 +545,6 @@
 				D0ED1A652923A57F002ABBD5 /* Main */,
 				D0ED1A662923A589002ABBD5 /* Game */,
 				D0ED1A672923A592002ABBD5 /* Round */,
-				D0ED1A642923A578002ABBD5 /* Settings */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -483,6 +552,7 @@
 		D0ED1A502923A3B1002ABBD5 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D0AE9E182BD57E1000F7B48F /* Environments */,
 				D0ED1A612923A551002ABBD5 /* Extensions */,
 				D0ED1A5F2923A528002ABBD5 /* Consts.swift */,
 				D0EA27462AF7D6C3005A1B40 /* Typealiases.swift */,
@@ -493,8 +563,11 @@
 		D0ED1A512923A3C9002ABBD5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D0651C282BD5AB07005A2AE7 /* DI */,
+				D0651C292BD5AB0C005A2AE7 /* ReviewManager */,
+				D0651C172BD5A2C5005A2AE7 /* Teams */,
+				D0651C1D2BD5A301005A2AE7 /* Settings */,
 				D0ED1A5A2923A4D6002ABBD5 /* Storages */,
-				D0ED1A5D2923A51A002ABBD5 /* SettingsManager.swift */,
 				D0A7F93529434CDD0013A084 /* AppearanceManager.swift */,
 			);
 			path = Services;
@@ -503,9 +576,10 @@
 		D0ED1A522923A3D0002ABBD5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D0A958E52BD6BB3800FAEB61 /* BottomSheets */,
 				D0EA27432AF7D4F8005A1B40 /* Buttons */,
+				D0A78F552BD7EC2A00FB65C9 /* ButtonStyles */,
 				D0EA27422AF7D4E3005A1B40 /* Team */,
-				D01401FE2AE4228700048B27 /* Scrolls */,
 				D01401FD2AE4227D00048B27 /* Old */,
 			);
 			path = Components;
@@ -526,7 +600,6 @@
 			children = (
 				D0ED1A5B2923A4E3002ABBD5 /* UserStorage.swift */,
 				D0ED1AA129250258002ABBD5 /* WordsStorage.swift */,
-				D077131A2954A1B400F6EC90 /* TeamsStorage.swift */,
 			);
 			path = Storages;
 			sourceTree = "<group>";
@@ -535,26 +608,15 @@
 			isa = PBXGroup;
 			children = (
 				D01401F42AE418CA00048B27 /* SwiftUI */,
-				D0ED1A622923A561002ABBD5 /* String + Extensions.swift */,
+				D0ED1A622923A561002ABBD5 /* Optional+Extensions.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		D0ED1A642923A578002ABBD5 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				D0ED1A682923A5AF002ABBD5 /* Components */,
-				D0ED1A6F2923A639002ABBD5 /* SettingsView.swift */,
-				D0ED1A712923A64E002ABBD5 /* SettingsViewModel.swift */,
-			);
-			path = Settings;
 			sourceTree = "<group>";
 		};
 		D0ED1A652923A57F002ABBD5 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				D01401F12AE4154400048B27 /* Components */,
-				D062F1F42955AE8E00B79C14 /* C */,
 				D0F0C2BC29472C54000D7FF5 /* MainView.swift */,
 				D0F0C2BE29472C5F000D7FF5 /* MainViewModel.swift */,
 				D0F0C2C5294743AD000D7FF5 /* MainRouter.swift */,
@@ -582,16 +644,6 @@
 				D0ED1A992923CC0E002ABBD5 /* RoundViewModel.swift */,
 			);
 			path = Round;
-			sourceTree = "<group>";
-		};
-		D0ED1A682923A5AF002ABBD5 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				D0ED1A692923A5CB002ABBD5 /* SettingCellStyle.swift */,
-				D0ED1A6B2923A5E2002ABBD5 /* SwitchSettingsCellView.swift */,
-				D0ED1A6D2923A609002ABBD5 /* CountSettingCellView.swift */,
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		D0ED1AAB29260536002ABBD5 /* Components */ = {
@@ -771,11 +823,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0ED1A6A2923A5CB002ABBD5 /* SettingCellStyle.swift in Sources */,
 				D0E5FB79293CF002006F7F6F /* Colors.swift in Sources */,
 				D0FDEF892AF8513500F310FD /* GameHeaderView.swift in Sources */,
+				D0A78F572BD7EC6200FB65C9 /* TextButtonStyle.swift in Sources */,
 				D0ED1A5C2923A4E3002ABBD5 /* UserStorage.swift in Sources */,
 				D0ED1A602923A528002ABBD5 /* Consts.swift in Sources */,
+				D0651C202BD5A3BE005A2AE7 /* GameConfigurable.swift in Sources */,
+				D0651C1C2BD5A2F2005A2AE7 /* TeamEditable.swift in Sources */,
 				D0E48AAE293FCF2B006E2555 /* Text + Extensions.swift in Sources */,
 				D0E5FB76293B65D2006F7F6F /* GameViewModel.swift in Sources */,
 				D0A7F931294328710013A084 /* PlayButtonStyle.swift in Sources */,
@@ -787,12 +841,15 @@
 				D07CCED62AE55C3500AB730B /* SettingCard.swift in Sources */,
 				D0A7F934294330130013A084 /* AnimatedAppBar.swift in Sources */,
 				D08F422D2AE54B780035D29E /* SettingItem.swift in Sources */,
+				D0651C162BD57ED9005A2AE7 /* ScreenSize.swift in Sources */,
 				D0E5FB72293A1239006F7F6F /* LinearProgressView.swift in Sources */,
 				D0ED1AAD2926054E002ABBD5 /* SwipableCardView.swift in Sources */,
 				D0ED1A9E2923CC2F002ABBD5 /* RoundRouter.swift in Sources */,
+				D0AE9E1A2BD57E2500F7B48F /* SafeAreaInsets.swift in Sources */,
 				D0BE04042938EFD9000739E0 /* CardView.swift in Sources */,
 				D0EA275A2AF830EC005A1B40 /* ScaleButtonStyle.swift in Sources */,
 				D01401F32AE4155E00048B27 /* MainHeader.swift in Sources */,
+				D0651C272BD5A502005A2AE7 /* SettingsConfiguration.swift in Sources */,
 				D0E5FB7F293DF90D006F7F6F /* TeamCellView.swift in Sources */,
 				D0A7F92D294312410013A084 /* AnswerModel.swift in Sources */,
 				D0EA27452AF7D509005A1B40 /* PhotoChangeButton.swift in Sources */,
@@ -801,13 +858,12 @@
 				D0EA274E2AF7E031005A1B40 /* TeamNameFieldButton.swift in Sources */,
 				D0FCA33D2951C47300599E69 /* EditTeamViewModel.swift in Sources */,
 				D0ED1AAF292616B5002ABBD5 /* View + Extensions.swift in Sources */,
-				D0ED1A632923A561002ABBD5 /* String + Extensions.swift in Sources */,
-				D0E48AB22941E328006E2555 /* RoundCoordinator.swift in Sources */,
+				D0ED1A632923A561002ABBD5 /* Optional+Extensions.swift in Sources */,
+				D0E48AB22941E328006E2555 /* GameCoordinator.swift in Sources */,
 				D0FDEF8E2AF8535900F310FD /* TeamScoreCell.swift in Sources */,
 				D01401FC2AE41BE400048B27 /* TeamTabControl.swift in Sources */,
 				D0F0C2C6294743AD000D7FF5 /* MainRouter.swift in Sources */,
 				D0ED1A572923A4A6002ABBD5 /* RoundModel.swift in Sources */,
-				D0ED1A6C2923A5E2002ABBD5 /* SwitchSettingsCellView.swift in Sources */,
 				D07CCED82AE5608100AB730B /* MainSettingsGrid.swift in Sources */,
 				D0EA274B2AF7D927005A1B40 /* PhotoChangeButtonStyle.swift in Sources */,
 				D01402012AE422A900048B27 /* TeamCell.swift in Sources */,
@@ -816,20 +872,22 @@
 				D0FDEF8B2AF8533700F310FD /* TeamScoreList.swift in Sources */,
 				D01401F62AE418DF00048B27 /* Button+Extensions.swift in Sources */,
 				D0EA27512AF7F320005A1B40 /* SettingCardButtonStyle.swift in Sources */,
-				D0ED1A6E2923A609002ABBD5 /* CountSettingCellView.swift in Sources */,
 				D0F0C2C22947368C000D7FF5 /* AddButtonView.swift in Sources */,
 				D0EA27472AF7D6C3005A1B40 /* Typealiases.swift in Sources */,
 				D0FDEF912AF8551900F310FD /* GameTeamCell.swift in Sources */,
 				D0FCA33729505D7600599E69 /* MainCoordinator.swift in Sources */,
 				D0E5FB6F293A0EF9006F7F6F /* TimerControllButtonView.swift in Sources */,
+				D0651C232BD5A44A005A2AE7 /* SettingUpdateOption.swift in Sources */,
 				D0ED1A812923A948002ABBD5 /* AppDelegate.swift in Sources */,
 				D01401F82AE4199600048B27 /* Images.swift in Sources */,
+				D0A958E72BD6BB5800FAEB61 /* TeamImageSheet.swift in Sources */,
 				D0FDEF942AF856CF00F310FD /* ScoreView.swift in Sources */,
-				D0F0C2C4294739AC000D7FF5 /* EditableTeamCellView.swift in Sources */,
+				D0651C252BD5A487005A2AE7 /* SettingsEditable.swift in Sources */,
 				D0ED1AA229250258002ABBD5 /* WordsStorage.swift in Sources */,
 				D0FDEF862AF84DA900F310FD /* DeleteTeamButton.swift in Sources */,
 				D01402092AE5338000048B27 /* TeamScrollView.swift in Sources */,
 				D0FCA33F2951C49000599E69 /* EditTeamView.swift in Sources */,
+				D0651C1A2BD5A2DE005A2AE7 /* TeamControlable.swift in Sources */,
 				D0E48AB02941DCD4006E2555 /* PlayButtonView.swift in Sources */,
 				D0EA27562AF80AC0005A1B40 /* Setting.swift in Sources */,
 				D0F0C2BD29472C54000D7FF5 /* MainView.swift in Sources */,
@@ -837,8 +895,6 @@
 				D0FDEF962AF90BB600F310FD /* ScoreViewStyle.swift in Sources */,
 				D062F1F62955AEC500B79C14 /* AvatarCellView.swift in Sources */,
 				D0ED1A592923A4B5002ABBD5 /* TeamModel.swift in Sources */,
-				D0ED1A702923A639002ABBD5 /* SettingsView.swift in Sources */,
-				D0ED1A722923A64E002ABBD5 /* SettingsViewModel.swift in Sources */,
 				D0A7F93629434CDD0013A084 /* AppearanceManager.swift in Sources */,
 				D0EA27582AF82F71005A1B40 /* PlayButton.swift in Sources */,
 				D0F0C2BF29472C5F000D7FF5 /* MainViewModel.swift in Sources */,
@@ -901,7 +957,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -957,7 +1013,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -986,7 +1042,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1022,7 +1078,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

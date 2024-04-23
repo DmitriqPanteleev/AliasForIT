@@ -12,7 +12,6 @@ enum SystemImage: String {
     case photo
     case checkMark = "checkmark.rectangle.portrait.fill"
     case playFill = "play.fill"
-//    case addTeam = "person.badge.plus"
     case addTeam = "plus"
     case removeTeam = "trash.fill"
     case close = "xmark"
@@ -24,7 +23,7 @@ enum SystemImage: String {
     case packs = "archivebox.circle.fill"
 }
 
-enum TeamImage: String {
+enum TeamImage: String, CaseIterable {
     case elon
     case facebook
     case silicon

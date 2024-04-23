@@ -11,6 +11,7 @@ import Combine
 final class RoundViewModel: ObservableObject {
     
     //MARK: - Services
+    private let settingsManager: GameConfigurable
     private weak var router: RoundRouter?
     
     //MARK: - Variables
@@ -24,15 +25,18 @@ final class RoundViewModel: ObservableObject {
     private var cancellable = Set<AnyCancellable>()
     
     init(roundModel: RoundModel,
+         settingsManager: GameConfigurable,
          onRoundFinish: PassthroughSubject<Int, Never>,
-         router: RoundRouter?) {
+         router: RoundRouter?) 
+    {
+        self.settingsManager = settingsManager
+        self.router = router
         
         self.roundModel = roundModel
         self.onRoundFinish = onRoundFinish
-        self.router = router
         
         self.input = Input()
-        self.output = Output()
+        self.output = Output(totalRoundTime: settingsManager.roundTime)
         
         setupBindings()
     }
@@ -144,6 +148,8 @@ final class RoundViewModel: ObservableObject {
     
     struct Output {
         var state: RoundViewState = .playing
+        var totalRoundTime: Int
+        
         var isTimerTicking: Bool = true
         var roundTime: Int = 10
         var currentIndex: Int = 0
