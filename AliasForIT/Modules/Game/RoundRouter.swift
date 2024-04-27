@@ -14,7 +14,7 @@ protocol RoundRouter: AnyObject {
     func exit()
 }
 
-extension RoundCoordinator: RoundRouter {
+extension GameCoordinator: RoundRouter {
     func moveToRound(model: RoundModel) {
         self.route(to: \.round, model)
     }

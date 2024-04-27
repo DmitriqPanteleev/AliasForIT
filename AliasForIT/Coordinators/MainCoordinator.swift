@@ -13,26 +13,34 @@ final class MainCoordinator: NavigationCoordinatable {
     
     var stack = Stinsen.NavigationStack<MainCoordinator>(initial: \.start)
     
+    // MARK: Routes
     @Root var start = makeStart
     
     @Route(.modal) var team = makeEditTeam
     @Route(.modal) var settings = makeSettingsScreen
     @Route(.fullScreen) var game = makeGame
     
+    // MARK: Dependencies
+    private let teamStorage: TeamControlable & TeamEditable = TeamStorage()
+    private let settingsManager: SettingsManager = SettingsManager()
     
     private let onBackTrigger = PassthroughSubject<Void, Never>()
     
-    #if DEBUG
     deinit {
+    #if DEBUG
         print("Coordinator \(self) deinited")
-    }
     #endif
+    }
 }
 
+// TODO: Вынести все в отдельный координатор
 extension MainCoordinator {
     
     @ViewBuilder func makeStart() -> some View {
-        let viewModel = MainViewModel(onUpdate: onBackTrigger, router: self)
+        let viewModel = MainViewModel(teamStorage: teamStorage,
+                                      settingsManager: settingsManager,
+                                      onUpdate: onBackTrigger,
+                                      router: self)
         MainView(viewModel: viewModel)
     }
     
@@ -44,11 +52,10 @@ extension MainCoordinator {
     }
     
     @ViewBuilder func makeSettingsScreen() -> some View {
-        let viewModel = SettingsViewModel(onBackTrigger: onBackTrigger)
-        SettingsView(viewModel: viewModel)
+        // TODO: make screen
     }
     
-    func makeGame(teams: [TeamModel]) -> NavigationViewCoordinator<RoundCoordinator> {
-        return NavigationViewCoordinator(RoundCoordinator(teams: teams))
+    func makeGame(teams: [TeamModel]) -> NavigationViewCoordinator<GameCoordinator> {
+        return NavigationViewCoordinator(GameCoordinator(teams: teams, settingsManager: settingsManager))
     }
 }

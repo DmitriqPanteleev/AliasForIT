@@ -13,7 +13,6 @@ protocol MainRouter: AnyObject {
     func moveToRules()
     func moveToEditTeam(model: TeamModel?)
     func moveToSettings()
-    func closeApp()
     func pop(action: @escaping () -> Void)
 }
 
@@ -33,10 +32,6 @@ extension MainCoordinator: MainRouter {
     
     func moveToSettings() {
         self.route(to: \.settings)
-    }
-    
-    func closeApp() {
-        //TODO:
     }
     
     func pop(action: @escaping () -> Void) {
