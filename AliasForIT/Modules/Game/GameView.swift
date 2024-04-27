@@ -32,8 +32,12 @@ private extension GameView {
             let currentId = viewModel.output.currentTeam?.id ?? 0
             TeamScoreList(currentTeamId: currentId,
                           models: viewModel.output.teams)
-            PlayButton(tapSubject: viewModel.input.onPlayTap)
-                .disabled(viewModel.output.pointsLeft < 0)
+            Spacer()
+            Button(action: viewModel.input.onPlayTap.send) {
+                Text("Играть")
+                    .buttonTitle()
+            }
+            .textButtonStyle(disabled: viewModel.output.pointsLeft < 0)
         }
     }
 }

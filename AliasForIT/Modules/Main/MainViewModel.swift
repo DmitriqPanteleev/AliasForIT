@@ -55,8 +55,9 @@ final class MainViewModel: ObservableObject {
 private extension MainViewModel {
     func bind() {
         bindOnAppear()
-        bindTeamControls()
+        bindSettings()
         bindTransitions()
+        bindTeamControls()
     }
     
     func bindOnAppear() {
@@ -92,6 +93,9 @@ private extension MainViewModel {
             .sink { [weak self] _ in
                 guard let self = self else { return }
                 self.output.teams = self.teamStorage.teams
+                
+                guard self.output.selectedTeamId > 0 else { return }
+                self.output.selectedTeamId -= 1
             }
             .store(in: &cancellable)
         
@@ -129,8 +133,9 @@ private extension MainViewModel {
         .store(in: &cancellable)
         
         input.toSomeSetting
-            .sink { [weak self] _ in
-                
+            .filter { $0 != .rules }
+            .sink { [weak self] setting in
+                self?.output.isShowingSettingSheet = SettingSheet(setting: setting, isShowing: true)
             }
             .store(in: &cancellable)
         
@@ -144,6 +149,21 @@ private extension MainViewModel {
         input.toChooseImage
             .sink { [weak self] in
                 self?.output.isShowingImageSheet = true
+            }
+            .store(in: &cancellable)
+    }
+    
+    func bindSettings() {
+        input.confirmSetting
+            .sink { [weak self] setting in
+                switch setting {
+                case .timeInterval(let value):
+                    self?.output.roundTime = value
+                case .wordsForWin(let value):
+                    self?.output.wordsForWin = value
+                case .rules:
+                    break
+                }
             }
             .store(in: &cancellable)
     }
@@ -161,6 +181,7 @@ extension MainViewModel {
         
         // MARK: BS
         let toChooseImage = VoidSubject()
+        let confirmSetting = SettingSubject()
         
         // MARK: Teams Operations
         let addTeam = TeamSubject()
@@ -176,17 +197,30 @@ extension MainViewModel {
         var isGameDisabled: Bool { teams.count < 2 }
         
         // MARK: Settings
-        var roundTime: Int
-        var wordsForWin: Int
-        var settings: [SettingItem] {
-            SettingItem.allCases(interval: roundTime, words: wordsForWin)
+        var settings: [SettingItem] = SettingItem.allCases(interval: 30, words: 30)
+        var roundTime: Int {
+            didSet {
+                settings = SettingItem.allCases(interval: roundTime, words: wordsForWin)
+            }
+        }
+        var wordsForWin: Int {
+            didSet {
+                settings = SettingItem.allCases(interval: roundTime, words: wordsForWin)
+            }
         }
         
         // MARK: BS
         var isShowingImageSheet = false
-        
+        var isShowingSettingSheet = SettingSheet(setting: .rules, isShowing: false)
         var isSheetsShowing: Bool {
-            isShowingImageSheet
+            isShowingImageSheet || isShowingSettingSheet.isShowing
         }
+    }
+}
+
+extension MainViewModel {
+    struct SettingSheet {
+        var setting: SettingItem
+        var isShowing: Bool
     }
 }

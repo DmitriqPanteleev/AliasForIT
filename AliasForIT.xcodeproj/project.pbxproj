@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D00B9B642BD98B2700870B6D /* ScaledButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00B9B632BD98B2700870B6D /* ScaledButtonStyle.swift */; };
 		D01401F32AE4155E00048B27 /* MainHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01401F22AE4155E00048B27 /* MainHeader.swift */; };
 		D01401F62AE418DF00048B27 /* Button+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01401F52AE418DF00048B27 /* Button+Extensions.swift */; };
 		D01401F82AE4199600048B27 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01401F72AE4199600048B27 /* Images.swift */; };
@@ -26,6 +27,7 @@
 		D07CCED82AE5608100AB730B /* MainSettingsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07CCED72AE5608100AB730B /* MainSettingsGrid.swift */; };
 		D08F422D2AE54B780035D29E /* SettingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08F422C2AE54B780035D29E /* SettingItem.swift */; };
 		D0A78F572BD7EC6200FB65C9 /* TextButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A78F562BD7EC6200FB65C9 /* TextButtonStyle.swift */; };
+		D0A78F5B2BD7FF7500FB65C9 /* SettingItemSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A78F5A2BD7FF7500FB65C9 /* SettingItemSheet.swift */; };
 		D0A7F92929430D140013A084 /* RoundFinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7F92829430D140013A084 /* RoundFinishedView.swift */; };
 		D0A7F92D294312410013A084 /* AnswerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7F92C294312410013A084 /* AnswerModel.swift */; };
 		D0A7F92F294321AC0013A084 /* AnswerToggleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7F92E294321AC0013A084 /* AnswerToggleCell.swift */; };
@@ -53,8 +55,6 @@
 		D0EA274E2AF7E031005A1B40 /* TeamNameFieldButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA274D2AF7E031005A1B40 /* TeamNameFieldButton.swift */; };
 		D0EA27512AF7F320005A1B40 /* SettingCardButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA27502AF7F320005A1B40 /* SettingCardButtonStyle.swift */; };
 		D0EA27562AF80AC0005A1B40 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA27552AF80AC0005A1B40 /* Setting.swift */; };
-		D0EA27582AF82F71005A1B40 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA27572AF82F71005A1B40 /* PlayButton.swift */; };
-		D0EA275A2AF830EC005A1B40 /* ScaleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA27592AF830EC005A1B40 /* ScaleButtonStyle.swift */; };
 		D0ED1A3E2923A33E002ABBD5 /* AliasForITApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A3D2923A33E002ABBD5 /* AliasForITApp.swift */; };
 		D0ED1A422923A340002ABBD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0ED1A412923A340002ABBD5 /* Assets.xcassets */; };
 		D0ED1A452923A340002ABBD5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0ED1A442923A340002ABBD5 /* Preview Assets.xcassets */; };
@@ -98,6 +98,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D00B9B632BD98B2700870B6D /* ScaledButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledButtonStyle.swift; sourceTree = "<group>"; };
 		D01401F22AE4155E00048B27 /* MainHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeader.swift; sourceTree = "<group>"; };
 		D01401F52AE418DF00048B27 /* Button+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Extensions.swift"; sourceTree = "<group>"; };
 		D01401F72AE4199600048B27 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
@@ -117,6 +118,7 @@
 		D07CCED72AE5608100AB730B /* MainSettingsGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSettingsGrid.swift; sourceTree = "<group>"; };
 		D08F422C2AE54B780035D29E /* SettingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingItem.swift; sourceTree = "<group>"; };
 		D0A78F562BD7EC6200FB65C9 /* TextButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButtonStyle.swift; sourceTree = "<group>"; };
+		D0A78F5A2BD7FF7500FB65C9 /* SettingItemSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingItemSheet.swift; sourceTree = "<group>"; };
 		D0A7F92829430D140013A084 /* RoundFinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundFinishedView.swift; sourceTree = "<group>"; };
 		D0A7F92C294312410013A084 /* AnswerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerModel.swift; sourceTree = "<group>"; };
 		D0A7F92E294321AC0013A084 /* AnswerToggleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerToggleCell.swift; sourceTree = "<group>"; };
@@ -143,8 +145,6 @@
 		D0EA274D2AF7E031005A1B40 /* TeamNameFieldButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamNameFieldButton.swift; sourceTree = "<group>"; };
 		D0EA27502AF7F320005A1B40 /* SettingCardButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCardButtonStyle.swift; sourceTree = "<group>"; };
 		D0EA27552AF80AC0005A1B40 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
-		D0EA27572AF82F71005A1B40 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
-		D0EA27592AF830EC005A1B40 /* ScaleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleButtonStyle.swift; sourceTree = "<group>"; };
 		D0ED1A3A2923A33E002ABBD5 /* AliasForIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AliasForIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0ED1A3D2923A33E002ABBD5 /* AliasForITApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasForITApp.swift; sourceTree = "<group>"; };
 		D0ED1A412923A340002ABBD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -305,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				D0A78F562BD7EC6200FB65C9 /* TextButtonStyle.swift */,
+				D00B9B632BD98B2700870B6D /* ScaledButtonStyle.swift */,
 			);
 			path = ButtonStyles;
 			sourceTree = "<group>";
@@ -339,6 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				D0A958E62BD6BB5800FAEB61 /* TeamImageSheet.swift */,
+				D0A78F5A2BD7FF7500FB65C9 /* SettingItemSheet.swift */,
 			);
 			path = BottomSheets;
 			sourceTree = "<group>";
@@ -410,7 +412,6 @@
 			isa = PBXGroup;
 			children = (
 				D0FDEF822AF84D6A00F310FD /* TeamDelete */,
-				D0EA27532AF7FD8F005A1B40 /* Play */,
 				D0EA274F2AF7F305005A1B40 /* SettingCard */,
 				D0EA274C2AF7E01C005A1B40 /* TeamName */,
 				D0EA27492AF7D910005A1B40 /* PhotoChange */,
@@ -442,15 +443,6 @@
 				D0EA27502AF7F320005A1B40 /* SettingCardButtonStyle.swift */,
 			);
 			path = SettingCard;
-			sourceTree = "<group>";
-		};
-		D0EA27532AF7FD8F005A1B40 /* Play */ = {
-			isa = PBXGroup;
-			children = (
-				D0EA27572AF82F71005A1B40 /* PlayButton.swift */,
-				D0EA27592AF830EC005A1B40 /* ScaleButtonStyle.swift */,
-			);
-			path = Play;
 			sourceTree = "<group>";
 		};
 		D0EA27542AF80AB2005A1B40 /* Configuration */ = {
@@ -824,6 +816,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0E5FB79293CF002006F7F6F /* Colors.swift in Sources */,
+				D00B9B642BD98B2700870B6D /* ScaledButtonStyle.swift in Sources */,
 				D0FDEF892AF8513500F310FD /* GameHeaderView.swift in Sources */,
 				D0A78F572BD7EC6200FB65C9 /* TextButtonStyle.swift in Sources */,
 				D0ED1A5C2923A4E3002ABBD5 /* UserStorage.swift in Sources */,
@@ -847,7 +840,6 @@
 				D0ED1A9E2923CC2F002ABBD5 /* RoundRouter.swift in Sources */,
 				D0AE9E1A2BD57E2500F7B48F /* SafeAreaInsets.swift in Sources */,
 				D0BE04042938EFD9000739E0 /* CardView.swift in Sources */,
-				D0EA275A2AF830EC005A1B40 /* ScaleButtonStyle.swift in Sources */,
 				D01401F32AE4155E00048B27 /* MainHeader.swift in Sources */,
 				D0651C272BD5A502005A2AE7 /* SettingsConfiguration.swift in Sources */,
 				D0E5FB7F293DF90D006F7F6F /* TeamCellView.swift in Sources */,
@@ -864,6 +856,7 @@
 				D01401FC2AE41BE400048B27 /* TeamTabControl.swift in Sources */,
 				D0F0C2C6294743AD000D7FF5 /* MainRouter.swift in Sources */,
 				D0ED1A572923A4A6002ABBD5 /* RoundModel.swift in Sources */,
+				D0A78F5B2BD7FF7500FB65C9 /* SettingItemSheet.swift in Sources */,
 				D07CCED82AE5608100AB730B /* MainSettingsGrid.swift in Sources */,
 				D0EA274B2AF7D927005A1B40 /* PhotoChangeButtonStyle.swift in Sources */,
 				D01402012AE422A900048B27 /* TeamCell.swift in Sources */,
@@ -896,7 +889,6 @@
 				D062F1F62955AEC500B79C14 /* AvatarCellView.swift in Sources */,
 				D0ED1A592923A4B5002ABBD5 /* TeamModel.swift in Sources */,
 				D0A7F93629434CDD0013A084 /* AppearanceManager.swift in Sources */,
-				D0EA27582AF82F71005A1B40 /* PlayButton.swift in Sources */,
 				D0F0C2BF29472C5F000D7FF5 /* MainViewModel.swift in Sources */,
 				D0F0C2CB2947499D000D7FF5 /* RoundedTextField.swift in Sources */,
 			);

@@ -7,6 +7,14 @@
 
 import SwiftUI
 
+// MARK: - Text Modifiers
+extension Text {
+    init(_ value: Int) {
+        self.init(String(value))
+    }
+}
+
+// MARK: - Fonts
 extension Text {
     
     func titleWhite() -> Text {
@@ -62,5 +70,16 @@ extension Text {
         self
             .font(.system(size: 15, weight: .regular))
             .foregroundColor(.white)
+    }
+    
+    func option() -> Text {
+        self
+            .option(color: .appDarkGray)
+    }
+    
+    func option(color: Color) -> Text {
+        self
+            .font(.system(size: 13, weight: .regular))
+            .foregroundColor(color)
     }
 }

@@ -56,7 +56,6 @@ private extension TeamImageSheet {
             .fill(color)
     }
     
-    @ViewBuilder
     func confirmButton() -> some View {
         Button(action: confirmChoice) {
             Text("Готово")
@@ -68,10 +67,6 @@ private extension TeamImageSheet {
 }
 
 private extension TeamImageSheet {
-    func close() {
-        isShowing = false
-    }
-    
     func confirmChoice() {
         guard let selected = selected else { return }
         defer { confirmSubject.send(selected) }
