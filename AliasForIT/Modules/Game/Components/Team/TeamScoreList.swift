@@ -18,7 +18,6 @@ struct TeamScoreList: View {
                 TeamScoreCell(model: model,
                               isCurrent: currentTeamId == model.id)
             }
-            Spacer()
         }
     }
 }

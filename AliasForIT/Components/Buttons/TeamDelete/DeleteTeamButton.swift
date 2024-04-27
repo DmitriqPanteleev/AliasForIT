@@ -28,7 +28,7 @@ struct DeleteTeamButton: View {
                     .frame(width: 44)
                     .foregroundColor(.white)
             }
-            .scaleButtonStyle()
+            .scaledButtonStyle()
         }
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {

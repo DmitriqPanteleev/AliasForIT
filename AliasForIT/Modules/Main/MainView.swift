@@ -26,6 +26,8 @@ struct MainView: View {
         .animation(.smooth, value: viewModel.output.isSheetsShowing)
         .sheet(isPresented: $viewModel.output.isShowingImageSheet,
                content: imageBottomSheet)
+        .sheet(isPresented: $viewModel.output.isShowingSettingSheet.isShowing,
+               content: settingBottomSheet)
     }
 }
 
@@ -44,6 +46,7 @@ private extension MainView {
                            addPhotoSubject: viewModel.input.toChooseImage,
                            editNameSubject: viewModel.input.editTeamName,
                            deleteSubject: viewModel.input.deleteTeam)
+            .animation(.bouncy, value: viewModel.output.teams.count)
         }
         .background(Color.white)
     }
@@ -65,10 +68,22 @@ private extension MainView {
     @ViewBuilder
     func buttonBlock() -> some View {
         if !viewModel.output.isSheetsShowing {
-            PlayButton(tapSubject: viewModel.input.toNewRound)
-                .disabled(viewModel.output.isGameDisabled)
-                .scaleTransition(from: .bottom, viewModel.output.isSheetsShowing)
+            Button(action: viewModel.input.toNewRound.send) {
+                Text("Начать игру")
+                    .buttonTitle()
+            }
+            .textButtonStyle(disabled: viewModel.output.isGameDisabled)
+            .scaleTransition(from: .bottom, viewModel.output.isSheetsShowing)
+            .padding(.horizontal)
         }
+    }
+    
+    @ViewBuilder
+    func settingBottomSheet() -> some View {
+        SettingItemSheet(isShowing: $viewModel.output.isShowingSettingSheet.isShowing,
+                         setting: viewModel.output.isShowingSettingSheet.setting,
+                         confirmSubject: viewModel.input.confirmSetting)
+        .settingsSheetPresentation(height: screenSize.height * 0.3)
     }
     
     func imageBottomSheet() -> some View {
