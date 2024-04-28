@@ -42,7 +42,7 @@ final class GameViewModel: ObservableObject {
         self.onRoundFinish = onRoundFinish
         
         self.pointsLeft = Array.init(repeating: settingsManager.pointsForWin,
-                                     count: self.teams.count)
+                                     count: teams.count)
         
         self.input = Input()
         self.output = Output(pointsLeft: settingsManager.pointsForWin)
@@ -63,8 +63,8 @@ final class GameViewModel: ObservableObject {
     // MARK: - Setup all bindings
     func setupBindings() {
         
-        output.teams = self.teams
-        output.currentTeam = self.teams[currentTeamIndex]
+        output.teams = teams
+        output.currentTeam = teams[currentTeamIndex]
         
         bindRoundFinish()
         bindPlayTap()
@@ -72,7 +72,7 @@ final class GameViewModel: ObservableObject {
     }
     
     func bindRoundFinish() {
-        self.onRoundFinish
+        onRoundFinish
             .handleEvents(receiveOutput: { [weak self] newScore in
                 guard let self = self else { return }
                 self.output.currentTeam?.score += newScore
@@ -110,8 +110,8 @@ final class GameViewModel: ObservableObject {
     
     func bindStopTap() {
         input.onStopTap
-            .sink {
-                self.router?.exit()
+            .sink { [weak self] in
+                self?.router?.exit()
             }
             .store(in: &cancellable)
     }

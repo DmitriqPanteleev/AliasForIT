@@ -24,3 +24,4 @@ typealias SettingSubject = PassthroughSubject<SettingItem, Never>
 typealias TeamSubject = PassthroughSubject<TeamModel, Never>
 typealias ImageSubject = PassthroughSubject<TeamImage, Never>
 typealias IntSubject = PassthroughSubject<Int, Never>
+typealias TeamSheetSubject = PassthroughSubject<TeamSheetConfig, Never>
