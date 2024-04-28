@@ -10,20 +10,20 @@ import Combine
 
 struct MainHeader: View {
     let mode: String = "Классический режим"
-    let settingsSubject: VoidSubject
+    let addTeamSubject: VoidSubject
     
     var body: some View {
         HStack(alignment: .top) {
-            titleView()
+            titleView
             Spacer()
-            settingsButtonView()
+            addTeamButtonView
         }
         .padding(.leading)
     }
 }
 
 private extension MainHeader {
-    func titleView() -> some View {
+    var titleView: some View {
         VStack(alignment: .leading, spacing: 0) {
             Text("Новая игра")
                 .foregroundColor(.appDarkBlue)
@@ -35,11 +35,11 @@ private extension MainHeader {
     }
     
     @ViewBuilder
-    func settingsButtonView() -> some View {
+    var addTeamButtonView: some View {
         
         let buttonSize: CGFloat = 14
         
-        Button(subject: settingsSubject) {
+        Button(action: addTeamSubject.send) {
             Image(.addTeam)
                 .resizable()
                 .frame(width: buttonSize, height: buttonSize)
@@ -47,6 +47,7 @@ private extension MainHeader {
                 .padding(10)
                 .background(Color.appDarkBlue.cornerRadius(buttonSize * 2))
         }
+        .scaledButtonStyle()
         .padding(6)
         .padding(.horizontal, 10)
     }
@@ -56,7 +57,7 @@ private extension MainHeader {
 struct MainHeader_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            MainHeader(settingsSubject: PassthroughSubject<Void, Never>())
+            MainHeader(addTeamSubject: PassthroughSubject<Void, Never>())
             Spacer()
         }
     }

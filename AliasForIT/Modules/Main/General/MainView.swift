@@ -15,32 +15,31 @@ struct MainView: View {
     
     var body: some View {
         VStack(spacing: 16) {
-            topTeamBlock
-            settingsBlock
+            teamView
+            settingsView
             Spacer()
         }
         .onAppear(perform: viewModel.input.onAppear.send)
-        .safeAreaInset(edge: .top, spacing: 24, content: header)
-        .safeAreaInset(edge: .bottom, content: buttonBlock)
+        .safeAreaInset(edge: .top, spacing: 24, content: headerView)
+        .safeAreaInset(edge: .bottom, content: buttonBlockView)
         .background((viewModel.output.isSheetsShowing ? Color.white : Color.appLightGray).ignoresSafeArea())
         .animation(.smooth, value: viewModel.output.isSheetsShowing)
-        .sheet(isPresented: $viewModel.output.isShowingImageSheet,
-               content: imageBottomSheet)
-        .sheet(isPresented: $viewModel.output.isShowingSettingSheet.isShowing,
+        .sheet(isPresented: $viewModel.output.teamSheetConfig.isShowing,
+               content: teamBottomSheet)
+        .sheet(isPresented: $viewModel.output.settingSheetConfig.isShowing,
                content: settingBottomSheet)
     }
 }
 
 private extension MainView {
-    func header() -> some View {
-        MainHeader(settingsSubject: viewModel.input.toSettings)
+    func headerView() -> some View {
+        MainHeader(addTeamSubject: viewModel.input.toAppendTeam)
     }
     
-    var topTeamBlock: some View {
+    var teamView: some View {
         VStack(spacing: 0) {
             TeamTabControl(selectedTeam: $viewModel.output.selectedTeamId,
                            teamCount: viewModel.output.teams.count)
-            // TODO: add subject
             TeamScrollView(selectedTeam: $viewModel.output.selectedTeamId,
                            models: $viewModel.output.teams,
                            addPhotoSubject: viewModel.input.toChooseImage,
@@ -52,7 +51,7 @@ private extension MainView {
     }
     
     @ViewBuilder
-    var settingsBlock: some View {
+    var settingsView: some View {
         if !viewModel.output.isSheetsShowing {
             VStack {
                 MainSettingsGrid(models: viewModel.output.settings,
@@ -66,7 +65,7 @@ private extension MainView {
     }
     
     @ViewBuilder
-    func buttonBlock() -> some View {
+    func buttonBlockView() -> some View {
         if !viewModel.output.isSheetsShowing {
             Button(action: viewModel.input.toNewRound.send) {
                 Text("Начать игру")
@@ -80,16 +79,19 @@ private extension MainView {
     
     @ViewBuilder
     func settingBottomSheet() -> some View {
-        SettingItemSheet(isShowing: $viewModel.output.isShowingSettingSheet.isShowing,
-                         setting: viewModel.output.isShowingSettingSheet.setting,
+        SettingItemSheet(isShowing: $viewModel.output.settingSheetConfig.isShowing,
+                         setting: viewModel.output.settingSheetConfig.setting,
                          confirmSubject: viewModel.input.confirmSetting)
         .settingsSheetPresentation(height: screenSize.height * 0.3)
     }
     
-    func imageBottomSheet() -> some View {
-        TeamImageSheet(isShowing: $viewModel.output.isShowingImageSheet,
-                       confirmSubject: viewModel.input.editTeamImage)
-        .settingsSheetPresentation(height: screenSize.height * 0.3)
+    @ViewBuilder
+    func teamBottomSheet() -> some View {
+        let type = viewModel.output.teamSheetConfig.type
+        TeamSheet(isShowing: $viewModel.output.teamSheetConfig.isShowing,
+                  type: type,
+                  confirmSubject: viewModel.input.updateTeam)
+        .settingsSheetPresentation(height: screenSize.height * (type == .adding ? 0.4 : 0.3))
     }
 }
 

@@ -16,7 +16,6 @@ final class MainCoordinator: NavigationCoordinatable {
     // MARK: Routes
     @Root var start = makeStart
     
-    @Route(.modal) var team = makeEditTeam
     @Route(.modal) var settings = makeSettingsScreen
     @Route(.fullScreen) var game = makeGame
     
@@ -24,6 +23,7 @@ final class MainCoordinator: NavigationCoordinatable {
     private let teamStorage: TeamControlable & TeamEditable = TeamStorage()
     private let settingsManager: SettingsManager = SettingsManager()
     
+    // MARK: Internal
     private let onBackTrigger = PassthroughSubject<Void, Never>()
     
     deinit {
@@ -42,13 +42,6 @@ extension MainCoordinator {
                                       onUpdate: onBackTrigger,
                                       router: self)
         MainView(viewModel: viewModel)
-    }
-    
-    @ViewBuilder func makeEditTeam(model: TeamModel?) -> some View {
-        let viewModel = EditTeamViewModel(onSave: onBackTrigger,
-                                          model: model,
-                                          router: self)
-        EditTeamView(viewModel: viewModel)
     }
     
     @ViewBuilder func makeSettingsScreen() -> some View {

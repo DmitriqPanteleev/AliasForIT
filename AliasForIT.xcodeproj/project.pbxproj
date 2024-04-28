@@ -14,7 +14,6 @@
 		D01401FC2AE41BE400048B27 /* TeamTabControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01401FB2AE41BE400048B27 /* TeamTabControl.swift */; };
 		D01402012AE422A900048B27 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01402002AE422A900048B27 /* TeamCell.swift */; };
 		D01402092AE5338000048B27 /* TeamScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01402082AE5338000048B27 /* TeamScrollView.swift */; };
-		D062F1F62955AEC500B79C14 /* AvatarCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D062F1F52955AEC500B79C14 /* AvatarCellView.swift */; };
 		D0651C162BD57ED9005A2AE7 /* ScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0651C152BD57ED9005A2AE7 /* ScreenSize.swift */; };
 		D0651C1A2BD5A2DE005A2AE7 /* TeamControlable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0651C192BD5A2DE005A2AE7 /* TeamControlable.swift */; };
 		D0651C1C2BD5A2F2005A2AE7 /* TeamEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0651C1B2BD5A2F2005A2AE7 /* TeamEditable.swift */; };
@@ -34,7 +33,12 @@
 		D0A7F931294328710013A084 /* PlayButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7F930294328710013A084 /* PlayButtonStyle.swift */; };
 		D0A7F934294330130013A084 /* AnimatedAppBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7F933294330130013A084 /* AnimatedAppBar.swift */; };
 		D0A7F93629434CDD0013A084 /* AppearanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7F93529434CDD0013A084 /* AppearanceManager.swift */; };
-		D0A958E72BD6BB5800FAEB61 /* TeamImageSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A958E62BD6BB5800FAEB61 /* TeamImageSheet.swift */; };
+		D0A839782BDD888B00F0046C /* RulesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A839772BDD888B00F0046C /* RulesViewModel.swift */; };
+		D0A8397A2BDD892C00F0046C /* RuleStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A839792BDD892C00F0046C /* RuleStep.swift */; };
+		D0A839872BDD8A4900F0046C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0A839892BDD8A4900F0046C /* Localizable.strings */; };
+		D0A8398D2BDD8EC500F0046C /* TeamSheetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A8398C2BDD8EC500F0046C /* TeamSheetType.swift */; };
+		D0A8398F2BDD8F5200F0046C /* TeamSheetConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A8398E2BDD8F5200F0046C /* TeamSheetConfig.swift */; };
+		D0A958E72BD6BB5800FAEB61 /* TeamSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A958E62BD6BB5800FAEB61 /* TeamSheet.swift */; };
 		D0AE9E1A2BD57E2500F7B48F /* SafeAreaInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE9E192BD57E2500F7B48F /* SafeAreaInsets.swift */; };
 		D0BE04042938EFD9000739E0 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BE04032938EFD9000739E0 /* CardView.swift */; };
 		D0E48AAE293FCF2B006E2555 /* Text + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E48AAD293FCF2B006E2555 /* Text + Extensions.swift */; };
@@ -86,8 +90,6 @@
 		D0F0C2C6294743AD000D7FF5 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0C2C5294743AD000D7FF5 /* MainRouter.swift */; };
 		D0F0C2CB2947499D000D7FF5 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0C2CA2947499D000D7FF5 /* RoundedTextField.swift */; };
 		D0FCA33729505D7600599E69 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FCA33629505D7600599E69 /* MainCoordinator.swift */; };
-		D0FCA33D2951C47300599E69 /* EditTeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FCA33C2951C47300599E69 /* EditTeamViewModel.swift */; };
-		D0FCA33F2951C49000599E69 /* EditTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FCA33E2951C49000599E69 /* EditTeamView.swift */; };
 		D0FDEF862AF84DA900F310FD /* DeleteTeamButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FDEF852AF84DA900F310FD /* DeleteTeamButton.swift */; };
 		D0FDEF892AF8513500F310FD /* GameHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FDEF882AF8513500F310FD /* GameHeaderView.swift */; };
 		D0FDEF8B2AF8533700F310FD /* TeamScoreList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FDEF8A2AF8533700F310FD /* TeamScoreList.swift */; };
@@ -105,7 +107,7 @@
 		D01401FB2AE41BE400048B27 /* TeamTabControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTabControl.swift; sourceTree = "<group>"; };
 		D01402002AE422A900048B27 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
 		D01402082AE5338000048B27 /* TeamScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamScrollView.swift; sourceTree = "<group>"; };
-		D062F1F52955AEC500B79C14 /* AvatarCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCellView.swift; sourceTree = "<group>"; };
+		D040E4832BDEE36000EA465E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0651C152BD57ED9005A2AE7 /* ScreenSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSize.swift; sourceTree = "<group>"; };
 		D0651C192BD5A2DE005A2AE7 /* TeamControlable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamControlable.swift; sourceTree = "<group>"; };
 		D0651C1B2BD5A2F2005A2AE7 /* TeamEditable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamEditable.swift; sourceTree = "<group>"; };
@@ -125,7 +127,12 @@
 		D0A7F930294328710013A084 /* PlayButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonStyle.swift; sourceTree = "<group>"; };
 		D0A7F933294330130013A084 /* AnimatedAppBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedAppBar.swift; sourceTree = "<group>"; };
 		D0A7F93529434CDD0013A084 /* AppearanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceManager.swift; sourceTree = "<group>"; };
-		D0A958E62BD6BB5800FAEB61 /* TeamImageSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamImageSheet.swift; sourceTree = "<group>"; };
+		D0A839772BDD888B00F0046C /* RulesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewModel.swift; sourceTree = "<group>"; };
+		D0A839792BDD892C00F0046C /* RuleStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleStep.swift; sourceTree = "<group>"; };
+		D0A839882BDD8A4900F0046C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D0A8398C2BDD8EC500F0046C /* TeamSheetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSheetType.swift; sourceTree = "<group>"; };
+		D0A8398E2BDD8F5200F0046C /* TeamSheetConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSheetConfig.swift; sourceTree = "<group>"; };
+		D0A958E62BD6BB5800FAEB61 /* TeamSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSheet.swift; sourceTree = "<group>"; };
 		D0AE9E192BD57E2500F7B48F /* SafeAreaInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaInsets.swift; sourceTree = "<group>"; };
 		D0BE04032938EFD9000739E0 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		D0E48AAD293FCF2B006E2555 /* Text + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text + Extensions.swift"; sourceTree = "<group>"; };
@@ -168,8 +175,6 @@
 		D0F0C2C5294743AD000D7FF5 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		D0F0C2CA2947499D000D7FF5 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		D0FCA33629505D7600599E69 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
-		D0FCA33C2951C47300599E69 /* EditTeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTeamViewModel.swift; sourceTree = "<group>"; };
-		D0FCA33E2951C49000599E69 /* EditTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTeamView.swift; sourceTree = "<group>"; };
 		D0FDEF852AF84DA900F310FD /* DeleteTeamButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTeamButton.swift; sourceTree = "<group>"; };
 		D0FDEF882AF8513500F310FD /* GameHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHeaderView.swift; sourceTree = "<group>"; };
 		D0FDEF8A2AF8533700F310FD /* TeamScoreList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamScoreList.swift; sourceTree = "<group>"; };
@@ -203,6 +208,7 @@
 		D01401F12AE4154400048B27 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D0A958E52BD6BB3800FAEB61 /* BottomSheets */,
 				D08F422B2AE54B6A0035D29E /* Settings */,
 				D01401F22AE4155E00048B27 /* MainHeader.swift */,
 				D01401FB2AE41BE400048B27 /* TeamTabControl.swift */,
@@ -230,6 +236,33 @@
 				D0E5FB70293A1218006F7F6F /* ProgressView */,
 			);
 			path = Old;
+			sourceTree = "<group>";
+		};
+		D040E4842BDEE38300EA465E /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D040E4832BDEE36000EA465E /* Info.plist */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		D040E4852BDEE55B00EA465E /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		D040E4862BDEE5D400EA465E /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				D0FDEF872AF8510C00F310FD /* Components */,
+				D0E5FB7D293DF8FE006F7F6F /* OldComponents */,
+				D0E5FB73293B65C7006F7F6F /* GameView.swift */,
+				D0E5FB75293B65D2006F7F6F /* GameViewModel.swift */,
+				D0ED1A9D2923CC2F002ABBD5 /* RoundRouter.swift */,
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 		D0651C172BD5A2C5005A2AE7 /* Teams */ = {
@@ -336,10 +369,38 @@
 			path = AppBar;
 			sourceTree = "<group>";
 		};
+		D0A839752BDD881900F0046C /* General */ = {
+			isa = PBXGroup;
+			children = (
+				D01401F12AE4154400048B27 /* Components */,
+				D0F0C2BC29472C54000D7FF5 /* MainView.swift */,
+				D0F0C2BE29472C5F000D7FF5 /* MainViewModel.swift */,
+				D0F0C2C5294743AD000D7FF5 /* MainRouter.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		D0A839762BDD886E00F0046C /* Rules */ = {
+			isa = PBXGroup;
+			children = (
+				D0A839772BDD888B00F0046C /* RulesViewModel.swift */,
+			);
+			path = Rules;
+			sourceTree = "<group>";
+		};
+		D0A839902BDD8F5E00F0046C /* TeamSheet */ = {
+			isa = PBXGroup;
+			children = (
+				D0A8398C2BDD8EC500F0046C /* TeamSheetType.swift */,
+				D0A8398E2BDD8F5200F0046C /* TeamSheetConfig.swift */,
+			);
+			path = TeamSheet;
+			sourceTree = "<group>";
+		};
 		D0A958E52BD6BB3800FAEB61 /* BottomSheets */ = {
 			isa = PBXGroup;
 			children = (
-				D0A958E62BD6BB5800FAEB61 /* TeamImageSheet.swift */,
+				D0A958E62BD6BB5800FAEB61 /* TeamSheet.swift */,
 				D0A78F5A2BD7FF7500FB65C9 /* SettingItemSheet.swift */,
 			);
 			path = BottomSheets;
@@ -448,7 +509,9 @@
 		D0EA27542AF80AB2005A1B40 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				D0A839902BDD8F5E00F0046C /* TeamSheet */,
 				D0EA27552AF80AC0005A1B40 /* Setting.swift */,
+				D0A839792BDD892C00F0046C /* RuleStep.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -473,13 +536,13 @@
 			isa = PBXGroup;
 			children = (
 				D0ED1A4C2923A394002ABBD5 /* App */,
+				D0ED1A4B2923A370002ABBD5 /* Resources */,
 				D0ED1A4D2923A39B002ABBD5 /* Coordinators */,
-				D0ED1A512923A3C9002ABBD5 /* Services */,
 				D0ED1A4E2923A3A3002ABBD5 /* Models */,
+				D0ED1A502923A3B1002ABBD5 /* Helpers */,
+				D0ED1A512923A3C9002ABBD5 /* Services */,
 				D0ED1A4F2923A3AB002ABBD5 /* Modules */,
 				D0ED1A522923A3D0002ABBD5 /* Components */,
-				D0ED1A502923A3B1002ABBD5 /* Helpers */,
-				D0ED1A4B2923A370002ABBD5 /* Resources */,
 				D0ED1A432923A340002ABBD5 /* Preview Content */,
 			);
 			path = AliasForIT;
@@ -496,9 +559,11 @@
 		D0ED1A4B2923A370002ABBD5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D040E4842BDEE38300EA465E /* Settings */,
 				D0ED1A412923A340002ABBD5 /* Assets.xcassets */,
 				D0E5FB78293CF002006F7F6F /* Colors.swift */,
 				D01401F72AE4199600048B27 /* Images.swift */,
+				D0A839892BDD8A4900F0046C /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -533,10 +598,8 @@
 		D0ED1A4F2923A3AB002ABBD5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				D0FCA33B2951C45200599E69 /* EditTeam */,
 				D0ED1A652923A57F002ABBD5 /* Main */,
-				D0ED1A662923A589002ABBD5 /* Game */,
-				D0ED1A672923A592002ABBD5 /* Round */,
+				D0ED1A662923A589002ABBD5 /* Play */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -557,6 +620,7 @@
 			children = (
 				D0651C282BD5AB07005A2AE7 /* DI */,
 				D0651C292BD5AB0C005A2AE7 /* ReviewManager */,
+				D040E4852BDEE55B00EA465E /* Logger */,
 				D0651C172BD5A2C5005A2AE7 /* Teams */,
 				D0651C1D2BD5A301005A2AE7 /* Settings */,
 				D0ED1A5A2923A4D6002ABBD5 /* Storages */,
@@ -568,7 +632,6 @@
 		D0ED1A522923A3D0002ABBD5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				D0A958E52BD6BB3800FAEB61 /* BottomSheets */,
 				D0EA27432AF7D4F8005A1B40 /* Buttons */,
 				D0A78F552BD7EC2A00FB65C9 /* ButtonStyles */,
 				D0EA27422AF7D4E3005A1B40 /* Team */,
@@ -608,24 +671,19 @@
 		D0ED1A652923A57F002ABBD5 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				D01401F12AE4154400048B27 /* Components */,
-				D0F0C2BC29472C54000D7FF5 /* MainView.swift */,
-				D0F0C2BE29472C5F000D7FF5 /* MainViewModel.swift */,
-				D0F0C2C5294743AD000D7FF5 /* MainRouter.swift */,
+				D0A839762BDD886E00F0046C /* Rules */,
+				D0A839752BDD881900F0046C /* General */,
 			);
 			path = Main;
 			sourceTree = "<group>";
 		};
-		D0ED1A662923A589002ABBD5 /* Game */ = {
+		D0ED1A662923A589002ABBD5 /* Play */ = {
 			isa = PBXGroup;
 			children = (
-				D0FDEF872AF8510C00F310FD /* Components */,
-				D0E5FB7D293DF8FE006F7F6F /* OldComponents */,
-				D0E5FB73293B65C7006F7F6F /* GameView.swift */,
-				D0E5FB75293B65D2006F7F6F /* GameViewModel.swift */,
-				D0ED1A9D2923CC2F002ABBD5 /* RoundRouter.swift */,
+				D040E4862BDEE5D400EA465E /* Game */,
+				D0ED1A672923A592002ABBD5 /* Round */,
 			);
-			path = Game;
+			path = Play;
 			sourceTree = "<group>";
 		};
 		D0ED1A672923A592002ABBD5 /* Round */ = {
@@ -656,14 +714,6 @@
 			path = PlayButton;
 			sourceTree = "<group>";
 		};
-		D0F0C2C02947367C000D7FF5 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				D062F1F52955AEC500B79C14 /* AvatarCellView.swift */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
 		D0F0C2C929474981000D7FF5 /* RoundedTextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -678,16 +728,6 @@
 				D0F0C2C12947368C000D7FF5 /* AddButtonView.swift */,
 			);
 			path = AddButton;
-			sourceTree = "<group>";
-		};
-		D0FCA33B2951C45200599E69 /* EditTeam */ = {
-			isa = PBXGroup;
-			children = (
-				D0F0C2C02947367C000D7FF5 /* Components */,
-				D0FCA33E2951C49000599E69 /* EditTeamView.swift */,
-				D0FCA33C2951C47300599E69 /* EditTeamViewModel.swift */,
-			);
-			path = EditTeam;
 			sourceTree = "<group>";
 		};
 		D0FDEF822AF84D6A00F310FD /* TeamDelete */ = {
@@ -774,11 +814,11 @@
 			};
 			buildConfigurationList = D0ED1A352923A33E002ABBD5 /* Build configuration list for PBXProject "AliasForIT" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ru;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				ru,
 			);
 			mainGroup = D0ED1A312923A33E002ABBD5;
 			packageReferences = (
@@ -804,6 +844,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0ED1A452923A340002ABBD5 /* Preview Assets.xcassets in Resources */,
+				D0A839872BDD8A4900F0046C /* Localizable.strings in Resources */,
 				D0ED1A422923A340002ABBD5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -816,10 +857,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0E5FB79293CF002006F7F6F /* Colors.swift in Sources */,
+				D0A839782BDD888B00F0046C /* RulesViewModel.swift in Sources */,
 				D00B9B642BD98B2700870B6D /* ScaledButtonStyle.swift in Sources */,
 				D0FDEF892AF8513500F310FD /* GameHeaderView.swift in Sources */,
 				D0A78F572BD7EC6200FB65C9 /* TextButtonStyle.swift in Sources */,
 				D0ED1A5C2923A4E3002ABBD5 /* UserStorage.swift in Sources */,
+				D0A8398F2BDD8F5200F0046C /* TeamSheetConfig.swift in Sources */,
 				D0ED1A602923A528002ABBD5 /* Consts.swift in Sources */,
 				D0651C202BD5A3BE005A2AE7 /* GameConfigurable.swift in Sources */,
 				D0651C1C2BD5A2F2005A2AE7 /* TeamEditable.swift in Sources */,
@@ -848,7 +891,6 @@
 				D0A7F92F294321AC0013A084 /* AnswerToggleCell.swift in Sources */,
 				D0ED1A5E2923A51A002ABBD5 /* SettingsManager.swift in Sources */,
 				D0EA274E2AF7E031005A1B40 /* TeamNameFieldButton.swift in Sources */,
-				D0FCA33D2951C47300599E69 /* EditTeamViewModel.swift in Sources */,
 				D0ED1AAF292616B5002ABBD5 /* View + Extensions.swift in Sources */,
 				D0ED1A632923A561002ABBD5 /* Optional+Extensions.swift in Sources */,
 				D0E48AB22941E328006E2555 /* GameCoordinator.swift in Sources */,
@@ -867,26 +909,26 @@
 				D0EA27512AF7F320005A1B40 /* SettingCardButtonStyle.swift in Sources */,
 				D0F0C2C22947368C000D7FF5 /* AddButtonView.swift in Sources */,
 				D0EA27472AF7D6C3005A1B40 /* Typealiases.swift in Sources */,
+				D0A8397A2BDD892C00F0046C /* RuleStep.swift in Sources */,
 				D0FDEF912AF8551900F310FD /* GameTeamCell.swift in Sources */,
+				D0A8398D2BDD8EC500F0046C /* TeamSheetType.swift in Sources */,
 				D0FCA33729505D7600599E69 /* MainCoordinator.swift in Sources */,
 				D0E5FB6F293A0EF9006F7F6F /* TimerControllButtonView.swift in Sources */,
 				D0651C232BD5A44A005A2AE7 /* SettingUpdateOption.swift in Sources */,
 				D0ED1A812923A948002ABBD5 /* AppDelegate.swift in Sources */,
 				D01401F82AE4199600048B27 /* Images.swift in Sources */,
-				D0A958E72BD6BB5800FAEB61 /* TeamImageSheet.swift in Sources */,
+				D0A958E72BD6BB5800FAEB61 /* TeamSheet.swift in Sources */,
 				D0FDEF942AF856CF00F310FD /* ScoreView.swift in Sources */,
 				D0651C252BD5A487005A2AE7 /* SettingsEditable.swift in Sources */,
 				D0ED1AA229250258002ABBD5 /* WordsStorage.swift in Sources */,
 				D0FDEF862AF84DA900F310FD /* DeleteTeamButton.swift in Sources */,
 				D01402092AE5338000048B27 /* TeamScrollView.swift in Sources */,
-				D0FCA33F2951C49000599E69 /* EditTeamView.swift in Sources */,
 				D0651C1A2BD5A2DE005A2AE7 /* TeamControlable.swift in Sources */,
 				D0E48AB02941DCD4006E2555 /* PlayButtonView.swift in Sources */,
 				D0EA27562AF80AC0005A1B40 /* Setting.swift in Sources */,
 				D0F0C2BD29472C54000D7FF5 /* MainView.swift in Sources */,
 				D0ED1A3E2923A33E002ABBD5 /* AliasForITApp.swift in Sources */,
 				D0FDEF962AF90BB600F310FD /* ScoreViewStyle.swift in Sources */,
-				D062F1F62955AEC500B79C14 /* AvatarCellView.swift in Sources */,
 				D0ED1A592923A4B5002ABBD5 /* TeamModel.swift in Sources */,
 				D0A7F93629434CDD0013A084 /* AppearanceManager.swift in Sources */,
 				D0F0C2BF29472C5F000D7FF5 /* MainViewModel.swift in Sources */,
@@ -895,6 +937,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D0A839892BDD8A4900F0046C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0A839882BDD8A4900F0046C /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D0ED1A462923A340002ABBD5 /* Debug */ = {
@@ -1026,6 +1079,7 @@
 				DEVELOPMENT_TEAM = 29WM9J786L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AliasForIT/Resources/Settings/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Alias For IT";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -1034,6 +1088,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1062,6 +1117,7 @@
 				DEVELOPMENT_TEAM = 29WM9J786L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AliasForIT/Resources/Settings/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Alias For IT";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -1070,6 +1126,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

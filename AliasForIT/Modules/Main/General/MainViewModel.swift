@@ -73,7 +73,11 @@ private extension MainViewModel {
     }
     
     func bindTeamControls() {
-        input.addTeam
+        input.updateTeam
+            .filter { $0.type == .adding }
+            .map {
+                TeamModel(name: $0.name, image: $0.image)
+            }
             .handleEvents(receiveOutput: { [weak self] model in
                 self?.teamStorage.appendTeam(model)
             })
@@ -112,7 +116,9 @@ private extension MainViewModel {
             }
             .store(in: &cancellable)
         
-        input.editTeamImage
+        input.updateTeam
+            .filter { $0.type == .editing }
+            .map { $0.image }
             .compactMap { [unowned self] in
                 (self.teamStorage.teams[self.output.selectedTeamId].id, $0)
             }
@@ -135,7 +141,8 @@ private extension MainViewModel {
         input.toSomeSetting
             .filter { $0 != .rules }
             .sink { [weak self] setting in
-                self?.output.isShowingSettingSheet = SettingSheet(setting: setting, isShowing: true)
+                self?.output.settingSheetConfig.setting = setting
+                self?.output.settingSheetConfig.isShowing = true
             }
             .store(in: &cancellable)
         
@@ -148,7 +155,15 @@ private extension MainViewModel {
         
         input.toChooseImage
             .sink { [weak self] in
-                self?.output.isShowingImageSheet = true
+                self?.output.teamSheetConfig.type = .editing
+                self?.output.teamSheetConfig.isShowing = true
+            }
+            .store(in: &cancellable)
+        
+        input.toAppendTeam
+            .sink { [weak self] in
+                self?.output.teamSheetConfig.type = .adding
+                self?.output.teamSheetConfig.isShowing = true
             }
             .store(in: &cancellable)
     }
@@ -180,14 +195,14 @@ extension MainViewModel {
         let toSomeSetting = SettingSubject()
         
         // MARK: BS
+        let toAppendTeam = VoidSubject()
         let toChooseImage = VoidSubject()
         let confirmSetting = SettingSubject()
         
         // MARK: Teams Operations
-        let addTeam = TeamSubject()
+        let updateTeam = TeamSheetSubject()
         let deleteTeam = VoidSubject()
         let editTeamName = StringSubject()
-        let editTeamImage = ImageSubject()
     }
     
     struct Output {
@@ -210,10 +225,10 @@ extension MainViewModel {
         }
         
         // MARK: BS
-        var isShowingImageSheet = false
-        var isShowingSettingSheet = SettingSheet(setting: .rules, isShowing: false)
+        var teamSheetConfig = TypedTeamSheet(type: .adding, isShowing: false)
+        var settingSheetConfig = SettingSheet(setting: .rules, isShowing: false)
         var isSheetsShowing: Bool {
-            isShowingImageSheet || isShowingSettingSheet.isShowing
+            teamSheetConfig.isShowing || settingSheetConfig.isShowing
         }
     }
 }
@@ -221,6 +236,11 @@ extension MainViewModel {
 extension MainViewModel {
     struct SettingSheet {
         var setting: SettingItem
+        var isShowing: Bool
+    }
+    
+    struct TypedTeamSheet {
+        var type: TeamSheetType
         var isShowing: Bool
     }
 }
