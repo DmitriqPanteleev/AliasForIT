@@ -9,11 +9,11 @@ import SwiftUI
 import Combine
 
 struct MainHeader: View {
-    let mode: String = "Классический режим"
+//    let mode: String = "Классический режим" // не в рамках MVP
     let addTeamSubject: VoidSubject
     
     var body: some View {
-        HStack(alignment: .top) {
+        HStack {
             titleView
             Spacer()
             addTeamButtonView
