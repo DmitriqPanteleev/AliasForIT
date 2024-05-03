@@ -12,6 +12,7 @@ enum SystemImage: String {
     case photo
     case checkMark = "checkmark.rectangle.portrait.fill"
     case playFill = "play.fill"
+    case pauseCircle = "pause.circle"
     case addTeam = "plus"
     case removeTeam = "trash.fill"
     case close = "xmark"

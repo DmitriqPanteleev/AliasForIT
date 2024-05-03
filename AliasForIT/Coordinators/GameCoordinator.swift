@@ -16,7 +16,6 @@ final class GameCoordinator: NavigationCoordinatable {
     // MARK: Routes
     @Root var game = makeGame
     @Route(.fullScreen) var round = makeRound
-    @Route(.push) var finish = makeRoundFinish
     
     // MARK: Dependencies
     private let settingsManager: GameConfigurable
@@ -24,8 +23,7 @@ final class GameCoordinator: NavigationCoordinatable {
     // MARK: External
     private let teams: [TeamModel]
     
-    // MARK: Internal
-    private let onRoundFinish = PassthroughSubject<Int, Never>()
+    let onRoundFinish = PassthroughSubject<Int, Never>()
     
     init(teams: [TeamModel], settingsManager: GameConfigurable) {
         self.teams = teams
@@ -55,10 +53,5 @@ extension GameCoordinator {
                                        onRoundFinish: onRoundFinish,
                                        router: self)
         RoundView(viewModel: viewModel)
-    }
-    
-    @ViewBuilder func makeRoundFinish(answeredWords: [AnswerModel]) -> some View {
-        RoundFinishedView(answeredWords: answeredWords, sendScore: onRoundFinish)
-            .environmentObject(self)
     }
 }

@@ -22,9 +22,4 @@ struct Consts {
         static let isCommonLastWord = "isCommonLastWord"
         static let isForfeitForMiss = "isForfeitForMiss"
     }
-    
-    enum SharedLayout {
-        static let cardWidth = UIScreen.main.bounds.width * 0.6
-        static let cardHeight = UIScreen.main.bounds.height * 0.5
-    }
 }

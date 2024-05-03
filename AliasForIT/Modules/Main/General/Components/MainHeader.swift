@@ -24,14 +24,9 @@ struct MainHeader: View {
 
 private extension MainHeader {
     var titleView: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            Text("Новая игра")
-                .foregroundColor(.appDarkBlue)
-                .font(.system(size: 28))
-            Text(mode)
-                .foregroundColor(.appDarkGray)
-                .font(.system(size: 16, weight: .thin))
-        }
+        Text("Новая игра")
+            .foregroundColor(.appDarkBlue)
+            .font(.system(size: 28))
     }
     
     @ViewBuilder

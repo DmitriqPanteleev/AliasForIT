@@ -11,7 +11,6 @@ import Stinsen
 protocol MainRouter: AnyObject {
     func moveToGame(teams: [TeamModel])
     func moveToRules()
-    func moveToEditTeam(model: TeamModel?)
     func moveToSettings()
     func pop(action: @escaping () -> Void)
 }
@@ -26,18 +25,12 @@ extension MainCoordinator: MainRouter {
         //TODO:
     }
     
-    func moveToEditTeam(model: TeamModel?) {
-        self.route(to: \.team, model)
-    }
-    
     func moveToSettings() {
         self.route(to: \.settings)
     }
     
     func pop(action: @escaping () -> Void) {
-        self.popToRoot {
-            action()
-        }
+        self.popToRoot(action)
     }
     
 }
