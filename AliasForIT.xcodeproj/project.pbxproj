@@ -14,6 +14,12 @@
 		D01401FC2AE41BE400048B27 /* TeamTabControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01401FB2AE41BE400048B27 /* TeamTabControl.swift */; };
 		D01402012AE422A900048B27 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01402002AE422A900048B27 /* TeamCell.swift */; };
 		D01402092AE5338000048B27 /* TeamScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01402082AE5338000048B27 /* TeamScrollView.swift */; };
+		D02E39D52BE2FC380087E707 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02E39D42BE2FC380087E707 /* Array+Extensions.swift */; };
+		D040E48A2BDEE8D600EA465E /* PlayCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040E4892BDEE8D600EA465E /* PlayCardView.swift */; };
+		D040E48D2BDEEA3F00EA465E /* PlayCardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040E48C2BDEEA3F00EA465E /* PlayCardState.swift */; };
+		D040E4902BDEED3B00EA465E /* SwipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040E48F2BDEED3A00EA465E /* SwipeCardView.swift */; };
+		D040E4932BDFBB9300EA465E /* Animation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040E4922BDFBB9300EA465E /* Animation+Extensions.swift */; };
+		D040E4952BDFC69C00EA465E /* RoundTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040E4942BDFC69C00EA465E /* RoundTimerView.swift */; };
 		D0651C162BD57ED9005A2AE7 /* ScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0651C152BD57ED9005A2AE7 /* ScreenSize.swift */; };
 		D0651C1A2BD5A2DE005A2AE7 /* TeamControlable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0651C192BD5A2DE005A2AE7 /* TeamControlable.swift */; };
 		D0651C1C2BD5A2F2005A2AE7 /* TeamEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0651C1B2BD5A2F2005A2AE7 /* TeamEditable.swift */; };
@@ -27,11 +33,7 @@
 		D08F422D2AE54B780035D29E /* SettingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08F422C2AE54B780035D29E /* SettingItem.swift */; };
 		D0A78F572BD7EC6200FB65C9 /* TextButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A78F562BD7EC6200FB65C9 /* TextButtonStyle.swift */; };
 		D0A78F5B2BD7FF7500FB65C9 /* SettingItemSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A78F5A2BD7FF7500FB65C9 /* SettingItemSheet.swift */; };
-		D0A7F92929430D140013A084 /* RoundFinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7F92829430D140013A084 /* RoundFinishedView.swift */; };
 		D0A7F92D294312410013A084 /* AnswerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7F92C294312410013A084 /* AnswerModel.swift */; };
-		D0A7F92F294321AC0013A084 /* AnswerToggleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7F92E294321AC0013A084 /* AnswerToggleCell.swift */; };
-		D0A7F931294328710013A084 /* PlayButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7F930294328710013A084 /* PlayButtonStyle.swift */; };
-		D0A7F934294330130013A084 /* AnimatedAppBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7F933294330130013A084 /* AnimatedAppBar.swift */; };
 		D0A7F93629434CDD0013A084 /* AppearanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7F93529434CDD0013A084 /* AppearanceManager.swift */; };
 		D0A839782BDD888B00F0046C /* RulesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A839772BDD888B00F0046C /* RulesViewModel.swift */; };
 		D0A8397A2BDD892C00F0046C /* RuleStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A839792BDD892C00F0046C /* RuleStep.swift */; };
@@ -40,19 +42,18 @@
 		D0A8398F2BDD8F5200F0046C /* TeamSheetConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A8398E2BDD8F5200F0046C /* TeamSheetConfig.swift */; };
 		D0A958E72BD6BB5800FAEB61 /* TeamSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A958E62BD6BB5800FAEB61 /* TeamSheet.swift */; };
 		D0AE9E1A2BD57E2500F7B48F /* SafeAreaInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE9E192BD57E2500F7B48F /* SafeAreaInsets.swift */; };
-		D0BE04042938EFD9000739E0 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BE04032938EFD9000739E0 /* CardView.swift */; };
+		D0E0F0B82BE2920A00D1AEB7 /* BorderedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E0F0B72BE2920A00D1AEB7 /* BorderedTextField.swift */; };
+		D0E0F0BB2BE2C16700D1AEB7 /* RoundTeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E0F0BA2BE2C16700D1AEB7 /* RoundTeamCell.swift */; };
+		D0E0F0BD2BE2E28B00D1AEB7 /* RoundViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E0F0BC2BE2E28B00D1AEB7 /* RoundViewState.swift */; };
+		D0E0F0BF2BE2E58700D1AEB7 /* AnsweredWordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E0F0BE2BE2E58700D1AEB7 /* AnsweredWordsView.swift */; };
+		D0E0F0C22BE2E69A00D1AEB7 /* AnsweredWordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E0F0C12BE2E69A00D1AEB7 /* AnsweredWordCell.swift */; };
+		D0E0F0C42BE2F34400D1AEB7 /* GameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E0F0C32BE2F34400D1AEB7 /* GameRouter.swift */; };
 		D0E48AAE293FCF2B006E2555 /* Text + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E48AAD293FCF2B006E2555 /* Text + Extensions.swift */; };
-		D0E48AB02941DCD4006E2555 /* PlayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E48AAF2941DCD4006E2555 /* PlayButtonView.swift */; };
 		D0E48AB22941E328006E2555 /* GameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E48AB12941E328006E2555 /* GameCoordinator.swift */; };
 		D0E48AB72941E64C006E2555 /* Stinsen in Frameworks */ = {isa = PBXBuildFile; productRef = D0E48AB62941E64C006E2555 /* Stinsen */; };
-		D0E5FB6C293A0EDB006F7F6F /* TimerControllButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FB6B293A0EDB006F7F6F /* TimerControllButtonStyle.swift */; };
-		D0E5FB6F293A0EF9006F7F6F /* TimerControllButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FB6E293A0EF9006F7F6F /* TimerControllButtonView.swift */; };
-		D0E5FB72293A1239006F7F6F /* LinearProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FB71293A1239006F7F6F /* LinearProgressView.swift */; };
 		D0E5FB74293B65C7006F7F6F /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FB73293B65C7006F7F6F /* GameView.swift */; };
 		D0E5FB76293B65D2006F7F6F /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FB75293B65D2006F7F6F /* GameViewModel.swift */; };
 		D0E5FB79293CF002006F7F6F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FB78293CF002006F7F6F /* Colors.swift */; };
-		D0E5FB7C293CF26B006F7F6F /* SharpedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FB7B293CF26B006F7F6F /* SharpedCardView.swift */; };
-		D0E5FB7F293DF90D006F7F6F /* TeamCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5FB7E293DF90D006F7F6F /* TeamCellView.swift */; };
 		D0EA27452AF7D509005A1B40 /* PhotoChangeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA27442AF7D509005A1B40 /* PhotoChangeButton.swift */; };
 		D0EA27472AF7D6C3005A1B40 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA27462AF7D6C3005A1B40 /* Typealiases.swift */; };
 		D0EA274B2AF7D927005A1B40 /* PhotoChangeButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA274A2AF7D927005A1B40 /* PhotoChangeButtonStyle.swift */; };
@@ -82,13 +83,10 @@
 		D0ED1A9C2923CC1F002ABBD5 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A9B2923CC1F002ABBD5 /* RoundView.swift */; };
 		D0ED1A9E2923CC2F002ABBD5 /* RoundRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1A9D2923CC2F002ABBD5 /* RoundRouter.swift */; };
 		D0ED1AA229250258002ABBD5 /* WordsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1AA129250258002ABBD5 /* WordsStorage.swift */; };
-		D0ED1AAD2926054E002ABBD5 /* SwipableCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1AAC2926054E002ABBD5 /* SwipableCardView.swift */; };
 		D0ED1AAF292616B5002ABBD5 /* View + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED1AAE292616B5002ABBD5 /* View + Extensions.swift */; };
 		D0F0C2BD29472C54000D7FF5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0C2BC29472C54000D7FF5 /* MainView.swift */; };
 		D0F0C2BF29472C5F000D7FF5 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0C2BE29472C5F000D7FF5 /* MainViewModel.swift */; };
-		D0F0C2C22947368C000D7FF5 /* AddButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0C2C12947368C000D7FF5 /* AddButtonView.swift */; };
 		D0F0C2C6294743AD000D7FF5 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0C2C5294743AD000D7FF5 /* MainRouter.swift */; };
-		D0F0C2CB2947499D000D7FF5 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0C2CA2947499D000D7FF5 /* RoundedTextField.swift */; };
 		D0FCA33729505D7600599E69 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FCA33629505D7600599E69 /* MainCoordinator.swift */; };
 		D0FDEF862AF84DA900F310FD /* DeleteTeamButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FDEF852AF84DA900F310FD /* DeleteTeamButton.swift */; };
 		D0FDEF892AF8513500F310FD /* GameHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FDEF882AF8513500F310FD /* GameHeaderView.swift */; };
@@ -107,7 +105,13 @@
 		D01401FB2AE41BE400048B27 /* TeamTabControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTabControl.swift; sourceTree = "<group>"; };
 		D01402002AE422A900048B27 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
 		D01402082AE5338000048B27 /* TeamScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamScrollView.swift; sourceTree = "<group>"; };
+		D02E39D42BE2FC380087E707 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		D040E4832BDEE36000EA465E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D040E4892BDEE8D600EA465E /* PlayCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayCardView.swift; sourceTree = "<group>"; };
+		D040E48C2BDEEA3F00EA465E /* PlayCardState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayCardState.swift; sourceTree = "<group>"; };
+		D040E48F2BDEED3A00EA465E /* SwipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCardView.swift; sourceTree = "<group>"; };
+		D040E4922BDFBB9300EA465E /* Animation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation+Extensions.swift"; sourceTree = "<group>"; };
+		D040E4942BDFC69C00EA465E /* RoundTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTimerView.swift; sourceTree = "<group>"; };
 		D0651C152BD57ED9005A2AE7 /* ScreenSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSize.swift; sourceTree = "<group>"; };
 		D0651C192BD5A2DE005A2AE7 /* TeamControlable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamControlable.swift; sourceTree = "<group>"; };
 		D0651C1B2BD5A2F2005A2AE7 /* TeamEditable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamEditable.swift; sourceTree = "<group>"; };
@@ -121,11 +125,7 @@
 		D08F422C2AE54B780035D29E /* SettingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingItem.swift; sourceTree = "<group>"; };
 		D0A78F562BD7EC6200FB65C9 /* TextButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButtonStyle.swift; sourceTree = "<group>"; };
 		D0A78F5A2BD7FF7500FB65C9 /* SettingItemSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingItemSheet.swift; sourceTree = "<group>"; };
-		D0A7F92829430D140013A084 /* RoundFinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundFinishedView.swift; sourceTree = "<group>"; };
 		D0A7F92C294312410013A084 /* AnswerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerModel.swift; sourceTree = "<group>"; };
-		D0A7F92E294321AC0013A084 /* AnswerToggleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerToggleCell.swift; sourceTree = "<group>"; };
-		D0A7F930294328710013A084 /* PlayButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonStyle.swift; sourceTree = "<group>"; };
-		D0A7F933294330130013A084 /* AnimatedAppBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedAppBar.swift; sourceTree = "<group>"; };
 		D0A7F93529434CDD0013A084 /* AppearanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceManager.swift; sourceTree = "<group>"; };
 		D0A839772BDD888B00F0046C /* RulesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewModel.swift; sourceTree = "<group>"; };
 		D0A839792BDD892C00F0046C /* RuleStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleStep.swift; sourceTree = "<group>"; };
@@ -134,18 +134,17 @@
 		D0A8398E2BDD8F5200F0046C /* TeamSheetConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSheetConfig.swift; sourceTree = "<group>"; };
 		D0A958E62BD6BB5800FAEB61 /* TeamSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSheet.swift; sourceTree = "<group>"; };
 		D0AE9E192BD57E2500F7B48F /* SafeAreaInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaInsets.swift; sourceTree = "<group>"; };
-		D0BE04032938EFD9000739E0 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		D0E0F0B72BE2920A00D1AEB7 /* BorderedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedTextField.swift; sourceTree = "<group>"; };
+		D0E0F0BA2BE2C16700D1AEB7 /* RoundTeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTeamCell.swift; sourceTree = "<group>"; };
+		D0E0F0BC2BE2E28B00D1AEB7 /* RoundViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundViewState.swift; sourceTree = "<group>"; };
+		D0E0F0BE2BE2E58700D1AEB7 /* AnsweredWordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnsweredWordsView.swift; sourceTree = "<group>"; };
+		D0E0F0C12BE2E69A00D1AEB7 /* AnsweredWordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnsweredWordCell.swift; sourceTree = "<group>"; };
+		D0E0F0C32BE2F34400D1AEB7 /* GameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRouter.swift; sourceTree = "<group>"; };
 		D0E48AAD293FCF2B006E2555 /* Text + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text + Extensions.swift"; sourceTree = "<group>"; };
-		D0E48AAF2941DCD4006E2555 /* PlayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonView.swift; sourceTree = "<group>"; };
 		D0E48AB12941E328006E2555 /* GameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCoordinator.swift; sourceTree = "<group>"; };
-		D0E5FB6B293A0EDB006F7F6F /* TimerControllButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerControllButtonStyle.swift; sourceTree = "<group>"; };
-		D0E5FB6E293A0EF9006F7F6F /* TimerControllButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerControllButtonView.swift; sourceTree = "<group>"; };
-		D0E5FB71293A1239006F7F6F /* LinearProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearProgressView.swift; sourceTree = "<group>"; };
 		D0E5FB73293B65C7006F7F6F /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		D0E5FB75293B65D2006F7F6F /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		D0E5FB78293CF002006F7F6F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		D0E5FB7B293CF26B006F7F6F /* SharpedCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharpedCardView.swift; sourceTree = "<group>"; };
-		D0E5FB7E293DF90D006F7F6F /* TeamCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCellView.swift; sourceTree = "<group>"; };
 		D0EA27442AF7D509005A1B40 /* PhotoChangeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoChangeButton.swift; sourceTree = "<group>"; };
 		D0EA27462AF7D6C3005A1B40 /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		D0EA274A2AF7D927005A1B40 /* PhotoChangeButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoChangeButtonStyle.swift; sourceTree = "<group>"; };
@@ -167,13 +166,10 @@
 		D0ED1A9B2923CC1F002ABBD5 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
 		D0ED1A9D2923CC2F002ABBD5 /* RoundRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundRouter.swift; sourceTree = "<group>"; };
 		D0ED1AA129250258002ABBD5 /* WordsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsStorage.swift; sourceTree = "<group>"; };
-		D0ED1AAC2926054E002ABBD5 /* SwipableCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipableCardView.swift; sourceTree = "<group>"; };
 		D0ED1AAE292616B5002ABBD5 /* View + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Extensions.swift"; sourceTree = "<group>"; };
 		D0F0C2BC29472C54000D7FF5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		D0F0C2BE29472C5F000D7FF5 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		D0F0C2C12947368C000D7FF5 /* AddButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButtonView.swift; sourceTree = "<group>"; };
 		D0F0C2C5294743AD000D7FF5 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
-		D0F0C2CA2947499D000D7FF5 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		D0FCA33629505D7600599E69 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		D0FDEF852AF84DA900F310FD /* DeleteTeamButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTeamButton.swift; sourceTree = "<group>"; };
 		D0FDEF882AF8513500F310FD /* GameHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHeaderView.swift; sourceTree = "<group>"; };
@@ -222,20 +218,9 @@
 				D01401F52AE418DF00048B27 /* Button+Extensions.swift */,
 				D0ED1AAE292616B5002ABBD5 /* View + Extensions.swift */,
 				D0E48AAD293FCF2B006E2555 /* Text + Extensions.swift */,
+				D040E4922BDFBB9300EA465E /* Animation+Extensions.swift */,
 			);
 			path = SwiftUI;
-			sourceTree = "<group>";
-		};
-		D01401FD2AE4227D00048B27 /* Old */ = {
-			isa = PBXGroup;
-			children = (
-				D0A7F93229432FFF0013A084 /* AppBar */,
-				D0E48AAC293FCF12006E2555 /* Buttons */,
-				D0E5FB7A293CF24B006F7F6F /* CardView */,
-				D0F0C2C929474981000D7FF5 /* RoundedTextField */,
-				D0E5FB70293A1218006F7F6F /* ProgressView */,
-			);
-			path = Old;
 			sourceTree = "<group>";
 		};
 		D040E4842BDEE38300EA465E /* Settings */ = {
@@ -257,12 +242,30 @@
 			isa = PBXGroup;
 			children = (
 				D0FDEF872AF8510C00F310FD /* Components */,
-				D0E5FB7D293DF8FE006F7F6F /* OldComponents */,
 				D0E5FB73293B65C7006F7F6F /* GameView.swift */,
 				D0E5FB75293B65D2006F7F6F /* GameViewModel.swift */,
-				D0ED1A9D2923CC2F002ABBD5 /* RoundRouter.swift */,
+				D0E0F0C32BE2F34400D1AEB7 /* GameRouter.swift */,
 			);
 			path = Game;
+			sourceTree = "<group>";
+		};
+		D040E4882BDEE8C100EA465E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D0E0F0C02BE2E68400D1AEB7 /* AnsweredWord */,
+				D040E4912BDFB73100EA465E /* Card */,
+				D040E4942BDFC69C00EA465E /* RoundTimerView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D040E4912BDFB73100EA465E /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				D040E4892BDEE8D600EA465E /* PlayCardView.swift */,
+				D040E48F2BDEED3A00EA465E /* SwipeCardView.swift */,
+			);
+			path = Card;
 			sourceTree = "<group>";
 		};
 		D0651C172BD5A2C5005A2AE7 /* Teams */ = {
@@ -343,32 +346,6 @@
 			path = ButtonStyles;
 			sourceTree = "<group>";
 		};
-		D0A7F92A29430D280013A084 /* CardView */ = {
-			isa = PBXGroup;
-			children = (
-				D0ED1AAC2926054E002ABBD5 /* SwipableCardView.swift */,
-				D0BE04032938EFD9000739E0 /* CardView.swift */,
-			);
-			path = CardView;
-			sourceTree = "<group>";
-		};
-		D0A7F92B29430F3C0013A084 /* RoundFinishedView */ = {
-			isa = PBXGroup;
-			children = (
-				D0A7F92829430D140013A084 /* RoundFinishedView.swift */,
-				D0A7F92E294321AC0013A084 /* AnswerToggleCell.swift */,
-			);
-			path = RoundFinishedView;
-			sourceTree = "<group>";
-		};
-		D0A7F93229432FFF0013A084 /* AppBar */ = {
-			isa = PBXGroup;
-			children = (
-				D0A7F933294330130013A084 /* AnimatedAppBar.swift */,
-			);
-			path = AppBar;
-			sourceTree = "<group>";
-		};
 		D0A839752BDD881900F0046C /* General */ = {
 			isa = PBXGroup;
 			children = (
@@ -415,56 +392,39 @@
 			path = Environments;
 			sourceTree = "<group>";
 		};
-		D0E48AAC293FCF12006E2555 /* Buttons */ = {
+		D0E0F0B62BE291EE00D1AEB7 /* TextFields */ = {
 			isa = PBXGroup;
 			children = (
-				D0FCA3382950682900599E69 /* AddButton */,
-				D0F0C2B929470464000D7FF5 /* PlayButton */,
-				D0E5FB6A293A0EAD006F7F6F /* TimerConrolButton */,
+				D0E0F0B72BE2920A00D1AEB7 /* BorderedTextField.swift */,
 			);
-			path = Buttons;
+			path = TextFields;
 			sourceTree = "<group>";
 		};
-		D0E5FB6A293A0EAD006F7F6F /* TimerConrolButton */ = {
+		D0E0F0B92BE2C15000D1AEB7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				D0E5FB6B293A0EDB006F7F6F /* TimerControllButtonStyle.swift */,
-				D0E5FB6E293A0EF9006F7F6F /* TimerControllButtonView.swift */,
+				D01402002AE422A900048B27 /* TeamCell.swift */,
+				D0FDEF902AF8551900F310FD /* GameTeamCell.swift */,
+				D0E0F0BA2BE2C16700D1AEB7 /* RoundTeamCell.swift */,
 			);
-			path = TimerConrolButton;
+			path = Cells;
 			sourceTree = "<group>";
 		};
-		D0E5FB70293A1218006F7F6F /* ProgressView */ = {
+		D0E0F0C02BE2E68400D1AEB7 /* AnsweredWord */ = {
 			isa = PBXGroup;
 			children = (
-				D0E5FB71293A1239006F7F6F /* LinearProgressView.swift */,
+				D0E0F0BE2BE2E58700D1AEB7 /* AnsweredWordsView.swift */,
+				D0E0F0C12BE2E69A00D1AEB7 /* AnsweredWordCell.swift */,
 			);
-			path = ProgressView;
-			sourceTree = "<group>";
-		};
-		D0E5FB7A293CF24B006F7F6F /* CardView */ = {
-			isa = PBXGroup;
-			children = (
-				D0E5FB7B293CF26B006F7F6F /* SharpedCardView.swift */,
-			);
-			path = CardView;
-			sourceTree = "<group>";
-		};
-		D0E5FB7D293DF8FE006F7F6F /* OldComponents */ = {
-			isa = PBXGroup;
-			children = (
-				D0E5FB7E293DF90D006F7F6F /* TeamCellView.swift */,
-			);
-			path = OldComponents;
+			path = AnsweredWord;
 			sourceTree = "<group>";
 		};
 		D0EA27422AF7D4E3005A1B40 /* Team */ = {
 			isa = PBXGroup;
 			children = (
+				D0E0F0B92BE2C15000D1AEB7 /* Cells */,
 				D0FDEF922AF856BE00F310FD /* Score */,
 				D01402082AE5338000048B27 /* TeamScrollView.swift */,
-				D01402002AE422A900048B27 /* TeamCell.swift */,
-				D0FDEF902AF8551900F310FD /* GameTeamCell.swift */,
 			);
 			path = Team;
 			sourceTree = "<group>";
@@ -512,6 +472,8 @@
 				D0A839902BDD8F5E00F0046C /* TeamSheet */,
 				D0EA27552AF80AC0005A1B40 /* Setting.swift */,
 				D0A839792BDD892C00F0046C /* RuleStep.swift */,
+				D040E48C2BDEEA3F00EA465E /* PlayCardState.swift */,
+				D0E0F0BC2BE2E28B00D1AEB7 /* RoundViewState.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -634,8 +596,8 @@
 			children = (
 				D0EA27432AF7D4F8005A1B40 /* Buttons */,
 				D0A78F552BD7EC2A00FB65C9 /* ButtonStyles */,
+				D0E0F0B62BE291EE00D1AEB7 /* TextFields */,
 				D0EA27422AF7D4E3005A1B40 /* Team */,
-				D01401FD2AE4227D00048B27 /* Old */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -664,6 +626,7 @@
 			children = (
 				D01401F42AE418CA00048B27 /* SwiftUI */,
 				D0ED1A622923A561002ABBD5 /* Optional+Extensions.swift */,
+				D02E39D42BE2FC380087E707 /* Array+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -689,45 +652,12 @@
 		D0ED1A672923A592002ABBD5 /* Round */ = {
 			isa = PBXGroup;
 			children = (
-				D0ED1AAB29260536002ABBD5 /* Components */,
+				D040E4882BDEE8C100EA465E /* Components */,
 				D0ED1A9B2923CC1F002ABBD5 /* RoundView.swift */,
 				D0ED1A992923CC0E002ABBD5 /* RoundViewModel.swift */,
+				D0ED1A9D2923CC2F002ABBD5 /* RoundRouter.swift */,
 			);
 			path = Round;
-			sourceTree = "<group>";
-		};
-		D0ED1AAB29260536002ABBD5 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				D0A7F92B29430F3C0013A084 /* RoundFinishedView */,
-				D0A7F92A29430D280013A084 /* CardView */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		D0F0C2B929470464000D7FF5 /* PlayButton */ = {
-			isa = PBXGroup;
-			children = (
-				D0E48AAF2941DCD4006E2555 /* PlayButtonView.swift */,
-				D0A7F930294328710013A084 /* PlayButtonStyle.swift */,
-			);
-			path = PlayButton;
-			sourceTree = "<group>";
-		};
-		D0F0C2C929474981000D7FF5 /* RoundedTextField */ = {
-			isa = PBXGroup;
-			children = (
-				D0F0C2CA2947499D000D7FF5 /* RoundedTextField.swift */,
-			);
-			path = RoundedTextField;
-			sourceTree = "<group>";
-		};
-		D0FCA3382950682900599E69 /* AddButton */ = {
-			isa = PBXGroup;
-			children = (
-				D0F0C2C12947368C000D7FF5 /* AddButtonView.swift */,
-			);
-			path = AddButton;
 			sourceTree = "<group>";
 		};
 		D0FDEF822AF84D6A00F310FD /* TeamDelete */ = {
@@ -868,52 +798,50 @@
 				D0651C1C2BD5A2F2005A2AE7 /* TeamEditable.swift in Sources */,
 				D0E48AAE293FCF2B006E2555 /* Text + Extensions.swift in Sources */,
 				D0E5FB76293B65D2006F7F6F /* GameViewModel.swift in Sources */,
-				D0A7F931294328710013A084 /* PlayButtonStyle.swift in Sources */,
+				D0E0F0BB2BE2C16700D1AEB7 /* RoundTeamCell.swift in Sources */,
 				D0ED1A9A2923CC0E002ABBD5 /* RoundViewModel.swift in Sources */,
 				D0ED1A9C2923CC1F002ABBD5 /* RoundView.swift in Sources */,
-				D0E5FB6C293A0EDB006F7F6F /* TimerControllButtonStyle.swift in Sources */,
-				D0A7F92929430D140013A084 /* RoundFinishedView.swift in Sources */,
 				D0E5FB74293B65C7006F7F6F /* GameView.swift in Sources */,
 				D07CCED62AE55C3500AB730B /* SettingCard.swift in Sources */,
-				D0A7F934294330130013A084 /* AnimatedAppBar.swift in Sources */,
 				D08F422D2AE54B780035D29E /* SettingItem.swift in Sources */,
+				D0E0F0C22BE2E69A00D1AEB7 /* AnsweredWordCell.swift in Sources */,
 				D0651C162BD57ED9005A2AE7 /* ScreenSize.swift in Sources */,
-				D0E5FB72293A1239006F7F6F /* LinearProgressView.swift in Sources */,
-				D0ED1AAD2926054E002ABBD5 /* SwipableCardView.swift in Sources */,
 				D0ED1A9E2923CC2F002ABBD5 /* RoundRouter.swift in Sources */,
+				D040E4952BDFC69C00EA465E /* RoundTimerView.swift in Sources */,
 				D0AE9E1A2BD57E2500F7B48F /* SafeAreaInsets.swift in Sources */,
-				D0BE04042938EFD9000739E0 /* CardView.swift in Sources */,
 				D01401F32AE4155E00048B27 /* MainHeader.swift in Sources */,
 				D0651C272BD5A502005A2AE7 /* SettingsConfiguration.swift in Sources */,
-				D0E5FB7F293DF90D006F7F6F /* TeamCellView.swift in Sources */,
 				D0A7F92D294312410013A084 /* AnswerModel.swift in Sources */,
 				D0EA27452AF7D509005A1B40 /* PhotoChangeButton.swift in Sources */,
-				D0A7F92F294321AC0013A084 /* AnswerToggleCell.swift in Sources */,
+				D040E48D2BDEEA3F00EA465E /* PlayCardState.swift in Sources */,
+				D040E48A2BDEE8D600EA465E /* PlayCardView.swift in Sources */,
 				D0ED1A5E2923A51A002ABBD5 /* SettingsManager.swift in Sources */,
 				D0EA274E2AF7E031005A1B40 /* TeamNameFieldButton.swift in Sources */,
+				D02E39D52BE2FC380087E707 /* Array+Extensions.swift in Sources */,
 				D0ED1AAF292616B5002ABBD5 /* View + Extensions.swift in Sources */,
 				D0ED1A632923A561002ABBD5 /* Optional+Extensions.swift in Sources */,
 				D0E48AB22941E328006E2555 /* GameCoordinator.swift in Sources */,
 				D0FDEF8E2AF8535900F310FD /* TeamScoreCell.swift in Sources */,
 				D01401FC2AE41BE400048B27 /* TeamTabControl.swift in Sources */,
+				D040E4932BDFBB9300EA465E /* Animation+Extensions.swift in Sources */,
 				D0F0C2C6294743AD000D7FF5 /* MainRouter.swift in Sources */,
+				D0E0F0BF2BE2E58700D1AEB7 /* AnsweredWordsView.swift in Sources */,
 				D0ED1A572923A4A6002ABBD5 /* RoundModel.swift in Sources */,
 				D0A78F5B2BD7FF7500FB65C9 /* SettingItemSheet.swift in Sources */,
 				D07CCED82AE5608100AB730B /* MainSettingsGrid.swift in Sources */,
 				D0EA274B2AF7D927005A1B40 /* PhotoChangeButtonStyle.swift in Sources */,
 				D01402012AE422A900048B27 /* TeamCell.swift in Sources */,
 				D077131B2954A1B400F6EC90 /* TeamsStorage.swift in Sources */,
-				D0E5FB7C293CF26B006F7F6F /* SharpedCardView.swift in Sources */,
 				D0FDEF8B2AF8533700F310FD /* TeamScoreList.swift in Sources */,
+				D0E0F0B82BE2920A00D1AEB7 /* BorderedTextField.swift in Sources */,
 				D01401F62AE418DF00048B27 /* Button+Extensions.swift in Sources */,
 				D0EA27512AF7F320005A1B40 /* SettingCardButtonStyle.swift in Sources */,
-				D0F0C2C22947368C000D7FF5 /* AddButtonView.swift in Sources */,
 				D0EA27472AF7D6C3005A1B40 /* Typealiases.swift in Sources */,
 				D0A8397A2BDD892C00F0046C /* RuleStep.swift in Sources */,
 				D0FDEF912AF8551900F310FD /* GameTeamCell.swift in Sources */,
 				D0A8398D2BDD8EC500F0046C /* TeamSheetType.swift in Sources */,
 				D0FCA33729505D7600599E69 /* MainCoordinator.swift in Sources */,
-				D0E5FB6F293A0EF9006F7F6F /* TimerControllButtonView.swift in Sources */,
+				D040E4902BDEED3B00EA465E /* SwipeCardView.swift in Sources */,
 				D0651C232BD5A44A005A2AE7 /* SettingUpdateOption.swift in Sources */,
 				D0ED1A812923A948002ABBD5 /* AppDelegate.swift in Sources */,
 				D01401F82AE4199600048B27 /* Images.swift in Sources */,
@@ -924,15 +852,15 @@
 				D0FDEF862AF84DA900F310FD /* DeleteTeamButton.swift in Sources */,
 				D01402092AE5338000048B27 /* TeamScrollView.swift in Sources */,
 				D0651C1A2BD5A2DE005A2AE7 /* TeamControlable.swift in Sources */,
-				D0E48AB02941DCD4006E2555 /* PlayButtonView.swift in Sources */,
+				D0E0F0C42BE2F34400D1AEB7 /* GameRouter.swift in Sources */,
 				D0EA27562AF80AC0005A1B40 /* Setting.swift in Sources */,
 				D0F0C2BD29472C54000D7FF5 /* MainView.swift in Sources */,
+				D0E0F0BD2BE2E28B00D1AEB7 /* RoundViewState.swift in Sources */,
 				D0ED1A3E2923A33E002ABBD5 /* AliasForITApp.swift in Sources */,
 				D0FDEF962AF90BB600F310FD /* ScoreViewStyle.swift in Sources */,
 				D0ED1A592923A4B5002ABBD5 /* TeamModel.swift in Sources */,
 				D0A7F93629434CDD0013A084 /* AppearanceManager.swift in Sources */,
 				D0F0C2BF29472C5F000D7FF5 /* MainViewModel.swift in Sources */,
-				D0F0C2CB2947499D000D7FF5 /* RoundedTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

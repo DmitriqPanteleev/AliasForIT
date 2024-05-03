@@ -21,6 +21,14 @@ extension Color {
         case appGray
         case appDarkGray
         case appLightGray
+        
+        // MARK: Card colors
+        case missedCard
+        case neutralCard
+        case guessedCard
+        case missedCardWord
+        case neutralCardWord
+        case guessedCardWord
     }
 }
 
@@ -44,6 +52,13 @@ extension Color {
     static let appGray = Color(.appGray)
     static let appDarkGray = Color(.appDarkGray)
     static let appLightGray = Color(.appLightGray)
+    
+    static let missedCard = Color(.missedCard)
+    static let neutralCard = Color(.neutralCard)
+    static let guessedCard = Color(.guessedCard)
+    static let missedCardWord = Color(.missedCardWord)
+    static let neutralCardWord = Color(.neutralCardWord)
+    static let guessedCardWord = Color(.guessedCardWord)
 }
 
 extension UIColor {

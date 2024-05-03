@@ -14,28 +14,29 @@ struct GameView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            let currentId = viewModel.output.currentTeam?.id ?? 0
-            
-            TeamScoreList(currentTeamId: currentId,
+            TeamScoreList(currentTeamId: viewModel.output.currentTeam?.id ?? 0,
                           models: viewModel.output.teams)
-            
             Spacer()
-            
-            Button(action: viewModel.input.onPlayTap.send) {
-                Text("Играть")
-                    .buttonTitle()
-            }
-            .textButtonStyle(disabled: viewModel.output.pointsLeft < 0)
         }
-        .safeAreaInset(edge: .top, content: headerContent)
+        .safeAreaInset(edge: .top, content: headerView)
+        .safeAreaInset(edge: .bottom, content: buttonView)
         .background(Color.white.ignoresSafeArea())
         .onAppear(perform: viewModel.input.onAppear.send)
     }
 }
 
 private extension GameView {
-    func headerContent() -> some View {
+    func headerView() -> some View {
         GameHeaderView(tapAction: viewModel.input.onStopTap.send)
+    }
+    
+    func buttonView() -> some View {
+        Button(action: viewModel.input.onPlayTap.send) {
+            Text("Играть")
+                .buttonTitle()
+        }
+        .textButtonStyle(disabled: viewModel.output.pointsLeft < 0)
+        .padding(.horizontal)
     }
 }
 

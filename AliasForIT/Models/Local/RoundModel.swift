@@ -10,7 +10,6 @@ import Combine
 
 struct RoundModel: Equatable {
     let team: TeamModel
-    let words: [String]
-    
+    var words: [String]
     var roundDuration: Int
 }

@@ -12,7 +12,7 @@ final class GameViewModel: ObservableObject {
     
     // MARK: - Services
     private let settingsManager: GameConfigurable
-    private weak var router: RoundRouter?
+    private weak var router: GameRouter?
     
     // MARK: - External
     let teams: [TeamModel]
@@ -31,7 +31,7 @@ final class GameViewModel: ObservableObject {
     init(teams: [TeamModel], 
          settingsManager: GameConfigurable,
          onRoundFinish: PassthroughSubject<Int, Never>,
-         router: RoundRouter?)
+         router: GameRouter?)
     {
         self.settingsManager = settingsManager
         self.router = router
@@ -99,7 +99,7 @@ final class GameViewModel: ObservableObject {
                 if self.output.pointsLeft > 0 {
                     
                     let roundModel = RoundModel(team: self.output.currentTeam!,
-                                                words: WordsStorage.getRoundWords(count: self.settingsManager.pointsForWin),
+                                                words: WordsStorage.getRoundWords(count: self.settingsManager.roundTime),
                                                 roundDuration: self.settingsManager.roundTime)
                     
                     self.router?.moveToRound(model: roundModel)

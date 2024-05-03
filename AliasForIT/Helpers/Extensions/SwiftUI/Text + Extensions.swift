@@ -82,4 +82,16 @@ extension Text {
             .font(.system(size: 13, weight: .regular))
             .foregroundColor(color)
     }
+    
+    func playCard(_ color: Color) -> Text {
+        self
+            .font(.system(size: 28, weight: .light))
+            .foregroundColor(color)
+    }
+    
+    func playTimer(_ color: Color) -> Text {
+        self
+            .font(.system(size: 18))
+            .foregroundColor(color)
+    }
 }

@@ -70,8 +70,7 @@ private extension TeamSheet {
     @ViewBuilder
     var teamNameView: some View {
         if type == .adding {
-            TextField("Имя команды", text: $teamName)
-                .textFieldStyle(.plain)
+            BorderedTextField(text: $teamName, placeholder: "Имя команды")
                 .padding(.horizontal)
         }
     }
