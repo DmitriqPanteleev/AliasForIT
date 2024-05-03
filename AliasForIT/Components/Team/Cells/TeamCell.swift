@@ -17,9 +17,10 @@ struct TeamCell: View {
     
     @State private var isDeleting = false
     
-    let isSelected: Bool
     @Binding var model: TeamModel
     
+    let isSelected: Bool
+    let isDeletingEnabled: Bool
     let addPhotoSubject: VoidSubject
     let editNameSubject: StringSubject
     let deleteSubject: VoidSubject
@@ -53,7 +54,7 @@ private extension TeamCell {
             .overlay(alignment: .bottomTrailing, content: addPhotoButton)
             .onLongPressGesture(minimumDuration: 0.5,
                                 maximumDistance: .infinity) {
-                guard isSelected else { return }
+                guard isSelected, isDeletingEnabled else { return }
                 isDeleting.toggle()
             }
     }
@@ -91,8 +92,9 @@ struct TeamCell_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
             Spacer()
-            TeamCell(isSelected: true,
-                     model: .constant(.defaultTeam1()),
+            TeamCell(model: .constant(.defaultTeam1()),
+                     isSelected: true,
+                     isDeletingEnabled: false,
                      addPhotoSubject: VoidSubject(),
                      editNameSubject: StringSubject(),
                      deleteSubject: VoidSubject())
