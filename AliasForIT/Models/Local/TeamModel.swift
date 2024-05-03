@@ -35,7 +35,7 @@ struct TeamModel: Equatable, Identifiable {
     }
     
     static func defaultTeam2() -> TeamModel {
-        TeamModel(name: "Ворота", image: .facebook)
+        TeamModel(name: "Переменные", image: .facebook)
     }
     
     static func emptyTeam() -> TeamModel {

@@ -17,6 +17,10 @@ struct TeamScrollView: View {
     let editNameSubject: StringSubject
     let deleteSubject: VoidSubject
     
+    private var isDeletingEnabled: Bool {
+        models.count > 1
+    }
+    
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 30) {
@@ -34,8 +38,9 @@ struct TeamScrollView: View {
 private extension TeamScrollView {
     
     func cellView(_ model: Binding<TeamModel>, for index: Int) -> some View {
-        TeamCell(isSelected: index == selectedTeam,
-                 model: model,
+        TeamCell(model: model,
+                 isSelected: index == selectedTeam,
+                 isDeletingEnabled: isDeletingEnabled,
                  addPhotoSubject: addPhotoSubject,
                  editNameSubject: editNameSubject,
                  deleteSubject: deleteSubject)
